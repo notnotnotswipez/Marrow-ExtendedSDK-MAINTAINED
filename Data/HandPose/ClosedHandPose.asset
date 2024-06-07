@@ -1,0 +1,140 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8dee6e90fb12c2b7cf1301d97ee90d8, type: 3}
+  m_Name: ClosedHandPose
+  m_EditorClassIdentifier:
+  primaryAxis:
+    x: 0
+    y: 0
+    z: 1
+  secondaryAxis:
+    x: 0
+    y: 1
+    z: 0
+  wristOffset:
+    x: 0
+    y: 0
+    z: 0
+  swingRotationLimit: 30
+  twistRotationLimit: 30
+  poseData:
+  - radius: 0
+    poseArray:
+    - nativePry:
+        x: 0
+        y: 0
+        z: 0
+      thumb1:
+        x: 0.47084117
+        y: 0.42323387
+        z: 0.11551309
+        w: 0.7654008
+      index1:
+        x: 0.11549649
+        y: 0.14277628
+        z: 0.6390845
+        w: 0.74689126
+      middle1:
+        x: -0.018232822
+        y: 0.030435994
+        z: 0.66760266
+        w: 0.7436719
+      ring1:
+        x: -0.1386932
+        y: -0.03052675
+        z: 0.69707054
+        w: 0.70279795
+      pinky1:
+        x: -0.20448525
+        y: -0.06423184
+        z: 0.7477244
+        w: 0.6284651
+      thumb2: 56.96663
+      thumb3: 86.282166
+      index2: 107.680885
+      index3: 86.711815
+      middle2: 106.0817
+      middle3: 84.441895
+      ring2: 89.43766
+      ring3: 112.09293
+      pinky2: 91.53801
+      pinky3: 106.9657
+      leftHandle:
+        position:
+          x: 0.024388442
+          y: 0.010870539
+          z: 0.051771864
+        rotation:
+          x: -0.7071068
+          y: -0
+          z: -0
+          w: 0.7071068
+      invLeftHandle:
+        position:
+          x: -0.024388326
+          y: 0.05177179
+          z: -0.010870366
+        rotation:
+          x: 0.7071068
+          y: 0
+          z: 0
+          w: 0.7071068
+      rightHandle:
+        position:
+          x: -0.024390599
+          y: 0.010870539
+          z: 0.051771864
+        rotation:
+          x: -0.7071068
+          y: 2.1648903E-17
+          z: -0
+          w: 0.7071068
+      invRightHandle:
+        position:
+          x: 0.024390751
+          y: 0.051771864
+          z: -0.010870583
+        rotation:
+          x: 0.7071068
+          y: -2.1648903E-17
+          z: 0
+          w: 0.7071068
+      leftArtHandle:
+        position:
+          x: -0.051771864
+          y: -0.024388442
+          z: 0.010870539
+        rotation:
+          x: 0
+          y: -0
+          z: -0.7071068
+          w: 0.7071068
+      rightArtHandle:
+        position:
+          x: 0.051771864
+          y: 0.024390599
+          z: -0.010870539
+        rotation:
+          x: -0.7071068
+          y: 0.7071068
+          z: -4.3297806E-17
+          w: 4.3297806E-17
+  leftOffsetRotation:
+    x: 0
+    y: 0
+    z: 0
+    w: 1
+  rightOffsetRotation:
+    x: 0
+    y: 0
+    z: 0
+    w: 1
