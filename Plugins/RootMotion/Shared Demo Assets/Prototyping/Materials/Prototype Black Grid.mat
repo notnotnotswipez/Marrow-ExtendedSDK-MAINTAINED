@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Prototype Black Grid
+  m_Shader: {fileID: 4800000, guid: fe8830f487bbbd247a131d12f9750fcb, type: 3}
+  m_ValidKeywords:
+  - _NORMALMAP
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+  - RenderType: Opaque
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: c6b16203d9a568e42b2de5615d4932f1, type: 3}
+        m_Scale: {x: 10, y: 10}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 1c32c07833ea6934fbc9f8601f804724, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: c6b16203d9a568e42b2de5615d4932f1, type: 3}
+        m_Scale: {x: 10, y: 10}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: {}
+    m_Floats:
+    - _AlphaClip: 0
+    - _AnisotropicRatio: 0.5
+    - _AnisotropicRotation: 0.5
+    - _Blend: 0
+    - _BumpScale: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+    - _ColorMultiplier: 0
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
+    - _DetailMode: 4
+    - _DetailNormalMapScale: 1
+    - _DetailSmoothnessMapScale: 1
+    - _DstBlend: 0
+    - _EmissionFalloff: 0
+    - _EmissiveMode: 0
+    - _EnvironmentReflections: 1
+    - _FogMultiplier: 1
+    - _GlossMapScale: 1
+    - _Glossiness: 0.111
+    - _GlossyReflections: 1
+    - _Metallic: 1
+    - _MetallicGlossMap: 0
+    - _Mode: 0
+    - _NormalToOcclusion: 1
+    - _OcclusionMap: 0
+    - _OcclusionStrength: 1
+    - _OcclusionStrengthDirectDiffuse: 1
+    - _OcclusionStrengthDirectSpecular: 1
+    - _OcclusionStrengthIndirectDiffuse: 1
+    - _OcclusionStrengthIndirectSpecular: 1
+    - _OffsetFactor: 0
+    - _OffsetUnits: 0
+    - _PackingMode: 0
+    - _Parallax: -0.02
+    - _ParallaxIterations: 1
+    - _ParallaxMap: 0
+    - _ParallaxOffset: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _Smoothness: 0.65
+    - _SmoothnessTextureChannel: 0
+    - _SpecGlossMap: 0
+    - _SpecMod: 1
+    - _SpecularHighlights: 1
+    - _SpecularMode: 2
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _Test: 0
+    - _UVSec: 0
+    - _VertexMode: 0
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    - g_bCastShadows: 1
+    - g_bReceiveShadows: 1
+    - g_bRenderBackfaces: 0
+    - g_bUnlit: 0
+    - g_bWorldAlignedTexture: 0
+    - g_flCubeMapScalar: 1
+    - g_flFresnelExponent: 8.84
+    - g_flFresnelFalloff: 0.125
+    - g_flReflectanceBias: 0
+    - g_flReflectanceMax: 1
+    - g_flReflectanceMin: 0
+    - g_flReflectanceScale: 1
+    - g_tBRDFMap: 0
+    - g_tOverrideLightmap: 0
+    m_Colors:
+    - _Absorbance: {r: 0.09999997, g: 0.24999997, b: 0.5, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorShift1: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorShift2: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorShift3: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorShift4: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FluorescenceColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - g_vWorldAlignedNormalTangentU: {r: -1, g: 0, b: 0, a: 0}
+    - g_vWorldAlignedNormalTangentV: {r: 0, g: 0, b: 1, a: 0}
+    - g_vWorldAlignedTextureNormal: {r: 0, g: 1, b: 0, a: 0}
+    - g_vWorldAlignedTexturePosition: {r: 0, g: 0, b: 0, a: 0}
+    - g_vWorldAlignedTextureSize: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []

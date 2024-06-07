@@ -1,0 +1,16 @@
+{
+    "name": "Unity.Sentis.ONNX",
+    "references": [
+        "Unity.Sentis",
+        "Unity.Burst",
+        "Unity.Mathematics"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": true,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}
