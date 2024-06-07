@@ -11,7 +11,7 @@ One of the major objectives of this repo, is to remove incentives to decompile t
 Install the MarrowSDK by following the original steps at https://github.com/StressLevelZero/MarrowSDK/wiki/ProjectSetup.
 
 After you've installed the MarrowSDK, download this repository from the green dropdown arrow. Then drop it into your Assets folder.
-
+#
 ### This repo contains DUMMY scripts. Which are scripts that are not functional and contain no code. They simply get replaced with their ingame equivalents upon being loaded.
 
 # IF YOU WOULD LIKE TO PR SOMETHING TO THIS REPO PLEASE FOLLOW THESE GUIDELINES:
