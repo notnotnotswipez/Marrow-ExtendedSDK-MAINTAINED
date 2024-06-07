@@ -15,6 +15,8 @@ Install the MarrowSDK by following the original steps at https://github.com/Stre
 After you've added the scoped registry, go to the top left of the ``Package Manager`` and add a ``git URL``.
 The git URL you should add is ``https://github.com/notnotnotswipez/MarrowSDKExt.git``.
 
+If you've done everything correctly, everything should install properly. Including SLZ's URP.
+
 After you've installed the MarrowSDK, download this repository from the green dropdown arrow. Then drop it into your Assets folder.
 #
 ### This repo contains DUMMY scripts. Which are scripts that are not functional and contain no code. They simply get replaced with their ingame equivalents upon being loaded.
