@@ -756,5 +756,11 @@ public object Current { get; }
 		public void OnEntityUncull()
 		{
 		}
-	}
+
+        public override void ValidateComponent()
+        {
+            base.ValidateComponent();
+			entity = GetComponentInParent<MarrowEntity>();
+        }
+    }
 }
