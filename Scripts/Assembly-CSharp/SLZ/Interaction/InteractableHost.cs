@@ -12,75 +12,6 @@ namespace SLZ.Interaction
 {
 	public class InteractableHost : MarrowBehaviour, IGrippable
 	{
-		[CompilerGenerated]
-		private sealed class _003CCoCheckForSleep_003Ed__79 : IEnumerator<object>, IEnumerator, IDisposable
-		{
-			private int _003C_003E1__state;
-
-			private object _003C_003E2__current;
-
-			public InteractableHost _003C_003E4__this;
-
-			private WaitForFixedUpdate _003Cwffu_003E5__2;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			[DebuggerHidden]
-			public _003CCoCheckForSleep_003Ed__79(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
-
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
-
 		private static ComponentCache<InteractableHost> _cache;
 
 		public InteractableHostManager manager;
@@ -119,12 +50,10 @@ namespace SLZ.Interaction
 
 		public VirtualController VirtualController
 		{
-			[CompilerGenerated]
 			get
 			{
 				return null;
 			}
-			[CompilerGenerated]
 			private set
 			{
 			}
@@ -132,12 +61,10 @@ namespace SLZ.Interaction
 
 		public TriggerRefProxy LastGrabbedProxy
 		{
-			[CompilerGenerated]
 			get
 			{
 				return null;
 			}
-			[CompilerGenerated]
 			private set
 			{
 			}
@@ -147,12 +74,10 @@ namespace SLZ.Interaction
 
 		public bool IsInteractionDisabled
 		{
-			[CompilerGenerated]
 			get
 			{
 				return false;
 			}
-			[CompilerGenerated]
 			private set
 			{
 			}
@@ -160,12 +85,10 @@ namespace SLZ.Interaction
 
 		public bool IsFarHoverEnabled
 		{
-			[CompilerGenerated]
 			get
 			{
 				return false;
 			}
-			[CompilerGenerated]
 			private set
 			{
 			}
@@ -173,14 +96,10 @@ namespace SLZ.Interaction
 
 		public bool IsStatic
 		{
-			[MethodImpl(256)]
-			[CompilerGenerated]
 			get
 			{
 				return false;
 			}
-			[MethodImpl(256)]
-			[CompilerGenerated]
 			set
 			{
 			}
@@ -188,7 +107,6 @@ namespace SLZ.Interaction
 
 		public bool HasRigidbody
 		{
-			[MethodImpl(256)]
 			get
 			{
 				return false;
@@ -197,7 +115,6 @@ namespace SLZ.Interaction
 
 		public MarrowBody Body
 		{
-			[MethodImpl(256)]
 			get
 			{
 				return null;
@@ -330,7 +247,6 @@ namespace SLZ.Interaction
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoCheckForSleep_003Ed__79))]
 		private IEnumerator CoCheckForSleep()
 		{
 			return null;

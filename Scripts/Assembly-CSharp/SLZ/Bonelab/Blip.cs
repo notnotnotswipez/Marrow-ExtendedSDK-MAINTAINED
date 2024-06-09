@@ -1,60 +1,32 @@
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
-using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Pool;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace SLZ.Bonelab
 {
 	public class Blip : SpawnEvents
 	{
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003CFireEffectAsync_003Ed__16 : IAsyncStateMachine
-		{
-			public int _003C_003E1__state;
-
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
-
-			public Blip _003C_003E4__this;
-
-			public Spawnable effect;
-
-			public Color? color;
-
-			private List<Mesh> _003CcachedMeshes_003E5__2;
-
-			private List<Renderer> _003Crenderers_003E5__3;
-
-			private UniTask<Poolee[]>.Awaiter _003C_003Eu__1;
-
-			private UniTask.Awaiter _003C_003Eu__2;
-
-			public void MoveNext()
-			{
-			}
-
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
-		}
-
 		private static ComponentCache<Blip> _cache;
 
 		[SerializeField]
 		private Renderer[] Renderers;
 
 		[SerializeField]
-		private Spawnable fizzlerSpawnable;
+		private Spawnable fizzlerSpawnable;// = new Spawnable()
+		//{
+		//	crateRef = new SLZ.Marrow.Warehouse.SpawnableCrateReference("c1534c5a-8afb-4be3-89da-1f9546697a7a")
+		//};
 
 		[SerializeField]
-		private Spawnable spawnSpawnable;
+		private Spawnable spawnSpawnable;// = new Spawnable()
+		//{
+		//	crateRef = new SLZ.Marrow.Warehouse.SpawnableCrateReference("fa534c5a83ee4ec6bd641fec424c4142.Spawnable.VFXUnblip")
+		//};
 
 		[Header("DO NOT SET IN INSPECTOR")]
 		[HideInInspector]
@@ -94,7 +66,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CFireEffectAsync_003Ed__16))]
 		public UniTaskVoid FireEffectAsync(Spawnable effect, Color? color = null)
 		{
 			return default(UniTaskVoid);
@@ -104,5 +75,37 @@ namespace SLZ.Bonelab
 		{
 			return 0f;
 		}
+
+		public void CollectRenderers()
+		{
+			Renderers = gameObject.GetComponentsInChildren<Renderer>(false);
+#if UNITY_EDITOR
+			EditorUtility.SetDirty(this);
+#endif
+		}
 	}
+
+	
+#if UNITY_EDITOR
+	[CustomEditor(typeof(Blip))]
+	[DisallowMultipleComponent]
+	public class BlipEditor : Editor 
+	{
+	    public override void OnInspectorGUI()
+	    {
+			Blip behaviour = (Blip)target;
+
+    	    if(GUILayout.Button("Validate"))
+        	{
+				behaviour.ValidateComponent();
+        	}
+    	    if(GUILayout.Button("Collect Renderers"))
+        	{
+				behaviour.CollectRenderers();
+        	}
+	
+        	DrawDefaultInspector();
+	    }
+	}
+#endif
 }
