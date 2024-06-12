@@ -9,6 +9,10 @@ using SLZ.Marrow.Data;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 using UnityEngine.EventSystems;
+#if UNITY_EDITOR
+using System.Collections.Generic;
+using UnityEditor;
+#endif
 
 namespace SLZ.Combat
 {
@@ -179,5 +183,81 @@ namespace SLZ.Combat
 		{
 			return 0f;
 		}
+		
+#if UNITY_EDITOR
+		public void Validate()
+		{
+			var renderer = gameObject.GetComponent<MeshRenderer>();
+			List<Collider> rootColliders = new List<Collider>(gameObject.GetComponents<Collider>());
+			List<Collider> childrenColliders = new List<Collider>(gameObject.GetComponentsInChildren<Collider>());
+			var manager = gameObject.GetComponent<ImpactPropertiesManager>();
+			List<Collider> validColliders = new List<Collider>();
+
+			if (renderer != null && DecalMeshObj == null)
+			{
+				DecalMeshObj = renderer.gameObject;
+			}
+			
+			if (manager == null)
+			{
+				manager = gameObject.AddComponent<ImpactPropertiesManager>();
+			}
+
+			if (manager != null)
+			{
+				manager.surfaceData = surfaceData;
+				manager.DecalMeshObj = DecalMeshObj;
+				manager.decalType = decalType;
+			}
+			
+			colliders = new Collider[0];
+
+			if (rootColliders.Count != 0)
+			{
+				foreach (var collider in rootColliders)
+				{
+					if (!collider.isTrigger && rootColliders.Contains(collider) == false)
+					{
+						validColliders.Add(collider);
+					}
+				}
+			}
+
+			if (childrenColliders.Count != 0)
+			{
+				foreach (var collider in childrenColliders)
+				{
+					if (!collider.isTrigger)
+					{
+						validColliders.Add(collider);
+					}
+				}
+			}
+
+			if (validColliders.Count != 0)
+			{
+				colliders = validColliders.ToArray();
+			}
+
+			EditorUtility.SetDirty(this);
+		}
+		
+		[CustomEditor(typeof(ImpactProperties))]
+		[DisallowMultipleComponent]
+		public class ImpactPropertiesEditor : Editor
+		{
+			public override void OnInspectorGUI()
+			{
+				ImpactProperties behaviour = (ImpactProperties)target;
+
+				if (GUILayout.Button("Validate Component"))
+				{
+					behaviour.Validate();
+				}
+
+				DrawDefaultInspector();
+			}
+		}
+#endif
 	}
 }
