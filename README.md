@@ -15,7 +15,10 @@ Begin installing the MarrowSDK by following the original instructions at https:/
 ### IMPORTANT!! DO NOT INSTALL THE MARROWSDK PACKAGE AFTER ADDING THE SCOPED REGISTRY!!
 
 After you've added the scoped registry, go to the top left of the ``Package Manager`` and add a ``git URL``.
-The git URL you should add is ``https://github.com/notnotnotswipez/MarrowSDKExt.git``.
+The git URL you should add is 
+```
+https://github.com/notnotnotswipez/MarrowSDKExt.git
+```
 
 ![image](https://github.com/notnotnotswipez/Marrow-ExtendedSDK-MAINTAINED/assets/79382000/98ee31d3-5c23-4183-93f1-76a2c7793803)
 
