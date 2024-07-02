@@ -12,7 +12,8 @@ Install [Git](https://git-scm.com/) and Restart Unity / Unity Hub if they are op
 
 Begin installing the MarrowSDK by following the original instructions at https://github.com/StressLevelZero/MarrowSDK/wiki/ProjectSetup.
 
-### IMPORTANT!! DO NOT INSTALL THE MARROWSDK PACKAGE AFTER ADDING THE SCOPED REGISTRY!!
+> [!IMPORTANT]  
+> DO NOT INSTALL THE SLZ MARROWSDK PACKAGE AFTER ADDING THE SCOPED REGISTRY
 
 After you've added the scoped registry, go to the top left of the ``Package Manager`` and add a ``git URL``.
 The git URL you should add is 
