@@ -15,6 +15,9 @@ Begin installing the MarrowSDK by following the original instructions at https:/
 > [!IMPORTANT]  
 > DO NOT INSTALL THE SLZ MARROWSDK PACKAGE AFTER ADDING THE SCOPED REGISTRY
 
+> [!IMPORTANT]  
+> IF UPDATING, MAKE SURE TO DELETE Marrow-ExtendedSDK-Maintained-main COMPLETELY FROM YOUR ASSETS FOLDER BEFORE DOWNLOADING THE NEW CODE DROPDOWN
+
 After you've added the scoped registry, go to the top left of the ``Package Manager`` and add a ``git URL``.
 The git URL you should add is 
 ```
