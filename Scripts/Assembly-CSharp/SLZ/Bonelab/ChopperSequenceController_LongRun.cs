@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.AI;
 using SLZ.Marrow.Interaction;
 using SLZ.Marrow.VoidLogic;
 using SLZ.SFX;
-using SLZ.VFX;
 using UnityEngine;
 using YieldAwaitable = Cysharp.Threading.Tasks.YieldAwaitable;
 
@@ -33,15 +33,25 @@ namespace SLZ.Bonelab
 
 			private UniTask.Awaiter _003C_003Eu__2;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -57,15 +67,25 @@ namespace SLZ.Bonelab
 
 			private YieldAwaitable.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -79,15 +99,25 @@ namespace SLZ.Bonelab
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -113,15 +143,25 @@ namespace SLZ.Bonelab
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -137,15 +177,25 @@ namespace SLZ.Bonelab
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -169,15 +219,25 @@ namespace SLZ.Bonelab
 
 			private YieldAwaitable.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -193,15 +253,25 @@ namespace SLZ.Bonelab
 
 			private YieldAwaitable.Awaiter _003C_003Eu__2;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		[Header("Animator")]
 		public Animator animator;
@@ -295,8 +365,8 @@ namespace SLZ.Bonelab
 		[Range(10f, 22000f)]
 		public float cutoffFreqHigh;
 
-		[Header("AI")]
 		[HideInInspector]
+		[Header("AI")]
 		public List<AgentLinkControl> omniAi;
 
 		public bool omniRoam;

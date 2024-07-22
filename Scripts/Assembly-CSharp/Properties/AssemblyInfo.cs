@@ -13,3 +13,4 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription(null)]
 [assembly: AssemblyTitle("Triangle")]
 [assembly: Guid("96a540d0-1772-4bed-8d25-ef5fa23cd1bc")]
+[assembly: AssemblyVersion("1.0.0.0")]

@@ -11,8 +11,8 @@ namespace SLZ.Bonelab
 
 		public bool confirmer;
 
-		[Header("Leave empty unless override")]
 		[Space(10f)]
+		[Header("Leave empty unless override")]
 		public int clipToPlay;
 
 		public AudioClip clip_override_hover;

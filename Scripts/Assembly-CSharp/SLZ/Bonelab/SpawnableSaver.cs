@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
-using SLZ.VFX;
 using UnityEngine;
 
 namespace SLZ.Bonelab

@@ -104,23 +104,13 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void Initialize()
-		{
-		}
 
 		private void SpawnTarget(Transform prefab, Vector3 pos)
 		{
 		}
 
-		public void OnEpisodeBegin()
-		{
-		}
 
 		public void CollectObservationBodyPart(BodyPart bp, VectorSensor sensor)
-		{
-		}
-
-		public void CollectObservations(VectorSensor sensor)
 		{
 		}
 
@@ -131,11 +121,6 @@ namespace SLZ.MLAgents
 		private void ArmJump()
 		{
 		}
-
-		public void OnActionReceived(ActionBuffers actionBuffers)
-		{
-		}
-
 
 		private void FixedUpdate()
 		{

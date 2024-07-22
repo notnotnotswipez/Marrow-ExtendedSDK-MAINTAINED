@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using SLZ.Bonelab;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.AI;
 using SLZ.Marrow.Interaction;
 using SLZ.Marrow.PuppetMasta;

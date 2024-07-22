@@ -1,4 +1,5 @@
 using System.Runtime.CompilerServices;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Rig
@@ -205,7 +206,7 @@ namespace SLZ.Rig
 		{
 		}
 
-		public void WasdFixedUpdate(Rig rig)
+		public void WasdFixedUpdate(SLZ.Marrow.Rig rig)
 		{
 		}
 	}

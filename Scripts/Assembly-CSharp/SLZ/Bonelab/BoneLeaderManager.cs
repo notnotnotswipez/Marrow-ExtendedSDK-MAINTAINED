@@ -31,9 +31,6 @@ namespace SLZ.Bonelab
 		[CompilerGenerated]
 		private sealed class _003CCoWaitAndQuery_003Ed__63 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -58,7 +55,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoWaitAndQuery_003Ed__63(int _003C_003E1__state)
 			{
 			}
@@ -68,7 +67,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -77,14 +76,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoQueryTimeout_003Ed__65 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -109,7 +120,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoQueryTimeout_003Ed__65(int _003C_003E1__state)
 			{
 			}
@@ -119,7 +132,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -128,7 +141,22 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -144,15 +172,25 @@ public object Current { get; }
 
 			private TaskAwaiter<LeaderboardEntry[]> _003C_003Eu__2;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -170,34 +208,44 @@ public object Current { get; }
 
 			private TaskAwaiter<Leaderboard?> _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public LeaderMode leaderMode;
 
-		[SerializeField]
 		[Header("LEADERBOARD DATA")]
+		[SerializeField]
 		private List<BoneLeaderData> allLeaderDataList;
 
 		public BoneLeaderData currData;
 
 		[Header("OCULUS USER DATA")]
-		[Space(20f)]
 		[SerializeField]
+		[Space(20f)]
 		private ulong myID;
 
 		[SerializeField]
 		private string myOculusID;
 
-		[Header("STEAM USER DATA")]
 		[SerializeField]
+		[Header("STEAM USER DATA")]
 		private string steamName;
 
 		[SerializeField]
@@ -209,8 +257,8 @@ public object Current { get; }
 		[SerializeField]
 		private SteamFilter steamFilter;
 
-		[SerializeField]
 		[Header("PREFABS")]
+		[SerializeField]
 		private GameObject entryPrefab;
 
 		[SerializeField]
@@ -360,10 +408,6 @@ public object Current { get; }
 		{
 		}
 
-		public void UserLeaderboardCallback_Steam(LeaderboardEntry[] entries)
-		{
-		}
-
 		private void CreateBlankUserEntry()
 		{
 		}
@@ -410,13 +454,5 @@ public object Current { get; }
 		public void SubmitScoreToBoard(BoneLeaderData data, int score)
 		{
 		}
-	}
-
-	public class SteamId
-	{
-	}
-
-	public class LeaderboardEntry
-	{
 	}
 }

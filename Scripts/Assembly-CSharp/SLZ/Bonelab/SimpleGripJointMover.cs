@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -23,9 +23,6 @@ namespace SLZ.Bonelab
 		[CompilerGenerated]
 		private sealed class _003CCoMoveJointTarget_003Ed__14 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -62,7 +59,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoMoveJointTarget_003Ed__14(int _003C_003E1__state)
 			{
 			}
@@ -72,7 +71,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -81,14 +80,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoCheckGrip_003Ed__18 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -113,7 +124,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoCheckGrip_003Ed__18(int _003C_003E1__state)
 			{
 			}
@@ -123,7 +136,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -132,7 +145,22 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[SerializeField]
 		private MoveState moveState;

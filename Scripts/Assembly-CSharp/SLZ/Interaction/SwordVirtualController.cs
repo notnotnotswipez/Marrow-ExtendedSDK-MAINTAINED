@@ -1,4 +1,4 @@
-using SLZ.Combat;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Interaction

@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using PuppetMasta;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.AI;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.PuppetMasta;
@@ -41,7 +41,9 @@ namespace SLZ.MLAgents
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CBluntAttackStun_003Ed__54(int _003C_003E1__state)
 			{
 			}
@@ -56,30 +58,26 @@ namespace SLZ.MLAgents
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CSelfDespawn_003Ed__63 : IEnumerator<object>, IEnumerator, IDisposable
@@ -110,7 +108,9 @@ namespace SLZ.MLAgents
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CSelfDespawn_003Ed__63(int _003C_003E1__state)
 			{
 			}
@@ -125,30 +125,26 @@ namespace SLZ.MLAgents
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CSpoolCounter_003Ed__88 : IEnumerator<object>, IEnumerator, IDisposable
@@ -177,7 +173,9 @@ namespace SLZ.MLAgents
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CSpoolCounter_003Ed__88(int _003C_003E1__state)
 			{
 			}
@@ -192,30 +190,26 @@ namespace SLZ.MLAgents
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public Transform target;
 

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using UltEvents;
 using UnityEngine;
 using UnityEngine.Events;
@@ -17,7 +17,7 @@ namespace SLZ.Bonelab
 		{
 			public UnityEventInt()
 			{
-	
+				
 			}
 		}
 
@@ -44,9 +44,6 @@ namespace SLZ.Bonelab
 		[CompilerGenerated]
 		private sealed class _003CRolling_003Ed__24 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -71,7 +68,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CRolling_003Ed__24(int _003C_003E1__state)
 			{
 			}
@@ -81,7 +80,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -90,7 +89,22 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[SerializeField]
 		public UnityEventInt activeRoll;

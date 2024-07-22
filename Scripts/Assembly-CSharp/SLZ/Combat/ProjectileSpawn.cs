@@ -36,7 +36,9 @@ namespace SLZ.Combat
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoDelayFire_003Ed__5(int _003C_003E1__state)
 			{
 			}
@@ -46,30 +48,31 @@ namespace SLZ.Combat
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[Header("Options")]
 		public LayerMask collisionLayers;

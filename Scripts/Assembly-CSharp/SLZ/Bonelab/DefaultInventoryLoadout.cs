@@ -4,10 +4,9 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
-using SLZ.Player;
 using UnityEngine;
-using Spawnable = SLZ.Marrow.Data.Spawnable;
 
 namespace SLZ.Bonelab
 {
@@ -19,12 +18,6 @@ namespace SLZ.Bonelab
 			public string slotName;
 
 			public Spawnable spawnable;
-
-			public SlotSpawnPair(string slotName, Spawnable spawnable)
-			{
-				this.slotName = "";
-				this.spawnable = default(Spawnable);
-			}
 		}
 
 		[StructLayout(3)]
@@ -37,15 +30,25 @@ namespace SLZ.Bonelab
 
 			public DefaultInventoryLoadout _003C_003E4__this;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public Inventory inventory;
 

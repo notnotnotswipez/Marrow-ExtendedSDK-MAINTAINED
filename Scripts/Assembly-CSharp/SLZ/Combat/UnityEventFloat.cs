@@ -8,7 +8,7 @@ namespace SLZ.Combat
 	{
 		public UnityEventFloat()
 		{
-
+			
 		}
 	}
 }

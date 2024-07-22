@@ -24,8 +24,8 @@ namespace SLZ.MLAgents
 
 		private Coroutine _emitterCoroutine;
 
-		[Header("Inference Section")]
 		[Tooltip("The model manager that this spawner is associated with")]
+		[Header("Inference Section")]
 		public BarracudaModelManagerMono bmm;
 
 		[Tooltip("Scriptable object that holds model manager/spawner variable and model references")]

@@ -1,6 +1,5 @@
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
-using SLZ.SFX;
 using UnityEngine;
 
 namespace SLZ.Bonelab

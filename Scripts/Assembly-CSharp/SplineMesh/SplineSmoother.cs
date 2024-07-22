@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace SplineMesh
 {
-	[DisallowMultipleComponent]
 	[RequireComponent(typeof(Spline))]
 	[ExecuteInEditMode]
+	[DisallowMultipleComponent]
 	public class SplineSmoother : MonoBehaviour
 	{
 		private Spline spline;

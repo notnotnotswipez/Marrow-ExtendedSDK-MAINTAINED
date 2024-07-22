@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using SLZ.Bonelab.SaveData;
+using SLZ.Marrow;
 using SLZ.Marrow.Interaction;
+using SLZ.Marrow.SaveData;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -133,8 +134,6 @@ namespace SLZ.Bonelab
 		public LevelCrateReference MenuHollowCrateRef;
 
 		public LevelCrateReference VoidG114CrateRef;
-
-		public LevelCrateReference LevelLoaderCrateRef;
 
 		public GameObject button_Quit;
 

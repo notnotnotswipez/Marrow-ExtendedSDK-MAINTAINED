@@ -6,8 +6,6 @@ namespace SLZ.Bonelab
 	{
 		public PipeLODMap lodMap;
 
-		public MB3_MeshCombinerSettings meshCombinerSettings;
-
 		public GameObject LOD0Root;
 
 		[SerializeField]
@@ -15,9 +13,5 @@ namespace SLZ.Bonelab
 
 		[SerializeField]
 		private GameObject LOD2Root;
-	}
-
-	public class MB3_MeshCombinerSettings
-	{
 	}
 }

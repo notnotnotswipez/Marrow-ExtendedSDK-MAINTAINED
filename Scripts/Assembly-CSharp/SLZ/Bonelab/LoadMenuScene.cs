@@ -13,7 +13,7 @@ namespace SLZ.Bonelab
 	{
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CLoad_003Ed__5 : IAsyncStateMachine
+		private struct _003CLoad_003Ed__4 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -23,25 +23,33 @@ namespace SLZ.Bonelab
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		public LevelCrateReference MenuHollowCrateRef;
 
 		public LevelCrateReference VoidG114CrateRef;
 
-		public LevelCrateReference LevelLoaderCrateRef;
-
 		private static PlayerProgression p => null;
 
-		[AsyncStateMachine(typeof(_003CLoad_003Ed__5))]
+		[AsyncStateMachine(typeof(_003CLoad_003Ed__4))]
 		public UniTaskVoid Load()
 		{
 			return default(UniTaskVoid);

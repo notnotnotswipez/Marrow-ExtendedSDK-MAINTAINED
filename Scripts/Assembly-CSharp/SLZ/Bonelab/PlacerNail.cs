@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Zones;
-using SLZ.SFX;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -28,10 +28,7 @@ namespace SLZ.Bonelab
 			{
 			}
 		}
-
-		public override void OnSpawn(GameObject go)
-		{
-		}
+		
 
 		private void SetJoint(MarrowBody bodyA)
 		{

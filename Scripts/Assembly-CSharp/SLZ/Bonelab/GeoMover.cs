@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Pool;
-using SLZ.VFX;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,9 +16,6 @@ namespace SLZ.Bonelab
 		[CompilerGenerated]
 		private sealed class _003CCoMoveGeo_003Ed__31 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -51,7 +48,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoMoveGeo_003Ed__31(int _003C_003E1__state)
 			{
 			}
@@ -61,7 +60,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -70,14 +69,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoIncrementalMove_003Ed__33 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -112,7 +123,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoIncrementalMove_003Ed__33(int _003C_003E1__state)
 			{
 			}
@@ -122,7 +135,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -131,14 +144,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoSpawnBoxForest_003Ed__36 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -175,7 +200,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoSpawnBoxForest_003Ed__36(int _003C_003E1__state)
 			{
 			}
@@ -185,7 +212,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -194,7 +221,22 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public GeoManager geoManager;
 

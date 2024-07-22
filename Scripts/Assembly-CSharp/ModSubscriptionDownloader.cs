@@ -58,15 +58,25 @@ public class ModSubscriptionDownloader
 
 		private List<ModObject>.Enumerator _003C_003E7__wrap3;
 
-		public void MoveNext()
+		private void MoveNext()
 		{
 		}
 
-		[DebuggerHidden]
-		public void SetStateMachine(IAsyncStateMachine stateMachine)
+        void IAsyncStateMachine.MoveNext()
+        {
+            throw new NotImplementedException();
+        }
+
+        [DebuggerHidden]
+		private void SetStateMachine(IAsyncStateMachine stateMachine)
 		{
 		}
-	}
+
+        void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 	[StructLayout(3)]
 	[CompilerGenerated]
@@ -80,15 +90,25 @@ public class ModSubscriptionDownloader
 
 		private UniTask.Awaiter _003C_003Eu__1;
 
-		public void MoveNext()
+		private void MoveNext()
 		{
 		}
 
-		[DebuggerHidden]
-		public void SetStateMachine(IAsyncStateMachine stateMachine)
+        void IAsyncStateMachine.MoveNext()
+        {
+            throw new NotImplementedException();
+        }
+
+        [DebuggerHidden]
+		private void SetStateMachine(IAsyncStateMachine stateMachine)
 		{
 		}
-	}
+
+        void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 	[StructLayout(3)]
 	[CompilerGenerated]
@@ -102,15 +122,25 @@ public class ModSubscriptionDownloader
 
 		private UniTask.Awaiter _003C_003Eu__1;
 
-		public void MoveNext()
+		private void MoveNext()
 		{
 		}
 
-		[DebuggerHidden]
-		public void SetStateMachine(IAsyncStateMachine stateMachine)
+        void IAsyncStateMachine.MoveNext()
+        {
+            throw new NotImplementedException();
+        }
+
+        [DebuggerHidden]
+		private void SetStateMachine(IAsyncStateMachine stateMachine)
 		{
 		}
-	}
+
+        void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 	[CompilerGenerated]
 	private sealed class _003C_003Ec__DisplayClass37_0
@@ -162,15 +192,25 @@ public class ModSubscriptionDownloader
 
 		private UniTask.Awaiter _003C_003Eu__2;
 
-		public void MoveNext()
+		private void MoveNext()
 		{
 		}
 
-		[DebuggerHidden]
-		public void SetStateMachine(IAsyncStateMachine stateMachine)
+        void IAsyncStateMachine.MoveNext()
+        {
+            throw new NotImplementedException();
+        }
+
+        [DebuggerHidden]
+		private void SetStateMachine(IAsyncStateMachine stateMachine)
 		{
 		}
-	}
+
+        void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 	[StructLayout(3)]
 	[CompilerGenerated]
@@ -188,15 +228,25 @@ public class ModSubscriptionDownloader
 
 		private UniTask<Result<GetModsObject>[]>.Awaiter _003C_003Eu__2;
 
-		public void MoveNext()
+		private void MoveNext()
 		{
 		}
 
-		[DebuggerHidden]
-		public void SetStateMachine(IAsyncStateMachine stateMachine)
+        void IAsyncStateMachine.MoveNext()
+        {
+            throw new NotImplementedException();
+        }
+
+        [DebuggerHidden]
+		private void SetStateMachine(IAsyncStateMachine stateMachine)
 		{
 		}
-	}
+
+        void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 	[StructLayout(3)]
 	[CompilerGenerated]
@@ -224,15 +274,25 @@ public class ModSubscriptionDownloader
 
 		private UniTask<(bool hasResultLeft, (int winArgumentIndex, T result) result)>.Awaiter _003C_003Eu__2;
 
-		public void MoveNext()
+		private void MoveNext()
 		{
 		}
 
-		[DebuggerHidden]
-		public void SetStateMachine(IAsyncStateMachine stateMachine)
+        void IAsyncStateMachine.MoveNext()
+        {
+            throw new NotImplementedException();
+        }
+
+        [DebuggerHidden]
+		private void SetStateMachine(IAsyncStateMachine stateMachine)
 		{
 		}
-	}
+
+        void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 	private bool _isDownloading;
 

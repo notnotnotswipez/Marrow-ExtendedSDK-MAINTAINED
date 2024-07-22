@@ -12,9 +12,6 @@ namespace SLZ.Bonelab
 		[CompilerGenerated]
 		private sealed class _003CCoLightingPos_003Ed__14 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -39,7 +36,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoLightingPos_003Ed__14(int _003C_003E1__state)
 			{
 			}
@@ -49,7 +48,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -58,14 +57,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoLightningFX_003Ed__15 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -98,7 +109,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoLightningFX_003Ed__15(int _003C_003E1__state)
 			{
 			}
@@ -108,7 +121,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -117,7 +130,22 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[Header("Animation Stuff")]
 		[SerializeField]
@@ -129,8 +157,8 @@ public object Current { get; }
 		[SerializeField]
 		private GameObject targetObj;
 
-		[SerializeField]
 		[Header("FX")]
+		[SerializeField]
 		private GameObject lightningBoltObj;
 
 		[SerializeField]

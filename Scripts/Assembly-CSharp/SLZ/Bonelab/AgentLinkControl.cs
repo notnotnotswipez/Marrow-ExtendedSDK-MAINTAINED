@@ -24,7 +24,6 @@ namespace SLZ.Bonelab
 		[CompilerGenerated]
 		private sealed class _003CCoSearchForLink_003Ed__78 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -51,7 +50,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoSearchForLink_003Ed__78(int _003C_003E1__state)
 			{
 			}
@@ -61,40 +62,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoTriggerLink_003Ed__79 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -121,7 +117,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoTriggerLink_003Ed__79(int _003C_003E1__state)
 			{
 			}
@@ -131,40 +129,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoWaitForOccupation_003Ed__85 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -189,7 +182,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoWaitForOccupation_003Ed__85(int _003C_003E1__state)
 			{
 			}
@@ -199,40 +194,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoClimbBlock_003Ed__86 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -261,7 +251,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoClimbBlock_003Ed__86(int _003C_003E1__state)
 			{
 			}
@@ -271,40 +263,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoJump_003Ed__88 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -331,7 +318,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoJump_003Ed__88(int _003C_003E1__state)
 			{
 			}
@@ -341,40 +330,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoLaunch_003Ed__89 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -401,7 +385,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoLaunch_003Ed__89(int _003C_003E1__state)
 			{
 			}
@@ -411,40 +397,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoOmniJumpDown_003Ed__90 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -471,7 +452,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoOmniJumpDown_003Ed__90(int _003C_003E1__state)
 			{
 			}
@@ -481,40 +464,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoClimbBars_003Ed__91 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -541,7 +519,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoClimbBars_003Ed__91(int _003C_003E1__state)
 			{
 			}
@@ -551,40 +531,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoSlide_003Ed__92 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -609,7 +584,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoSlide_003Ed__92(int _003C_003E1__state)
 			{
 			}
@@ -619,40 +596,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoClimbLedge_003Ed__93 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -677,7 +649,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoClimbLedge_003Ed__93(int _003C_003E1__state)
 			{
 			}
@@ -687,40 +661,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoZipLineDown_003Ed__94 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -747,7 +716,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoZipLineDown_003Ed__94(int _003C_003E1__state)
 			{
 			}
@@ -757,40 +728,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoZipLineUp_003Ed__95 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -817,7 +783,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoZipLineUp_003Ed__95(int _003C_003E1__state)
 			{
 			}
@@ -827,40 +795,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoEscalate_003Ed__96 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -885,7 +848,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoEscalate_003Ed__96(int _003C_003E1__state)
 			{
 			}
@@ -895,40 +860,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoDistCovered_003Ed__97 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -953,7 +913,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoDistCovered_003Ed__97(int _003C_003E1__state)
 			{
 			}
@@ -963,35 +925,31 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoCheckLegsFallenState_003Ed__98 : IEnumerator<object>, IEnumerator, IDisposable
@@ -1022,7 +980,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoCheckLegsFallenState_003Ed__98(int _003C_003E1__state)
 			{
 			}
@@ -1032,40 +992,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoCheckCrabFallenState_003Ed__99 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -1090,7 +1045,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoCheckCrabFallenState_003Ed__99(int _003C_003E1__state)
 			{
 			}
@@ -1100,40 +1057,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoCrabJumpAttempt_003Ed__104 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -1162,7 +1114,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoCrabJumpAttempt_003Ed__104(int _003C_003E1__state)
 			{
 			}
@@ -1172,40 +1126,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoCrabZip_003Ed__105 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -1232,7 +1181,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoCrabZip_003Ed__105(int _003C_003E1__state)
 			{
 			}
@@ -1242,40 +1193,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoDespawnDeadEscalator_003Ed__111 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -1300,7 +1246,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoDespawnDeadEscalator_003Ed__111(int _003C_003E1__state)
 			{
 			}
@@ -1310,35 +1258,31 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		private bool isDebugging;
 
@@ -1346,8 +1290,8 @@ namespace SLZ.Bonelab
 
 		private bool isDebuggingFallenState;
 
-		[SerializeField]
 		[Header("Agent Data")]
+		[SerializeField]
 		private float totalMass;
 
 		[SerializeField]
@@ -1440,8 +1384,8 @@ namespace SLZ.Bonelab
 
 		private Coroutine escalatorRoutine;
 
-		[Header("Rigidbodies")]
 		[SerializeField]
+		[Header("Rigidbodies")]
 		public Rigidbody headRB;
 
 		[SerializeField]

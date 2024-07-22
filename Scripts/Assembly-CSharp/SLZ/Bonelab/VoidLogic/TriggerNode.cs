@@ -4,9 +4,9 @@ using UnityEngine;
 
 namespace SLZ.Bonelab.VoidLogic
 {
-	[AddComponentMenu("VoidLogic/Bonelab/Nodes/VoidLogic Trigger")]
-	[Support(SupportFlags.BetaSupported, "This works, but should use Marrow primitives.")]
 	[RequireComponent(typeof(Collider))]
+	[Support(SupportFlags.BetaSupported, "This works, but should use Marrow primitives.")]
+	[AddComponentMenu("VoidLogic/Bonelab/Nodes/VoidLogic Trigger")]
 	public class TriggerNode : BaseNode
 	{
 		public enum TriggerBehavior
@@ -20,24 +20,24 @@ namespace SLZ.Bonelab.VoidLogic
 		[SerializeField]
 		private TriggerBehavior _triggerBehavior;
 
-		[Tooltip("Limit trigger to a specific Layer. Ignored by Player or Npc Only")]
 		[SerializeField]
+		[Tooltip("Limit trigger to a specific Layer. Ignored by Player or Npc Only")]
 		private LayerMask _layerFilter;
 
 		private LayerMask _playerLayerMask;
 
 		private LayerMask _npcLayerMask;
 
-		[SerializeField]
 		[Tooltip("Limit trigger to player only")]
+		[SerializeField]
 		private bool _playerOnly;
 
-		[Tooltip("Limit trigger to player or NPC only")]
 		[SerializeField]
+		[Tooltip("Limit trigger to player or NPC only")]
 		private bool _playerOrNpcOnly;
 
-		[Tooltip("Limit trigger to a specific object collision. CONFLICTS WITH: Player Only")]
 		[SerializeField]
+		[Tooltip("Limit trigger to a specific object collision. CONFLICTS WITH: Player Only")]
 		private GameObject _triggerObject;
 
 		private bool _isTriggered;

@@ -14,7 +14,7 @@ public class LaserCursorJockey : MonoBehaviour
 	{
 		public int _003C_003E1__state;
 
-		public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+		public SLZ.Bonelab.AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
 
 		public bool active;
 
@@ -22,15 +22,25 @@ public class LaserCursorJockey : MonoBehaviour
 
 		private UniTask.Awaiter _003C_003Eu__1;
 
-		public void MoveNext()
+		private void MoveNext()
 		{
 		}
 
-		[DebuggerHidden]
-		public void SetStateMachine(IAsyncStateMachine stateMachine)
+        void IAsyncStateMachine.MoveNext()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        [DebuggerHidden]
+		private void SetStateMachine(IAsyncStateMachine stateMachine)
 		{
 		}
-	}
+
+        void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 
 	public LaserCursor laserCursor;
 

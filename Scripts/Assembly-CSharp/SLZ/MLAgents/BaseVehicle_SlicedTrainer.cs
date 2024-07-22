@@ -8,8 +8,8 @@ namespace SLZ.MLAgents
 {
 	public class BaseVehicle_SlicedTrainer : Agent
 	{
-		[Header("Reward Section")]
 		[Header("Base Vehicle Trainer Class")]
+		[Header("Reward Section")]
 		public bool log_cum_reward;
 
 		[Header("Base Agent Components")]
@@ -52,9 +52,6 @@ namespace SLZ.MLAgents
 
 		private int temp;
 
-		public void Initialize()
-		{
-		}
 
 		public virtual void InitComponents()
 		{
@@ -80,15 +77,8 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void CollectObservations(VectorSensor sensor)
-		{
-		}
 
 		private void UpdateOrientationObjects()
-		{
-		}
-
-		public void OnActionReceived(ActionBuffers actionBuffers)
 		{
 		}
 

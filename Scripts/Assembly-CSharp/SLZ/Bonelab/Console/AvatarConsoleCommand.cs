@@ -7,7 +7,7 @@ namespace SLZ.Bonelab.Console
 	[ConsoleCommand("__builtin", "avatar", "Switch into avatar")]
 	public class AvatarConsoleCommand : BaseConsoleCommand
 	{
-		protected override (CommandStatus, string, object) ParseTokenAtIndex(List<(string, object)> previousTokens, int index, string token)
+		protected override (CommandStatus, string, object) ParseTokenAtIndex(List<(string token, object parsed)> previousTokens, int index, string token)
 		{
 			return default((CommandStatus, string, object));
 		}

@@ -1,4 +1,4 @@
-using SLZ.VRMK;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -25,12 +25,12 @@ namespace SLZ.Bonelab
 
 		public Transform targetHand;
 
-		[Range(1.001f, 3f)]
 		[Tooltip("Maximum factor the arms can be stretched by. Default 1.05")]
+		[Range(1.001f, 3f)]
 		public float maxStretchFactor;
 
-		[Range(0f, 1f)]
 		[Tooltip("Percentage of arm length where stretching starts. Default 0.8")]
+		[Range(0f, 1f)]
 		public float stretchThreshold;
 
 		[Range(1f, 4f)]

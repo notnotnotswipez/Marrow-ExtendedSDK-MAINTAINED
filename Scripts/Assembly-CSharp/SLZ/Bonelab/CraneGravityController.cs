@@ -1,5 +1,5 @@
+using SLZ.Marrow;
 using SLZ.Marrow.Audio;
-using SLZ.SFX;
 using UnityEngine;
 
 namespace SLZ.Bonelab

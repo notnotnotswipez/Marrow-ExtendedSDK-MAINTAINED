@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.CompilerServices;
 using SLZ.Algorithms.Unity;
 using SLZ.Marrow.VoidLogic;
@@ -5,14 +6,15 @@ using UnityEngine;
 
 namespace SLZ.Bonelab.VoidLogic
 {
-	[AddComponentMenu(null)]
 	[Support(SupportFlags.Unsupported, null)]
-	public sealed class OneOffThruster : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, IVoidLogicActuator
+	[AddComponentMenu(null)]
+	public sealed class OneOffThruster : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, ISerializationCallbackReceiver, IVoidLogicActuator
 	{
-		[SerializeField]
-		[Interface(typeof(IVoidLogicSource), false)]
+		[Obsolete("Replace with `_previousConnections`")]
 		[Tooltip("Previous node(s) in the chain")]
-		internal MonoBehaviour[] _previous;
+		[Interface(typeof(IVoidLogicSource), false)]
+		[SerializeField]
+		private MonoBehaviour[] _previous;
 
 		[SerializeField]
 		private ForceMode forceMode;
@@ -27,8 +29,6 @@ namespace SLZ.Bonelab.VoidLogic
 		private Rigidbody _target;
 
 		private static readonly PortMetadata _portMetadata;
-
-		public PortMetadata PortMetadata { get; }
 
 		public VoidLogicSubgraph Subgraph
 		{
@@ -46,6 +46,16 @@ namespace SLZ.Bonelab.VoidLogic
 		public int InputCount => 0;
 
 		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
+
+        public PortMetadata PortMetadata => throw new NotImplementedException();
+
+        private void UnityEngine_002EISerializationCallbackReceiver_002EOnBeforeSerialize()
+		{
+		}
+
+		private void UnityEngine_002EISerializationCallbackReceiver_002EOnAfterDeserialize()
+		{
+		}
 
 		private void Awake()
 		{
@@ -67,15 +77,19 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
-		{
-			input = null;
-			return false;
-		}
+        public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
+        {
+            throw new NotImplementedException();
+        }
 
-		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
-		{
-			return false;
+        public void OnBeforeSerialize()
+        {
+
+        }
+
+        public void OnAfterDeserialize()
+        {
+
 		}
-	}
+    }
 }

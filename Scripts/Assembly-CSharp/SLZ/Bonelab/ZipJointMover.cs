@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -21,7 +21,6 @@ namespace SLZ.Bonelab
 		[CompilerGenerated]
 		private sealed class _003CCoMoveJoint_003Ed__40 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -56,7 +55,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoMoveJoint_003Ed__40(int _003C_003E1__state)
 			{
 			}
@@ -66,40 +67,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoMoveJointDown_003Ed__41 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -132,7 +128,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoMoveJointDown_003Ed__41(int _003C_003E1__state)
 			{
 			}
@@ -142,59 +140,96 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoCheckGrip_003Ed__42 : IEnumerator<object>, IEnumerator, IDisposable
 		{
+			private int _003C_003E1__state;
 
-			public bool MoveNext()
+			private object _003C_003E2__current;
+
+			public ZipJointMover _003C_003E4__this;
+
+			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
 			{
-				throw new NotImplementedException();
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
 			}
 
-			public void Reset()
+			private object System_002ECollections_002EIEnumerator_002ECurrent
 			{
-				throw new NotImplementedException();
+				[DebuggerHidden]
+				get
+				{
+					return null;
+				}
 			}
 
-			public object Current { get; }
+            public object Current => throw new NotImplementedException();
 
-			object IEnumerator.Current => Current;
-
-			public void Dispose()
+            [DebuggerHidden]
+			public _003CCoCheckGrip_003Ed__42(int _003C_003E1__state)
 			{
-				throw new NotImplementedException();
 			}
-		}
+
+			[DebuggerHidden]
+			private void System_002EIDisposable_002EDispose()
+			{
+			}
+
+			private bool MoveNext()
+			{
+				return false;
+			}
+
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
+			{
+			}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		private Vector3 localVel;
 

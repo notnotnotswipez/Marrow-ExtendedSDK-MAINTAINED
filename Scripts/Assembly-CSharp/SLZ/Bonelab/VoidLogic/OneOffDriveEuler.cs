@@ -1,3 +1,4 @@
+using System;
 using System.Runtime.CompilerServices;
 using SLZ.Algorithms.Unity;
 using SLZ.Marrow.VoidLogic;
@@ -5,21 +6,20 @@ using UnityEngine;
 
 namespace SLZ.Bonelab.VoidLogic
 {
-	[Support(SupportFlags.Unsupported, "This is a one-off for testing.")]
 	[AddComponentMenu(null)]
-	public sealed class OneOffDriveEuler : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, IVoidLogicActuator
+	[Support(SupportFlags.Unsupported, "This is a one-off for testing.")]
+	public sealed class OneOffDriveEuler : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, ISerializationCallbackReceiver, IVoidLogicActuator
 	{
 		[Interface(typeof(IVoidLogicSource), false)]
 		[SerializeField]
 		[Tooltip("Previous node(s) in the chain")]
-		internal MonoBehaviour[] _previous;
+		[Obsolete("Replace with `_previousConnections`")]
+		private MonoBehaviour[] _previous;
 
 		[SerializeField]
 		private ConfigurableJoint target;
 
 		private static readonly PortMetadata _portMetadata;
-
-		public PortMetadata PortMetadata { get; }
 
 		public VoidLogicSubgraph Subgraph
 		{
@@ -37,6 +37,20 @@ namespace SLZ.Bonelab.VoidLogic
 		public int InputCount => 0;
 
 		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
+
+        int IVoidLogicSink.InputCount => throw new NotImplementedException();
+
+        PortMetadata IVoidLogicNode.PortMetadata => throw new NotImplementedException();
+
+        VoidLogicSubgraph IVoidLogicNode.Subgraph { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
+        private void UnityEngine_002EISerializationCallbackReceiver_002EOnBeforeSerialize()
+		{
+		}
+
+		private void UnityEngine_002EISerializationCallbackReceiver_002EOnAfterDeserialize()
+		{
+		}
 
 		private void Awake()
 		{
@@ -58,15 +72,19 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
-		{
-			input = null;
-			return false;
-		}
+        bool IVoidLogicSink.TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
+        {
+            throw new NotImplementedException();
+        }
 
-		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
-		{
-			return false;
-		}
-	}
+        public void OnBeforeSerialize()
+        {
+            
+        }
+
+        public void OnAfterDeserialize()
+        {
+            
+        }
+    }
 }

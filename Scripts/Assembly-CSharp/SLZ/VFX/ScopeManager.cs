@@ -12,8 +12,8 @@ namespace SLZ.VFX
 
 		private RenderTexture camRT;
 
-		[Range(0f, 10f)]
 		[SerializeField]
+		[Range(0f, 10f)]
 		public int frameskip;
 
 		[SerializeField]

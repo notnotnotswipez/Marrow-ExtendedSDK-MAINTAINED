@@ -18,7 +18,7 @@ namespace MK.Glow.URP
 
 			public RenderPriorityParameter()
 			{
-
+				
 			}
 		}
 
@@ -31,7 +31,7 @@ namespace MK.Glow.URP
 
 			public Texture2DParameter()
 			{
-
+				
 			}
 		}
 
@@ -44,7 +44,7 @@ namespace MK.Glow.URP
 
 			public DebugViewParameter()
 			{
-
+				
 			}
 		}
 
@@ -57,7 +57,7 @@ namespace MK.Glow.URP
 
 			public QualityParameter()
 			{
-
+				
 			}
 		}
 
@@ -70,7 +70,7 @@ namespace MK.Glow.URP
 
 			public AntiFlickerModeParameter()
 			{
-
+				
 			}
 		}
 
@@ -83,7 +83,7 @@ namespace MK.Glow.URP
 
 			public WorkflowParameter()
 			{
-
+				
 			}
 		}
 
@@ -96,7 +96,7 @@ namespace MK.Glow.URP
 
 			public LayerMaskParameter()
 			{
-	
+				
 			}
 		}
 
@@ -109,7 +109,7 @@ namespace MK.Glow.URP
 
 			public MinMaxRangeParameter()
 			{
-		
+				
 			}
 		}
 
@@ -122,7 +122,7 @@ namespace MK.Glow.URP
 
 			public GlareStyleParameter()
 			{
-
+				
 			}
 		}
 
@@ -135,7 +135,7 @@ namespace MK.Glow.URP
 
 			public LensFlareStyleParameter()
 			{
-
+				
 			}
 		}
 

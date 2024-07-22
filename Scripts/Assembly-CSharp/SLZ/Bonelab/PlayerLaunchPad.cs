@@ -1,5 +1,4 @@
 using System;
-using SLZ.Rig;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -12,14 +11,7 @@ namespace SLZ.Bonelab
 
 			public readonly float timeToTarget;
 
-			public LaunchData(Vector3 initialVelocity, float timeToTarget)
-			{
-				this.initialVelocity = initialVelocity;
-				this.timeToTarget = timeToTarget;
-			}
 		}
-
-		public RigManager rigManager;
 
 		public Rigidbody[] playerBodies;
 

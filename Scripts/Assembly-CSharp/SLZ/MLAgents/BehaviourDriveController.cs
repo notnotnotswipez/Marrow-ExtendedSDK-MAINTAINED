@@ -5,8 +5,8 @@ namespace SLZ.MLAgents
 {
 	public class BehaviourDriveController : MonoBehaviour
 	{
-		[Header("Joint Drive Settings")]
 		[Space(10f)]
+		[Header("Joint Drive Settings")]
 		private float m_FacingDot;
 
 		[HideInInspector]

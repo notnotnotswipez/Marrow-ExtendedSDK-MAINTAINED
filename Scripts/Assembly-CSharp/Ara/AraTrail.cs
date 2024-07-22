@@ -53,13 +53,6 @@ namespace Ara
 
 			public Vector3 tangent;
 
-			public CurveFrame(Vector3 position, Vector3 normal, Vector3 bitangent, Vector3 tangent)
-			{
-				this.position = position;
-				this.normal = normal;
-				this.bitangent = bitangent;
-				this.tangent = tangent;
-			}
 
 			public Vector3 Transport(Vector3 newTangent, Vector3 newPosition)
 			{
@@ -87,18 +80,6 @@ namespace Ara
 
 			public bool discontinuous;
 
-			public Point(Vector3 position, Vector3 velocity, Vector3 tangent, Vector3 normal, Color color, float thickness, float texcoord, float lifetime)
-			{
-				this.position = position;
-				this.velocity = velocity;
-				this.tangent = tangent;
-				this.normal = normal;
-				this.color = Color.white;
-				this.thickness = thickness;
-				this.texcoord = texcoord;
-				this.life = lifetime;
-				this.discontinuous = false;
-			}
 
 			public static float CatmullRom(float p0, float p1, float p2, float p3, float t)
 			{
@@ -140,8 +121,8 @@ namespace Ara
 		[Tooltip("Thickness multiplier, in meters.")]
 		public float thickness;
 
-		[Tooltip("Amount of smoothing iterations applied to the trail shape.")]
 		[Range(1f, 8f)]
+		[Tooltip("Amount of smoothing iterations applied to the trail shape.")]
 		public int smoothness;
 
 		[Tooltip("Calculate accurate thickness at sharp corners.")]
@@ -159,8 +140,8 @@ namespace Ara
 		[FormerlySerializedAs("colorOverLenght")]
 		public Gradient colorOverLength;
 
-		[Header("Time")]
 		[Tooltip("How should the thickness of the curve evolve with its lifetime. The horizontal axis is normalized lifetime (in the [0,1] range) and the vertical axis is a thickness multiplier.")]
+		[Header("Time")]
 		public AnimationCurve thicknessOverTime;
 
 		[Tooltip("How should vertex color evolve over the trail's lifetime.")]
@@ -201,8 +182,8 @@ namespace Ara
 		[Range(0f, 1f)]
 		public float inertia;
 
-		[Range(0f, 1f)]
 		[Tooltip("Amount of temporal smoothing applied to the velocity transferred from the transform to the trail.")]
+		[Range(0f, 1f)]
 		public float velocitySmoothing;
 
 		[Tooltip("Amount of damping applied to the trail's velocity. Larger values will slow down the trail more as time passes.")]
@@ -218,8 +199,8 @@ namespace Ara
 
 		public bool useLightProbes;
 
-		[Header("Texture")]
 		[Tooltip("Quad mapping will send the shader an extra coordinate for each vertex, that can be used to correct UV distortion using tex2Dproj.")]
+		[Header("Texture")]
 		public bool quadMapping;
 
 		[Tooltip("How to apply the texture over the trail: stretch it all over its lenght, or tile it.")]
@@ -231,8 +212,8 @@ namespace Ara
 		[Tooltip("Defines how many times are V coords repeated trough the width of the trail.")]
 		public float uvWidthFactor;
 
-		[Range(0f, 1f)]
 		[Tooltip("When the texture mode is set to 'Tile', defines where to begin tiling from: 0 means the start of the trail, 1 means the end.")]
+		[Range(0f, 1f)]
 		public float tileAnchor;
 
 		[HideInInspector]

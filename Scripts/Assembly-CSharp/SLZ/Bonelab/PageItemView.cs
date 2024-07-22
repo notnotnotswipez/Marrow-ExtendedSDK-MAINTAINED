@@ -14,8 +14,8 @@ namespace SLZ.Bonelab
 			EIGHTH = 4
 		}
 
-		[ColorUsage(true, true)]
 		[Header("Options")]
+		[ColorUsage(true, true)]
 		public Color highlightColor1;
 
 		[ColorUsage(true, true)]

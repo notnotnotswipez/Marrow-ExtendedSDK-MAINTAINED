@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.AI;
-using SLZ.SFX;
 using UnityEngine;
 
 namespace SLZ.Bonelab

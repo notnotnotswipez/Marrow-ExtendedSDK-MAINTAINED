@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
@@ -83,7 +84,9 @@ namespace SLZ.Interaction
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoEjectMagazine_003Ed__47(int _003C_003E1__state)
 			{
 			}
@@ -98,30 +101,26 @@ namespace SLZ.Interaction
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoWaitLockMagazine_003Ed__48 : IEnumerator<object>, IEnumerator, IDisposable
@@ -164,7 +163,9 @@ namespace SLZ.Interaction
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoWaitLockMagazine_003Ed__48(int _003C_003E1__state)
 			{
 			}
@@ -179,30 +180,26 @@ namespace SLZ.Interaction
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoSelfDestructJoint_003Ed__49 : IEnumerator<object>, IEnumerator, IDisposable
@@ -237,7 +234,9 @@ namespace SLZ.Interaction
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoSelfDestructJoint_003Ed__49(int _003C_003E1__state)
 			{
 			}
@@ -252,30 +251,26 @@ namespace SLZ.Interaction
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[Header("References")]
 		public MarrowEntity marrowEntity;

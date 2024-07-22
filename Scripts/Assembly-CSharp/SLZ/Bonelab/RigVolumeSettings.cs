@@ -6,7 +6,7 @@ namespace SLZ.Bonelab
 	[RequireComponent(typeof(Volume))]
 	public class RigVolumeSettings : MonoBehaviour
 	{
-		private void Awake()
+		private void Start()
 		{
 		}
 	}

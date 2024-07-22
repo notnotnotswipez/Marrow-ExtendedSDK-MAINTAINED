@@ -18,8 +18,8 @@ namespace PathCreation
 			Automatic = 3
 		}
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		private List<Vector3> points;
 
 		[HideInInspector]
@@ -30,32 +30,32 @@ namespace PathCreation
 		[SerializeField]
 		private PathSpace space;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		private ControlMode controlMode;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		private float autoControlLength;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		private bool boundsUpToDate;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		private Bounds bounds;
 
 		[SerializeField]
 		[HideInInspector]
 		private List<float> perAnchorNormalsAngle;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		private float globalNormalsAngle;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		private bool flipNormals;
 
 		public Vector3 Item => default(Vector3);

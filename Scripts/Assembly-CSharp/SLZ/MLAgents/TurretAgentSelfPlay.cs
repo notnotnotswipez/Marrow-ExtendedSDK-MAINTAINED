@@ -42,10 +42,6 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void OnEpisodeBegin()
-		{
-		}
-
 		private void FixedUpdate()
 		{
 		}
@@ -75,13 +71,6 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void CollectObservations(VectorSensor sensor)
-		{
-		}
-
-		public void OnActionReceived(ActionBuffers actionBuffers)
-		{
-		}
 
 		private void ShootBullet()
 		{

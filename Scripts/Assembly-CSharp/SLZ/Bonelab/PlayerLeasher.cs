@@ -1,6 +1,6 @@
+using SLZ.Marrow;
 using SLZ.Marrow.SceneStreaming;
 using SLZ.Marrow.Zones;
-using SLZ.Rig;
 using UnityEngine;
 
 namespace SLZ.Bonelab

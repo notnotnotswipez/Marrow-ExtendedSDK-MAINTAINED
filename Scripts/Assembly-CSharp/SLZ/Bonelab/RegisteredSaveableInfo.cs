@@ -7,8 +7,8 @@ namespace SLZ.Bonelab
 	[Serializable]
 	public class RegisteredSaveableInfo
 	{
-		[ReadOnly(false)]
 		[SerializeField]
+		[ReadOnly(false)]
 		private Saveable _saveable;
 
 		[SerializeField]

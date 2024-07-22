@@ -44,7 +44,11 @@ namespace TriangleNet
 				}
 			}
 
-			[DebuggerHidden]
+            public Edge Current => throw new NotImplementedException();
+
+            object IEnumerator.Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003Cget_Edges_003Ed__39(int _003C_003E1__state)
 			{
 			}
@@ -54,19 +58,10 @@ namespace TriangleNet
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public Edge Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
@@ -85,21 +80,36 @@ namespace TriangleNet
 				return null;
 			}
 
-			public IEnumerator<Edge> GetEnumerator()
-			{
-				throw new NotImplementedException();
-			}
+            public IEnumerator GetEnumerator()
+            {
+                throw new NotImplementedException();
+            }
 
-			IEnumerator IEnumerable.GetEnumerator()
-			{
-				return GetEnumerator();
-			}
+            IEnumerator<Edge> IEnumerable<Edge>.GetEnumerator()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            IEnumerator IEnumerable.GetEnumerator()
+            {
+                throw new NotImplementedException();
+            }
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		private IPredicates predicates;
 

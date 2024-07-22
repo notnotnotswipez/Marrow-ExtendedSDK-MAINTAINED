@@ -23,14 +23,6 @@ namespace SLZ.Bonelab
 
 			private List<Texture2D> totalTextureSet;
 
-			public ObjectDebug(GameObject inputGameobject, List<Renderer> renderers, Dictionary<Renderer, MeshFilter> staticRendererFilterFix = null)
-			{
-				this.gameObject = null;
-				this.rendererDebugs = null;
-				this.totalMemory = 0;
-				this.totalTextureMemory = 0;
-				this.totalTextureSet = null;
-			}
 
 			public void CalcTotalMemory()
 			{
@@ -52,15 +44,6 @@ namespace SLZ.Bonelab
 
 			private List<Texture2D> totalTextureSet;
 
-			public ObjectRendererDebug(Renderer rendererInput)
-			{
-				this.gameObject = null;
-				this.renderer = null;
-				this.filter = null;
-				this.totalTextureMemory = 0;
-				this.totalTextureSet = null;
-				this.materials = null;
-			}
 
 			public void CalcTotalMemory()
 			{
@@ -82,15 +65,6 @@ namespace SLZ.Bonelab
 
 			private List<Texture2D> totalTextureSet;
 
-			public ObjectMaterialDebug(Material materialInput)
-			{
-				this.materialName = null;
-				this.material = null;
-				this.materialTextures = null;
-				this.totalTextureMemory = 0;
-				this.totalTextureSet = null;
-				this.mainTexture = null;
-			}
 
 			public void CalcTotalMemory()
 			{
@@ -120,14 +94,6 @@ namespace SLZ.Bonelab
 
 			private int lastMipLevel;
 
-			public MaterialTexture(string shaderPropName, Texture2D tex)
-			{
-				this.shaderPropertyName = null;
-				this.texture = null;
-				this.textureMemory = 0;
-				this.customMip = false;
-				this.lastMipLevel = -1;
-			}
 
 			public void SetCustomMip(int level)
 			{
@@ -166,7 +132,6 @@ namespace SLZ.Bonelab
 			public Image desiredMipImage;
 
 			public Image loadedMipImage;
-
 
 		}
 
@@ -280,8 +245,8 @@ namespace SLZ.Bonelab
 		public bool selectNextRenderer;
 
 		[Header("Runtime Values")]
-		[SerializeField]
 		[ReadOnly(false)]
+		[SerializeField]
 		private Camera activeCamera;
 
 		[SerializeField]
@@ -292,8 +257,8 @@ namespace SLZ.Bonelab
 		[TextArea(2, 20)]
 		private string debugGlobalText;
 
-		[TextArea(2, 20)]
 		[SerializeField]
+		[TextArea(2, 20)]
 		private string debugModeText;
 
 		[SerializeField]
@@ -302,16 +267,16 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private ObjectRendererDebug? selectedRenderer;
 
-		[SerializeField]
 		[ReadOnly(false)]
+		[SerializeField]
 		private int selectedRendererIndex;
 
-		[SerializeField]
 		[ReadOnly(false)]
+		[SerializeField]
 		private int budget;
 
-		[SerializeField]
 		[ReadOnly(false)]
+		[SerializeField]
 		private int maxLevelReduction;
 
 		[ReadOnly(false)]

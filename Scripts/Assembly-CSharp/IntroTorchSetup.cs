@@ -20,25 +20,31 @@ public class IntroTorchSetup : SpawnDecorator
 
 		private UniTask.Awaiter _003C_003Eu__1;
 
-		public void MoveNext()
+		private void MoveNext()
 		{
 		}
 
-		[DebuggerHidden]
-		public void SetStateMachine(IAsyncStateMachine stateMachine)
+        void IAsyncStateMachine.MoveNext()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        [DebuggerHidden]
+		private void SetStateMachine(IAsyncStateMachine stateMachine)
 		{
 		}
-	}
+
+        void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 
 	public Rigidbody attachPoint;
 
 	public int index;
 
 	private ConfigurableJoint _torchJoint;
-
-	public override void OnSpawn(GameObject go)
-	{
-	}
 
 	private void SetJoint(ConfigurableJoint joint, Rigidbody _connectedBody)
 	{

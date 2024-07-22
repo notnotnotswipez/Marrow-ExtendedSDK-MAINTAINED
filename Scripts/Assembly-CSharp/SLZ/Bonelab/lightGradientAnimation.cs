@@ -30,24 +30,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		protected void OnEnable()
-		{
-		}
-
-		protected void OnDisable()
-		{
-		}
 
 		private void Update()
 		{
 		}
 
-		protected void OnEnter(MarrowEntity activatorEntity)
-		{
-		}
-
-		protected void OnExit(MarrowEntity activatorEntity)
-		{
-		}
 	}
 }

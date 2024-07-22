@@ -64,21 +64,16 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void Initialize()
-		{
-		}
 
 		private void Awake()
 		{
 		}
 
-		public void OnEpisodeBegin()
-		{
-		}
 
 		public void MoveAgent(ActionSegment<int> act)
 		{
 		}
+
 
 		private void FixedUpdate()
 		{
@@ -88,13 +83,6 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void OnActionReceived(ActionBuffers actionBuffers)
-		{
-		}
-
-		public void CollectObservations(VectorSensor sensor)
-		{
-		}
 
 		private void AgentCollisionLoss()
 		{

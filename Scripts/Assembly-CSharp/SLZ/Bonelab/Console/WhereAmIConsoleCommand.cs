@@ -12,7 +12,6 @@ namespace SLZ.Bonelab.Console
 	[ConsoleCommand("__builtin", "whereami", "Display current coordinates")]
 	public class WhereAmIConsoleCommand : BaseConsoleCommand
 	{
-		[StructLayout((ushort)0, Size = 1)]
 		private struct WriteToLog : IAsyncWriter<object>
 		{
 			public UniTask YieldAsync(object value)
@@ -35,19 +34,27 @@ namespace SLZ.Bonelab.Console
 
 			private UniTask.Awaiter _003C_003Eu__2;
 
-
-			public void MoveNext()
+			private void MoveNext()
 			{
-				throw new System.NotImplementedException();
 			}
 
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-				throw new System.NotImplementedException();
-			}
-		}
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
 
-		protected override (CommandStatus, string, object) ParseTokenAtIndex(List<(string, object)> previousTokens, int index, string token)
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
+
+		protected override (CommandStatus, string, object) ParseTokenAtIndex(List<(string token, object parsed)> previousTokens, int index, string token)
 		{
 			return default((CommandStatus, string, object));
 		}

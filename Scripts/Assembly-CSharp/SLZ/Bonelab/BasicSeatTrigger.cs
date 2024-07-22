@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Rig;
-using SLZ.Vehicle;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -14,7 +13,6 @@ namespace SLZ.Bonelab
 		[CompilerGenerated]
 		private sealed class _003CYoinkCoroutine_003Ed__23 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -41,7 +39,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CYoinkCoroutine_003Ed__23(int _003C_003E1__state)
 			{
 			}
@@ -51,35 +51,31 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		private RigManager rM;
 

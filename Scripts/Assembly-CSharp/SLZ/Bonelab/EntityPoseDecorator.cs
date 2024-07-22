@@ -11,8 +11,5 @@ namespace SLZ.Bonelab
 
 		public MarrowEntity _entity;
 
-		public override void OnSpawn(GameObject go)
-		{
-		}
 	}
 }

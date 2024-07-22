@@ -1,6 +1,6 @@
+using SLZ.Marrow;
 using SLZ.Marrow.SceneStreaming;
 using SLZ.Marrow.Zones;
-using SLZ.Player;
 using UltEvents;
 using UnityEngine;
 
@@ -8,8 +8,8 @@ namespace SLZ.Bonelab
 {
 	public class PlayerHealthDecorator : MonoBehaviour, ISpawnListenable
 	{
-		[Header("This is a stop gap script. Should be rolled into a player marker manager eventually \n \nThe player by Default is Mortal and Level Reloads on Death \nAlso rotates the player to the correct orientation\n")]
 		[SerializeField]
+		[Header("This is a stop gap script. Should be rolled into a player marker manager eventually \n \nThe player by Default is Mortal and Level Reloads on Death \nAlso rotates the player to the correct orientation\n")]
 		private PlayerMarker _playerMarker;
 
 		[SerializeField]

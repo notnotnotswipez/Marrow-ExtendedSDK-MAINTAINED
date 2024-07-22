@@ -20,9 +20,6 @@ namespace SLZ.Bonelab
 
 		public bool rateSingle;
 
-		public override void OnSpawn(GameObject go)
-		{
-		}
 
 		private void SetUpDispenser(AmmoDispenser aD)
 		{

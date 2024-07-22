@@ -8,6 +8,7 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using PuppetMasta;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.PuppetMasta;
 using UnityEngine;
@@ -73,15 +74,25 @@ namespace SLZ.Bonelab
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -97,22 +108,29 @@ namespace SLZ.Bonelab
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoFlicker_003Ed__53 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -141,7 +159,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoFlicker_003Ed__53(int _003C_003E1__state)
 			{
 			}
@@ -151,7 +171,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -160,14 +180,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoFlickerSin_003Ed__54 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -196,7 +228,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoFlickerSin_003Ed__54(int _003C_003E1__state)
 			{
 			}
@@ -206,7 +240,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -215,7 +249,22 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[Header("Omni Settings")]
 		public float scaleFactor;

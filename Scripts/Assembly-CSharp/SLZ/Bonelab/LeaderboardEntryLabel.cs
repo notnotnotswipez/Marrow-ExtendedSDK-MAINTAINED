@@ -36,13 +36,6 @@ namespace SLZ.Bonelab
 
 		public int itemIndex;
 
-		public void PopulateBoneUserText_Steam(LeaderboardEntry entry, BoneLeaderData data, BoneLeaderManager manager, bool displayPanel)
-		{
-		}
-
-		public void PopulateBoneText_Steam(LeaderboardEntry entry, bool displayPanel, bool isUser, BoneLeaderData data)
-		{
-		}
 
 		public void PopulateBlankUserBoneText(BoneLeaderData data, BoneLeaderManager manager, bool displayPanel)
 		{

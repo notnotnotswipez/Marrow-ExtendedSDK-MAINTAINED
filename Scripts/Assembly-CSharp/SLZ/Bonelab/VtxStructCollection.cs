@@ -52,7 +52,6 @@ namespace SLZ.Bonelab
 		{
 			public SerializedVtxAttrDesc[] desc;
 
-	
 
 			public ulong GetLongHashCode()
 			{
@@ -75,11 +74,8 @@ namespace SLZ.Bonelab
 		public struct SerializedVtxAttrDesc
 		{
 			public VertexAttribute attribute;
-			
 			public VertexAttributeFormat format;
-			
 			public int dimension;
-
 			public int stream;
 		}
 

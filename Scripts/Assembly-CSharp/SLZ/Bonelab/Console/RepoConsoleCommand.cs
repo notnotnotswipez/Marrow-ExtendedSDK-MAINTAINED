@@ -32,17 +32,25 @@ namespace SLZ.Bonelab.Console
 
 			private UniTask<List<(int lineNumber, Uri url)>>.Awaiter _003C_003Eu__2;
 
-
-			public void MoveNext()
+			private void MoveNext()
 			{
-				throw new NotImplementedException();
 			}
 
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
-				throw new NotImplementedException();
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003C_003Ec__DisplayClass3_0
@@ -83,17 +91,25 @@ namespace SLZ.Bonelab.Console
 
 			private ValueTaskAwaiter _003C_003Eu__3;
 
-
-			public void MoveNext()
+			private void MoveNext()
 			{
-				throw new NotImplementedException();
 			}
 
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
-				throw new NotImplementedException();
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -113,19 +129,27 @@ namespace SLZ.Bonelab.Console
 
 			private TaskAwaiter _003C_003Eu__2;
 
-
-			public void MoveNext()
+			private void MoveNext()
 			{
-				throw new NotImplementedException();
 			}
 
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-				throw new NotImplementedException();
-			}
-		}
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-		protected override (CommandStatus, string, object) ParseTokenAtIndex(List<(string, object)> previousTokens, int index, string token)
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+		protected override (CommandStatus, string, object) ParseTokenAtIndex(List<(string token, object parsed)> previousTokens, int index, string token)
 		{
 			return default((CommandStatus, string, object));
 		}

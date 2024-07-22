@@ -12,7 +12,7 @@ namespace Unity.MLAgentsExamples
 		{
 			public TriggerEvent()
 			{
-	
+				
 			}
 		}
 
@@ -21,7 +21,7 @@ namespace Unity.MLAgentsExamples
 		{
 			public CollisionEvent()
 			{
-
+				
 			}
 		}
 

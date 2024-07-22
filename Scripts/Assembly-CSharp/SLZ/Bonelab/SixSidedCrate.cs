@@ -1,7 +1,6 @@
 using System.Collections.Generic;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Combat;
-using SLZ.SFX;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -9,9 +8,9 @@ namespace SLZ.Bonelab
 {
 	public class SixSidedCrate : MonoBehaviour, IAttackReceiver, IEventSystemHandler
 	{
-		[Tooltip("Can be damaged by physical impacts")]
 		[Space(2f)]
 		[Header("IMPACT")]
+		[Tooltip("Can be damaged by physical impacts")]
 		public bool damageFromImpact;
 
 		[Tooltip("Modifier multiplier to collision")]
@@ -23,9 +22,9 @@ namespace SLZ.Bonelab
 		[Tooltip("Threshold of impact magnitude required to damage")]
 		public float thr_Impact;
 
-		[Tooltip("Can be damaged by attacks")]
 		[Space(15f)]
 		[Header("ATTACKED")]
+		[Tooltip("Can be damaged by attacks")]
 		public bool damageFromAttack;
 
 		[Tooltip("Modifier multiplier to attack damage")]
@@ -53,8 +52,8 @@ namespace SLZ.Bonelab
 
 		private Vector3 ang_vel;
 
-		[Space(15f)]
 		[Header("DESTRUCTION")]
+		[Space(15f)]
 		public Transform fx_Audio;
 
 		private ImpactSFX impactSFX;
@@ -98,10 +97,6 @@ namespace SLZ.Bonelab
 		}
 
 		public void AudioChild()
-		{
-		}
-
-		private void RemoveDecals(int side)
 		{
 		}
 

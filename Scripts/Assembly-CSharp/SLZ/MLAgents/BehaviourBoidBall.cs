@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using PuppetMasta;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.AI;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Pool;
@@ -54,7 +54,9 @@ namespace SLZ.MLAgents
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CSelfDespawn_003Ed__41(int _003C_003E1__state)
 			{
 			}
@@ -69,30 +71,26 @@ namespace SLZ.MLAgents
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CBallRadiusStateController_003Ed__133 : IEnumerator<object>, IEnumerator, IDisposable
@@ -121,7 +119,9 @@ namespace SLZ.MLAgents
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CBallRadiusStateController_003Ed__133(int _003C_003E1__state)
 			{
 			}
@@ -136,30 +136,26 @@ namespace SLZ.MLAgents
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[Header("----BoidBall Section Start----")]
 		[Tooltip("Shows the debug graphics for the radii and thrusters")]
@@ -233,12 +229,12 @@ namespace SLZ.MLAgents
 
 		private float _blendToAnimationTime;
 
-		[Tooltip("This allows the radii to lerp between min and max values")]
 		[Header("----BoidBall Deal Damage Section----")]
+		[Tooltip("This allows the radii to lerp between min and max values")]
 		public RigidBodyDamageDealer[] dmgDealers;
 
-		[Tooltip("Rate is multiplied by current health")]
 		[Header("----Mental State Section----")]
+		[Tooltip("Rate is multiplied by current health")]
 		public float agroTickRate;
 
 		public float waypointAgroTime;

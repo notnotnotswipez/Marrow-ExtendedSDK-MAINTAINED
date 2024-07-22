@@ -42,7 +42,11 @@ namespace TriangleNet.Topology.DCEL
 				}
 			}
 
-			[DebuggerHidden]
+            public HalfEdge Current => throw new NotImplementedException();
+
+            object IEnumerator.Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CEnumerateEdges_003Ed__17(int _003C_003E1__state)
 			{
 			}
@@ -52,19 +56,10 @@ namespace TriangleNet.Topology.DCEL
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public HalfEdge Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
@@ -83,21 +78,31 @@ namespace TriangleNet.Topology.DCEL
 				return null;
 			}
 
-			public IEnumerator<HalfEdge> GetEnumerator()
-			{
-				throw new NotImplementedException();
-			}
+            public IEnumerator GetEnumerator()
+            {
+                throw new NotImplementedException();
+            }
 
-			IEnumerator IEnumerable.GetEnumerator()
-			{
-				return GetEnumerator();
-			}
+            IEnumerator<HalfEdge> IEnumerable<HalfEdge>.GetEnumerator()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public static readonly Face Empty;
 

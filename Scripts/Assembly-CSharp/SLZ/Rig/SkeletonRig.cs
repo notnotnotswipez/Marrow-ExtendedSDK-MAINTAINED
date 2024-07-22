@@ -1,3 +1,4 @@
+using SLZ.Marrow;
 using SLZ.Marrow.Mechanics;
 using SLZ.Marrow.Utilities;
 using SLZ.VRMK;
@@ -7,8 +8,8 @@ namespace SLZ.Rig
 {
 	public class SkeletonRig : HeptaRig
 	{
-		[SerializeField]
 		[Header("AnimationRig")]
+		[SerializeField]
 		private LiteLoco _liteLoco;
 
 		[SerializeField]

@@ -163,8 +163,8 @@ namespace SLZ.MLAgents
 		[Tooltip("If the car is in outer bubble")]
 		public bool inProx;
 
-		[Tooltip("Log all sensor values")]
 		[Header("Log Section")]
+		[Tooltip("Log all sensor values")]
 		public bool logSensors;
 
 		[Tooltip("Log the distances from the radii")]

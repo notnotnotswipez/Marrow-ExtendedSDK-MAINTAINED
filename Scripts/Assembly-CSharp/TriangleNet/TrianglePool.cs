@@ -25,7 +25,9 @@ namespace TriangleNet
 
 			private object System_002ECollections_002EIEnumerator_002ECurrent => null;
 
-			public Enumerator(TrianglePool pool)
+            object IEnumerator.Current => throw new NotImplementedException();
+
+            public Enumerator(TrianglePool pool)
 			{
 			}
 
@@ -41,8 +43,6 @@ namespace TriangleNet
 			public void Reset()
 			{
 			}
-
-			object IEnumerator.Current => Current;
 		}
 
 		[CompilerGenerated]
@@ -84,7 +84,11 @@ namespace TriangleNet
 				}
 			}
 
-			[DebuggerHidden]
+            public Triangle Current => throw new NotImplementedException();
+
+            object IEnumerator.Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CSample_003Ed__9(int _003C_003E1__state)
 			{
 			}
@@ -94,19 +98,10 @@ namespace TriangleNet
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public Triangle Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
@@ -125,21 +120,31 @@ namespace TriangleNet
 				return null;
 			}
 
-			public IEnumerator<Triangle> GetEnumerator()
-			{
-				throw new NotImplementedException();
-			}
+            public IEnumerator<Triangle> GetEnumerator()
+            {
+                throw new NotImplementedException();
+            }
 
-			IEnumerator IEnumerable.GetEnumerator()
-			{
-				return GetEnumerator();
-			}
+            IEnumerator IEnumerable.GetEnumerator()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		private const int BLOCKSIZE = 1024;
 
@@ -211,9 +216,9 @@ namespace TriangleNet
 			return null;
 		}
 
-		IEnumerator IEnumerable.GetEnumerator()
-		{
-			return GetEnumerator();
-		}
-	}
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

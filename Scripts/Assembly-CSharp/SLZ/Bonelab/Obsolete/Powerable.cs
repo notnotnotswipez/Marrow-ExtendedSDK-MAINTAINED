@@ -7,14 +7,13 @@ using UnityEngine;
 
 namespace SLZ.Bonelab.Obsolete
 {
+	[Obsolete("OLD POWERABLE SYSTEM - DO NOT USE!")]
 	[AddComponentMenu(null)]
-	[Obsolete("Superseded by VoidLogic")]
 	public class Powerable : MonoBehaviour
 	{
 		[CompilerGenerated]
 		private sealed class _003CCoUnchargeLoop_003Ed__26 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -41,7 +40,9 @@ namespace SLZ.Bonelab.Obsolete
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoUnchargeLoop_003Ed__26(int _003C_003E1__state)
 			{
 			}
@@ -51,35 +52,31 @@ namespace SLZ.Bonelab.Obsolete
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[Header("POWERED AND TURNED ON")]
 		[SerializeField]
@@ -89,8 +86,8 @@ namespace SLZ.Bonelab.Obsolete
 		protected bool m_TurnedOn;
 
 		[Tooltip("Default value for 10 minutes of use if capacity is 1000f in the PowerSource and there are 4 electronics using it. Divide number based on number of objects using it")]
-		[Space(5f)]
 		[Header("DRAW")]
+		[Space(5f)]
 		public float Discharge;
 
 		[Tooltip("Used when checking compatability")]

@@ -18,7 +18,7 @@ namespace SLZ.Interaction
 
 		public InteractableIconObject()
 		{
-
+			
 		}
 	}
 }

@@ -44,9 +44,6 @@ namespace SLZ.MLAgents
 
 		private EnvironmentParameters envParams;
 
-		public void Initialize()
-		{
-		}
 
 		private void Awake()
 		{
@@ -56,21 +53,11 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void OnEpisodeBegin()
-		{
-		}
 
 		public void MoveAgent(ActionSegment<int> act)
 		{
 		}
 
-		public void OnActionReceived(ActionBuffers actionBuffers)
-		{
-		}
-
-		public void CollectObservations(VectorSensor sensor)
-		{
-		}
 
 		private void AgentCollisionLoss()
 		{

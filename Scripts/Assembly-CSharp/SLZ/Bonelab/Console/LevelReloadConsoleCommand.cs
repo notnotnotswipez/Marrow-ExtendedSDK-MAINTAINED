@@ -7,7 +7,7 @@ namespace SLZ.Bonelab.Console
 	[ConsoleCommand("level", "reload", "Reload Current Level")]
 	public class LevelReloadConsoleCommand : BaseConsoleCommand
 	{
-		protected override (CommandStatus, string, object) ParseTokenAtIndex(List<(string, object)> previousTokens, int index, string token)
+		protected override (CommandStatus, string, object) ParseTokenAtIndex(List<(string token, object parsed)> previousTokens, int index, string token)
 		{
 			return default((CommandStatus, string, object));
 		}

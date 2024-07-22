@@ -2,9 +2,9 @@ using UnityEngine;
 
 namespace SplineMesh
 {
-	[DisallowMultipleComponent]
-	[ExecuteInEditMode]
 	[SelectionBase]
+	[ExecuteInEditMode]
+	[DisallowMultipleComponent]
 	public class ExampleSower : MonoBehaviour
 	{
 		private GameObject generated;

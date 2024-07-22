@@ -26,8 +26,5 @@ namespace SLZ.Bonelab
 		[Tooltip("Will default to prefab value if null")]
 		public AudioClip audioDeactivateOverride;
 
-		public override void OnSpawn(GameObject go)
-		{
-		}
 	}
 }

@@ -6,12 +6,11 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Audio;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Utilities;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
 using SLZ.UI;
 using UnityEngine;
 
@@ -20,11 +19,8 @@ namespace SLZ.Bonelab
 	public class PullCordDevice : MonoBehaviour
 	{
 		[CompilerGenerated]
-		private sealed class _003CHologramAnimation_003Ed__153 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CHologramAnimation_003Ed__151 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -55,8 +51,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CHologramAnimation_003Ed__153(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CHologramAnimation_003Ed__151(int _003C_003E1__state)
 			{
 			}
 
@@ -65,7 +63,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -74,14 +72,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CAvatarTransformationSequence_003Ed__155 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CAvatarTransformationSequence_003Ed__153 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -116,8 +126,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CAvatarTransformationSequence_003Ed__155(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CAvatarTransformationSequence_003Ed__153(int _003C_003E1__state)
 			{
 			}
 
@@ -126,7 +138,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -135,14 +147,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CAddAvatarAnimation_003Ed__157 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CAddAvatarAnimation_003Ed__155 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -193,8 +217,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CAddAvatarAnimation_003Ed__157(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CAddAvatarAnimation_003Ed__155(int _003C_003E1__state)
 			{
 			}
 
@@ -203,7 +229,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -212,14 +238,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CRetractBall_003Ed__161 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CRetractBall_003Ed__159 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -252,8 +290,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CRetractBall_003Ed__161(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CRetractBall_003Ed__159(int _003C_003E1__state)
 			{
 			}
 
@@ -262,7 +302,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -271,14 +311,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CLerpAnchor_003Ed__168 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CLerpAnchor_003Ed__166 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -307,8 +359,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CLerpAnchor_003Ed__168(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CLerpAnchor_003Ed__166(int _003C_003E1__state)
 			{
 			}
 
@@ -317,7 +371,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -326,11 +380,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CUpdateAllPreviewMeshes_003Ed__172 : IAsyncStateMachine
+		private struct _003CUpdateAllPreviewMeshes_003Ed__170 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -338,27 +407,29 @@ public object Current { get; }
 
 			public PullCordDevice _003C_003E4__this;
 
-			private int _003Ci_003E5__2;
-
-			private SpawnableCrate[] _003C_003E7__wrap2;
-
-			private int _003C_003E7__wrap3;
-
-			private UniTask<SpawnableCrate>.Awaiter _003C_003Eu__1;
-
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CSwapAvatar_003Ed__174 : IAsyncStateMachine
+		private struct _003CSwapAvatar_003Ed__172 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -370,17 +441,25 @@ public object Current { get; }
 
 			private UniTask<bool>.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
 
-		public PullCordHandle pch;
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public AvatarsPanelView apv;
 
@@ -441,8 +520,8 @@ public object Current { get; }
 		[SerializeField]
 		private AudioClip[] incrementInTick;
 
-		[SerializeField]
 		[Range(0f, 1f)]
+		[SerializeField]
 		private float gripVolume;
 
 		[SerializeField]
@@ -451,15 +530,15 @@ public object Current { get; }
 		[SerializeField]
 		private AudioClip[] gripRelease;
 
-		[SerializeField]
 		[Range(0f, 1f)]
+		[SerializeField]
 		private float activateVolume;
 
 		[SerializeField]
 		private AudioClip[] activateBodyLog;
 
-		[SerializeField]
 		[Range(0f, 1f)]
+		[SerializeField]
 		private float glyphVolume;
 
 		[SerializeField]
@@ -472,15 +551,15 @@ public object Current { get; }
 		[SerializeField]
 		private AudioClip[] lockBodyLog;
 
-		[SerializeField]
 		[Range(0f, 1f)]
+		[SerializeField]
 		private float switchVolume;
 
 		[SerializeField]
 		private AudioClip[] switchAvatar;
 
-		[Range(0f, 1f)]
 		[SerializeField]
+		[Range(0f, 1f)]
 		private float addAvatarVolume;
 
 		[SerializeField]
@@ -513,24 +592,24 @@ public object Current { get; }
 		[Range(0f, 1f)]
 		private float incrementAmplitudeMin;
 
-		[Range(0f, 1f)]
 		[SerializeField]
+		[Range(0f, 1f)]
 		private float incrementAmplitudeMax;
 
 		[Range(0f, 2000f)]
 		[SerializeField]
 		private float incrementFrequencyMin;
 
-		[Range(0f, 2000f)]
 		[SerializeField]
+		[Range(0f, 2000f)]
 		private float incrementFrequencyMax;
 
 		[SerializeField]
 		[Range(0f, 1f)]
 		private float incrementDurationMin;
 
-		[SerializeField]
 		[Range(0f, 1f)]
+		[SerializeField]
 		private float incrementDurationMax;
 
 		[Header("Avatars")]
@@ -608,8 +687,6 @@ public object Current { get; }
 		public AnimationCurve addAvatarFlickerCurve;
 
 		public RigManager rm;
-
-		public BodyVitals bv;
 
 		public bool isHandleInReceiver;
 
@@ -762,7 +839,7 @@ public object Current { get; }
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CHologramAnimation_003Ed__153))]
+		[IteratorStateMachine(typeof(_003CHologramAnimation_003Ed__151))]
 		private IEnumerator HologramAnimation()
 		{
 			return null;
@@ -772,7 +849,7 @@ public object Current { get; }
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CAvatarTransformationSequence_003Ed__155))]
+		[IteratorStateMachine(typeof(_003CAvatarTransformationSequence_003Ed__153))]
 		private IEnumerator AvatarTransformationSequence(AvatarCrateReference avatarRef, int stopIndex = -1)
 		{
 			return null;
@@ -782,7 +859,7 @@ public object Current { get; }
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CAddAvatarAnimation_003Ed__157))]
+		[IteratorStateMachine(typeof(_003CAddAvatarAnimation_003Ed__155))]
 		private IEnumerator AddAvatarAnimation(Transform addPosition, SpawnableCrate addCrate)
 		{
 			return null;
@@ -800,7 +877,7 @@ public object Current { get; }
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CRetractBall_003Ed__161))]
+		[IteratorStateMachine(typeof(_003CRetractBall_003Ed__159))]
 		private IEnumerator RetractBall(bool quiet = false)
 		{
 			return null;
@@ -831,7 +908,7 @@ public object Current { get; }
 			return default(Vector3);
 		}
 
-		[IteratorStateMachine(typeof(_003CLerpAnchor_003Ed__168))]
+		[IteratorStateMachine(typeof(_003CLerpAnchor_003Ed__166))]
 		private IEnumerator LerpAnchor(float lerpTime)
 		{
 			return null;
@@ -849,7 +926,7 @@ public object Current { get; }
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CUpdateAllPreviewMeshes_003Ed__172))]
+		[AsyncStateMachine(typeof(_003CUpdateAllPreviewMeshes_003Ed__170))]
 		private UniTaskVoid UpdateAllPreviewMeshes()
 		{
 			return default(UniTaskVoid);
@@ -859,7 +936,7 @@ public object Current { get; }
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CSwapAvatar_003Ed__174))]
+		[AsyncStateMachine(typeof(_003CSwapAvatar_003Ed__172))]
 		private UniTaskVoid SwapAvatar(AvatarCrateReference avatarCrateRef)
 		{
 			return default(UniTaskVoid);

@@ -17,8 +17,5 @@ namespace SLZ.Marrow.Zones
 		{
 		}
 
-		public override void OnSpawn(GameObject go)
-		{
-		}
 	}
 }

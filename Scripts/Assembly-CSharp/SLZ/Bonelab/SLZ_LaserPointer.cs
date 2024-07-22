@@ -55,8 +55,8 @@ namespace SLZ.Bonelab
 
 		private Vector3 AirPoint;
 
-		[Range(0f, 6f)]
 		[SerializeField]
+		[Range(0f, 6f)]
 		private int FrameSkip;
 
 		private int frame;

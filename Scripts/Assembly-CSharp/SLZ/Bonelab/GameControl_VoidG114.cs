@@ -1,7 +1,6 @@
 using SLZ.Bonelab.SaveData;
-using SLZ.Marrow.Data;
+using SLZ.Marrow;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
 using TMPro;
 using UnityEngine;
 
@@ -32,11 +31,7 @@ namespace SLZ.Bonelab
 
 		public LevelCrateReference voidG114LevelCrate;
 
-		public LevelCrateReference loadScreenLevel;
-
 		private LevelCrateReference _loadcrate;
-
-		public Spawnable vfxFadeOutSpawnable;
 
 		public string buildTitle;
 

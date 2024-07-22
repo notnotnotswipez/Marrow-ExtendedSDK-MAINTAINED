@@ -6,10 +6,8 @@ namespace SLZ.Bonelab
 {
 	public class ObjectDestructibleDecorator : SpawnDecorator
 	{
+		[Header("DO NOT USE on pooled assets")]
 		public LootTableData lootTable;
 
-		public override void OnSpawn(GameObject go)
-		{
-		}
 	}
 }

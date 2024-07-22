@@ -12,11 +12,8 @@ namespace SLZ.Bonelab
 	public class GachaPopFX : MonoBehaviour
 	{
 		[CompilerGenerated]
-		private sealed class _003CFXChange_003Ed__21 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CFXChange_003Ed__24 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -41,8 +38,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CFXChange_003Ed__21(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CFXChange_003Ed__24(int _003C_003E1__state)
 			{
 			}
 
@@ -51,7 +50,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -60,11 +59,28 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public TextMeshPro text_unlockedItemType;
 
 		public TextMeshPro text_unlockedItemName;
+
+		public SpriteRenderer image_item;
 
 		public string unlockedItemType;
 
@@ -80,11 +96,15 @@ public object Current { get; }
 
 		public Vector3 scale_target;
 
+		private Vector3 scale_start_img;
+
 		private Vector3 scale_start_uit;
 
 		private Vector3 scale_start_uin;
 
 		public Color32 color_transparent;
+
+		private Color32 color_start_img;
 
 		private Color32 color_start_uit;
 
@@ -110,7 +130,7 @@ public object Current { get; }
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CFXChange_003Ed__21))]
+		[IteratorStateMachine(typeof(_003CFXChange_003Ed__24))]
 		private IEnumerator FXChange()
 		{
 			return null;

@@ -20,18 +20,18 @@ namespace Unity.MLAgentsExamples
 		[HideInInspector]
 		public Quaternion startingRot;
 
-		[Space(10f)]
 		[Header("Ground & Target Contact")]
+		[Space(10f)]
 		public GroundContact groundContact;
 
 		public TargetContact targetContact;
 
-		[HideInInspector]
 		[FormerlySerializedAs("thisJDController")]
+		[HideInInspector]
 		public JointDriveController thisJdController;
 
-		[Space(10f)]
 		[Header("Current Joint Settings")]
+		[Space(10f)]
 		public Vector3 currentEularJointRotation;
 
 		[HideInInspector]

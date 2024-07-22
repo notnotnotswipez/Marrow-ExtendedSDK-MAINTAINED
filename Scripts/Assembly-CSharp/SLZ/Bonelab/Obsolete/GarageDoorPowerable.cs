@@ -20,7 +20,6 @@ namespace SLZ.Bonelab.Obsolete
 		[CompilerGenerated]
 		private sealed class _003CCoMoveUp_003Ed__34 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -45,7 +44,9 @@ namespace SLZ.Bonelab.Obsolete
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoMoveUp_003Ed__34(int _003C_003E1__state)
 			{
 			}
@@ -55,40 +56,35 @@ namespace SLZ.Bonelab.Obsolete
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoMoveDown_003Ed__35 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -113,7 +109,9 @@ namespace SLZ.Bonelab.Obsolete
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoMoveDown_003Ed__35(int _003C_003E1__state)
 			{
 			}
@@ -123,38 +121,34 @@ namespace SLZ.Bonelab.Obsolete
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
 
-		[Header("GARAGE REFS")]
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
+
 		[Space(5f)]
+		[Header("GARAGE REFS")]
 		public bool isBinary;
 
 		public GameObject GarageDoorParent;
@@ -163,18 +157,18 @@ namespace SLZ.Bonelab.Obsolete
 
 		public Transform GarageBottom;
 
-		[Space(5f)]
-		[Header("MOVERATE")]
 		[Range(0.005f, 0.015f)]
 		[Tooltip("Used for the non-binary mode")]
+		[Header("MOVERATE")]
+		[Space(5f)]
 		public float MinMoveRate;
 
 		[Range(0.005f, 0.02f)]
 		[Tooltip("Used for the non-binary mode")]
 		public float MaxMoveRate;
 
-		[Range(0.01f, 0.015f)]
 		[Tooltip("Used when in binary mode")]
+		[Range(0.01f, 0.015f)]
 		public float ConstantMoveRate;
 
 		[Range(75f, 200f)]
@@ -203,8 +197,8 @@ namespace SLZ.Bonelab.Obsolete
 
 		private float m_currVoltage;
 
-		[Space(10f)]
 		[Header("DEBUG")]
+		[Space(10f)]
 		public bool isDebugging;
 
 		private float stored_Draw;

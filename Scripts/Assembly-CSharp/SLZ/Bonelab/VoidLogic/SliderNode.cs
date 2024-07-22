@@ -1,7 +1,6 @@
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.VoidLogic;
-using SLZ.Player;
 using UnityEngine;
 
 namespace SLZ.Bonelab.VoidLogic
@@ -14,21 +13,21 @@ namespace SLZ.Bonelab.VoidLogic
 		[Tooltip("Output response curve (multiplied by input)")]
 		private AnimationCurve _curve;
 
-		[SerializeField]
 		[Tooltip("Slider Types:\n0 => Free\n1 => Momentary\n2+ => Stepped")]
+		[SerializeField]
 		[Min(0f)]
 		private int _steps;
 
-		[Tooltip("Slider joint that drives the output power value")]
 		[SerializeField]
+		[Tooltip("Slider joint that drives the output power value")]
 		private ConfigurableJoint _sliderConfigurableJoint;
 
-		[SerializeField]
 		[Tooltip("Interactable host i.e. for running haptics")]
+		[SerializeField]
 		private InteractableHost _interactableHost;
 
-		[SerializeField]
 		[Header("Force")]
+		[SerializeField]
 		private float force_Spring;
 
 		[SerializeField]
@@ -37,8 +36,8 @@ namespace SLZ.Bonelab.VoidLogic
 		[SerializeField]
 		private float force_Max;
 
-		[SerializeField]
 		[Tooltip("Only measures value and do not drive joint")]
+		[SerializeField]
 		private bool justMeasure;
 
 		[Header("Audio")]
@@ -96,15 +95,6 @@ namespace SLZ.Bonelab.VoidLogic
 		}
 
 		public override PortMetadata PortMetadata => default(PortMetadata);
-		public void Actuate(ref NodeState nodeState)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public void ReadSensors(ref NodeState nodeState)
-		{
-			throw new System.NotImplementedException();
-		}
 
 		protected override void Awake()
 		{
@@ -125,5 +115,15 @@ namespace SLZ.Bonelab.VoidLogic
 		private void SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicActuator_002EActuate(ref NodeState nodeState)
 		{
 		}
-	}
+
+        public void Actuate(ref NodeState nodeState)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void ReadSensors(ref NodeState nodeState)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 }

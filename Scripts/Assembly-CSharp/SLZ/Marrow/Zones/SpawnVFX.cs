@@ -19,29 +19,36 @@ namespace SLZ.Marrow.Zones
 		{
 			public int _003C_003E1__state;
 
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+			public Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
 
 			public SpawnVFX _003C_003E4__this;
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		private MarrowEntity entity;
 
 		private Blip blip;
 
-		public override void OnSpawn(GameObject go)
-		{
-		}
 
 		[AsyncStateMachine(typeof(_003CWaitForHibernation_003Ed__3))]
 		private UniTaskVoid WaitForHibernation()

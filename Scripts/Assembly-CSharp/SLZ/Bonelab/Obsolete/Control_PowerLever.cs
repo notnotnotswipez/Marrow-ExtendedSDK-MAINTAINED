@@ -1,8 +1,11 @@
-using SLZ.Player;
+using System;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Bonelab.Obsolete
 {
+	[AddComponentMenu(null)]
+	[Obsolete("OLD POWERABLE SYSTEM - DO NOT USE!")]
 	public class Control_PowerLever : OnOffSwitch
 	{
 		[Header("SETTINGS")]
@@ -15,8 +18,8 @@ namespace SLZ.Bonelab.Obsolete
 		[Tooltip("Will return Lever to center position on letgo")]
 		public bool operation_Momentary;
 
-		[Range(2f, 100f)]
 		[Tooltip("The number of steps to sweetspot to while not in float mode")]
+		[Range(2f, 100f)]
 		public int intSubdivisions;
 
 		[Range(0f, 1f)]
@@ -49,8 +52,8 @@ namespace SLZ.Bonelab.Obsolete
 
 		private float m_limitMax;
 
-		[Space(5f)]
 		[Header("INDICATOR LIGHTS")]
+		[Space(5f)]
 		public GameObject[] indicateOn;
 
 		public GameObject[] indicateOff;

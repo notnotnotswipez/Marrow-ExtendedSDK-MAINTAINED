@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 
 namespace Ara
 {
-	public class ElasticArray<T> : IList<T>, ICollection<T>, IEnumerable<T>, IEnumerable
+	public class ElasticArray<T> : ICollection<T>, IEnumerable<T>, IEnumerable
 	{
 		[CompilerGenerated]
 		private sealed class _003CGetEnumerator_003Ed__2 : IEnumerator<T>, IEnumerator, IDisposable
@@ -38,7 +38,11 @@ namespace Ara
 				}
 			}
 
-			[DebuggerHidden]
+            public T Current => throw new NotImplementedException();
+
+            object IEnumerator.Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CGetEnumerator_003Ed__2(int _003C_003E1__state)
 			{
 			}
@@ -48,30 +52,31 @@ namespace Ara
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public T Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		private T[] data;
 
@@ -80,11 +85,21 @@ namespace Ara
 		public int Count => 0;
 
 		public bool IsReadOnly => false;
-		
+
+		public T Item
+		{
+			get
+			{
+				return default(T);
+			}
+			set
+			{
+			}
+		}
 
 		public T[] Data => null;
 
-		[IteratorStateMachine(typeof(ElasticArray<>._003CGetEnumerator_003Ed__2))]
+        [IteratorStateMachine(typeof(ElasticArray<>._003CGetEnumerator_003Ed__2))]
 		public IEnumerator<T> GetEnumerator()
 		{
 			return null;
@@ -130,12 +145,6 @@ namespace Ara
 		{
 		}
 
-		public T this[int index]
-		{
-			get => throw new NotImplementedException();
-			set => throw new NotImplementedException();
-		}
-
 		public void SetCount(int count)
 		{
 		}
@@ -148,9 +157,9 @@ namespace Ara
 		{
 		}
 
-		IEnumerator IEnumerable.GetEnumerator()
-		{
-			return GetEnumerator();
-		}
-	}
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

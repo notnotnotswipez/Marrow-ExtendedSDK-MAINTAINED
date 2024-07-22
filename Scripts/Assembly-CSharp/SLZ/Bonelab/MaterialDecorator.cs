@@ -8,9 +8,6 @@ namespace SLZ.Bonelab
 	{
 		public List<MatDecoratorGroup> materialGroups;
 
-		public override void OnSpawn(GameObject go)
-		{
-		}
 
 		private void ApplyMaterials(MatDecReciever matDecReciever, int index)
 		{

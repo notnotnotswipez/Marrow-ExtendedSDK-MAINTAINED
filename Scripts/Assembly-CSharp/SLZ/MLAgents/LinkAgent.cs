@@ -33,9 +33,6 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void OnActionReceived(ActionBuffers actionBuffers)
-		{
-		}
 
 		private void Start()
 		{

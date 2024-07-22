@@ -44,8 +44,8 @@ namespace SLZ.MLAgents
 
 		private List<GameObject> debugObjArr;
 
-		[Tooltip("Curvature noise scale.")]
 		[SerializeField]
+		[Tooltip("Curvature noise scale.")]
 		private float m_CurveScale;
 
 		[SerializeField]

@@ -39,14 +39,14 @@ namespace SLZ.Bonelab
 		[Space(10f)]
 		public UnityEvent completionEvent;
 
-		[Header("TextDisplay")]
 		[Space(10f)]
+		[Header("TextDisplay")]
 		public string[] string_DisplayText;
 
 		public TextMeshProUGUI[] text_DisplayText;
 
-		[Header("Body")]
 		[Space(10f)]
+		[Header("Body")]
 		public Control_Player controlPlayer;
 
 		public string[] shirt_sizes;

@@ -9,26 +9,12 @@ namespace SLZ.Bonelab.VoidLogic
 	[Support(SupportFlags.CowboySupported, null)]
 	public class OneOffCollisionSensor : MonoBehaviour, IVoidLogicSource, IVoidLogicNode, IVoidLogicSensor
 	{
-		public enum Measurement
-		{
-			ForceMagnitude = 0,
-			ForceX = 1,
-			ForceY = 2,
-			ForceZ = 3,
-			TorqueX = 4,
-			TorqueY = 5,
-			TorqueZ = 6
-		}
-
-		[SerializeField]
-		private Measurement _measurement;
-
 		[SerializeField]
 		private bool _negate;
 
 		private Rigidbody _rigidbody;
 
-		private readonly Queue<float> _impacts;
+		private readonly Queue<(Vector3 force, Vector3 torque)> _impacts;
 
 		private static readonly PortMetadata _portMetadata;
 
@@ -45,15 +31,7 @@ namespace SLZ.Bonelab.VoidLogic
 			}
 		}
 
-		public void ReadSensors(ref NodeState nodeState)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public void Calculate(ref NodeState nodeState)
-		{
-			throw new System.NotImplementedException();
-		}
+		public int OutputCount => 0;
 
 		public PortMetadata PortMetadata => default(PortMetadata);
 
@@ -72,5 +50,15 @@ namespace SLZ.Bonelab.VoidLogic
 		private void SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicSource_002ECalculate(ref NodeState nodeState)
 		{
 		}
-	}
+
+        public void Calculate(ref NodeState nodeState)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void ReadSensors(ref NodeState nodeState)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 }

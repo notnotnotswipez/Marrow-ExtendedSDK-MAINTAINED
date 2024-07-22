@@ -14,12 +14,5 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		protected void OnEnter(MarrowEntity entity)
-		{
-		}
-
-		protected void OnExit(MarrowEntity entity)
-		{
-		}
 	}
 }

@@ -26,18 +26,28 @@ namespace SLZ.Bonelab
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
 
-		[Tooltip("Include levels that are built in with the game")]
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
+
 		[Header("Level Query")]
+		[Tooltip("Include levels that are built in with the game")]
 		public bool includeInternalLevels;
 
 		[Tooltip("Include levels that are external (mods)")]
@@ -90,9 +100,9 @@ namespace SLZ.Bonelab
 
 		private LevelCrateReference[] keyLevelCrates;
 
-		private Dictionary<string, string> storyLevelBarcodeKeyPair;
+		private Dictionary<LevelCrateReference, string> storyLevelBarcodeKeyPair;
 
-		public List<string> completedStoryLevelBarcodes;
+		public List<Barcode> completedStoryLevelBarcodes;
 
 		private LevelCrateReference kartRaceRef;
 
@@ -117,7 +127,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void OnPalletAdded(string palletBarcode)
+		private void OnPalletAdded(Barcode palletBarcode)
 		{
 		}
 

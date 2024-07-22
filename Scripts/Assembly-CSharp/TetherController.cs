@@ -19,8 +19,8 @@ public class TetherController : MonoBehaviour
 
 	public bool canYaw;
 
-	[Tooltip("Position the controller will want to return to")]
 	[Header("Default States")]
+	[Tooltip("Position the controller will want to return to")]
 	public Vector3 defaultPosition;
 
 	[Tooltip("Rotation the controller will want to return to")]

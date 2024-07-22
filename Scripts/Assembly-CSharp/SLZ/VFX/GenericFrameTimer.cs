@@ -11,8 +11,8 @@ namespace SLZ.VFX
 			EndOfFrame = 1
 		}
 
-		[Tooltip("Which update to use for timing. Can't be changed in playtime")]
 		[SerializeField]
+		[Tooltip("Which update to use for timing. Can't be changed in playtime")]
 		private FrameType CountingType;
 
 		[SerializeField]

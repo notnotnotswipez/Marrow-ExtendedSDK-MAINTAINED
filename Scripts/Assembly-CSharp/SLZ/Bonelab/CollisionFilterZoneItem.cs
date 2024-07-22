@@ -9,12 +9,5 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private Collider[] _collidersToIgnore;
 
-		protected void OnEnter(MarrowEntity entity)
-		{
-		}
-
-		protected void OnExit(MarrowEntity entity)
-		{
-		}
 	}
 }

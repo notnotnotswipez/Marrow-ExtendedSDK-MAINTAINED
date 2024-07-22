@@ -8,8 +8,8 @@ namespace SLZ.MLAgents
 	[Serializable]
 	public class ArtBodyPart
 	{
-		[Space(10f)]
 		[Header("Body Part Info")]
+		[Space(10f)]
 		public ConfigurableJoint joint;
 
 		public Rigidbody rb;
@@ -20,8 +20,8 @@ namespace SLZ.MLAgents
 		[HideInInspector]
 		public Quaternion startingRot;
 
-		[Space(10f)]
 		[Header("Ground & Target Contact")]
+		[Space(10f)]
 		public GroundContact groundContact;
 
 		public TargetContact targetContact;
@@ -30,8 +30,8 @@ namespace SLZ.MLAgents
 		[FormerlySerializedAs("thisJDController")]
 		public BehaviourDriveController thisJdController;
 
-		[Header("Current Joint Settings")]
 		[Space(10f)]
+		[Header("Current Joint Settings")]
 		public Vector3 currentEularJointRotation;
 
 		[HideInInspector]

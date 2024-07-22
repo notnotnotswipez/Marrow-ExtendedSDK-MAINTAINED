@@ -1,10 +1,9 @@
+using Barracuda;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Barracuda;
-
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,7 +15,7 @@ namespace SLZ.MLAgents
 		{
 			public AgentBackFill()
 			{
-
+				
 			}
 		}
 
@@ -49,7 +48,9 @@ namespace SLZ.MLAgents
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CRun_003Ed__59(int _003C_003E1__state)
 			{
 			}
@@ -64,30 +65,26 @@ namespace SLZ.MLAgents
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CWaitForAllOutputs_003Ed__62 : IEnumerator<object>, IEnumerator, IDisposable
@@ -118,7 +115,9 @@ namespace SLZ.MLAgents
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CWaitForAllOutputs_003Ed__62(int _003C_003E1__state)
 			{
 			}
@@ -133,15 +132,6 @@ namespace SLZ.MLAgents
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			private void _003C_003Em__Finally1()
 			{
 			}
@@ -151,16 +141,21 @@ namespace SLZ.MLAgents
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CSlicedInference_003Ed__64 : IEnumerator<object>, IEnumerator, IDisposable
@@ -191,7 +186,9 @@ namespace SLZ.MLAgents
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CSlicedInference_003Ed__64(int _003C_003E1__state)
 			{
 			}
@@ -206,30 +203,26 @@ namespace SLZ.MLAgents
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CDoSimUpdate_003Ed__67 : IEnumerator<object>, IEnumerator, IDisposable
@@ -260,7 +253,9 @@ namespace SLZ.MLAgents
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CDoSimUpdate_003Ed__67(int _003C_003E1__state)
 			{
 			}
@@ -275,30 +270,26 @@ namespace SLZ.MLAgents
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCheckForLateInferenceExit_003Ed__69 : IEnumerator<object>, IEnumerator, IDisposable
@@ -327,7 +318,9 @@ namespace SLZ.MLAgents
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCheckForLateInferenceExit_003Ed__69(int _003C_003E1__state)
 			{
 			}
@@ -342,35 +335,31 @@ namespace SLZ.MLAgents
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public static List<BarracudaModelManager> Instances;
 
-		[Header("Model/Inference Pipeline Specific")]
 		[Tooltip("Config holding values for Model Manager")]
+		[Header("Model/Inference Pipeline Specific")]
 		public ModelManagerConfig bmmConfig;
 
 		[Tooltip("The neural network to do inference with")]

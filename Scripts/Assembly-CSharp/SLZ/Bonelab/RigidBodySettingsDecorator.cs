@@ -5,12 +5,9 @@ namespace SLZ.Bonelab
 {
 	public class RigidBodySettingsDecorator : SpawnDecorator
 	{
-		[Tooltip("Ignore Colliders")]
 		[SerializeField]
+		[Tooltip("Ignore Colliders")]
 		private Collider[] ignoreColliders;
 
-		public override void OnSpawn(GameObject go)
-		{
-		}
 	}
 }

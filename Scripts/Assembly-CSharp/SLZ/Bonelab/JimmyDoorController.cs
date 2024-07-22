@@ -3,11 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Audio;
-using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
-using SLZ.Vehicle;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -16,11 +14,8 @@ namespace SLZ.Bonelab
 	public class JimmyDoorController : MonoBehaviour
 	{
 		[CompilerGenerated]
-		private sealed class _003CDoorSequence_003Ed__43 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CDoorSequence_003Ed__41 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -51,8 +46,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CDoorSequence_003Ed__43(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CDoorSequence_003Ed__41(int _003C_003E1__state)
 			{
 			}
 
@@ -61,7 +58,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -70,14 +67,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CDoorSequenceByPass_003Ed__45 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CDoorSequenceByPass_003Ed__43 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -102,8 +111,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CDoorSequenceByPass_003Ed__45(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CDoorSequenceByPass_003Ed__43(int _003C_003E1__state)
 			{
 			}
 
@@ -112,7 +123,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -121,7 +132,22 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public Seat seat;
 
@@ -136,10 +162,6 @@ public object Current { get; }
 		public float seatingLength;
 
 		public float yoinkLength;
-
-		public Spawnable vfxFadeOutSpawnable;
-
-		public LevelCrateReference loadScreenLevel;
 
 		public AnimationCurve lerpDistanceCurve;
 
@@ -217,7 +239,7 @@ public object Current { get; }
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CDoorSequence_003Ed__43))]
+		[IteratorStateMachine(typeof(_003CDoorSequence_003Ed__41))]
 		private IEnumerator DoorSequence()
 		{
 			return null;
@@ -227,7 +249,7 @@ public object Current { get; }
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CDoorSequenceByPass_003Ed__45))]
+		[IteratorStateMachine(typeof(_003CDoorSequenceByPass_003Ed__43))]
 		private IEnumerator DoorSequenceByPass()
 		{
 			return null;

@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace SLZ.Bonelab
 {
-	[ExecuteAlways]
 	[CreateAssetMenu(fileName = "NPC_Alliance_Table", menuName = "StressLevelZero / AllianceTable", order = 1)]
+	[ExecuteAlways]
 	public class AllianceTable : ScriptableObject
 	{
 		public List<AllianceData> allianceData;

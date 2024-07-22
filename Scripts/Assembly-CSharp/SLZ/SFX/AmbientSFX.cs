@@ -45,7 +45,9 @@ namespace SLZ.SFX
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CFade_003Ed__29(int _003C_003E1__state)
 			{
 			}
@@ -60,30 +62,26 @@ namespace SLZ.SFX
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public AudioClip[] longPlay;
 
@@ -91,8 +89,8 @@ namespace SLZ.SFX
 
 		public AudioClip powerDown;
 
-		[Tooltip("Higher than 1 numbers increase min sphere by 1 meter per unit over 1")]
 		[Range(0f, 1f)]
+		[Tooltip("Higher than 1 numbers increase min sphere by 1 meter per unit over 1")]
 		public float volume;
 
 		[Range(0f, 1f)]
@@ -103,8 +101,8 @@ namespace SLZ.SFX
 		[Range(0.1f, 4f)]
 		public float fadeSpeed;
 
-		[Range(0f, 10f)]
 		[Tooltip("Radius of min sphere")]
+		[Range(0f, 10f)]
 		public float sourceRadius;
 
 		[Tooltip("Should source loop?")]

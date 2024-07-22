@@ -4,11 +4,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Data;
+using SLZ.Marrow;
 using SLZ.Marrow.AI;
-using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Warehouse;
 using SLZ.Marrow.Zones;
-using SLZ.Rig;
 using TMPro;
 using UltEvents;
 using UnityEngine;
@@ -49,9 +48,8 @@ namespace SLZ.Bonelab
 		}
 
 		[CompilerGenerated]
-		private sealed class _003CCoDelayedStart_003Ed__118 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CCoDelayedStart_003Ed__114 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -76,8 +74,10 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CCoDelayedStart_003Ed__118(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CCoDelayedStart_003Ed__114(int _003C_003E1__state)
 			{
 			}
 
@@ -86,31 +86,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-
-			public bool MoveNext()
+			private bool MoveNext()
 			{
-				throw new NotImplementedException();
+				return false;
 			}
 
-			public void Reset()
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
-				throw new NotImplementedException();
 			}
 
-			public object Current { get; }
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			object IEnumerator.Current => Current;
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CCoTimerUp_003Ed__119 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CCoTimerUp_003Ed__115 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -137,8 +141,10 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CCoTimerUp_003Ed__119(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CCoTimerUp_003Ed__115(int _003C_003E1__state)
 			{
 			}
 
@@ -147,40 +153,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CCoTimerUpRealtime_003Ed__120 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CCoTimerUpRealtime_003Ed__116 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -207,8 +208,10 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CCoTimerUpRealtime_003Ed__120(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CCoTimerUpRealtime_003Ed__116(int _003C_003E1__state)
 			{
 			}
 
@@ -217,40 +220,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CCoTimerDown_003Ed__121 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CCoTimerDown_003Ed__117 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -277,8 +275,10 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CCoTimerDown_003Ed__121(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CCoTimerDown_003Ed__117(int _003C_003E1__state)
 			{
 			}
 
@@ -287,40 +287,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CCoTimerRealtime_003Ed__122 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CCoTimerRealtime_003Ed__118 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -345,8 +340,10 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CCoTimerRealtime_003Ed__122(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CCoTimerRealtime_003Ed__118(int _003C_003E1__state)
 			{
 			}
 
@@ -355,40 +352,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CCoDelayedEnd_003Ed__123 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CCoDelayedEnd_003Ed__119 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -413,8 +405,10 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CCoDelayedEnd_003Ed__123(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CCoDelayedEnd_003Ed__119(int _003C_003E1__state)
 			{
 			}
 
@@ -423,40 +417,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CCoDelayedDespawn_003Ed__133 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CCoDelayedDespawn_003Ed__129 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -485,8 +474,10 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CCoDelayedDespawn_003Ed__133(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CCoDelayedDespawn_003Ed__129(int _003C_003E1__state)
 			{
 			}
 
@@ -495,40 +486,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CCoDelayedReload_003Ed__143 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CCoDelayedReload_003Ed__139 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -557,8 +543,10 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CCoDelayedReload_003Ed__143(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CCoDelayedReload_003Ed__139(int _003C_003E1__state)
 			{
 			}
 
@@ -567,35 +555,31 @@ namespace SLZ.Bonelab
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public string LevelKey;
 
@@ -665,19 +649,11 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		public int friendlyRespawnAmount;
 
-		public MarrowEntity playerEntity;
-
 		public RigManager rigManager;
 
 		public GameObject playerObject;
 
 		public TriggerRefProxy playerProxy;
-
-		public Rigidbody[] allPlayerRBs;
-
-		public Rigidbody playerPelvisBody;
-
-		public GenGameControl_Trigger startTrigger;
 
 		public List<TMP_Text> modeTexts;
 
@@ -699,8 +675,8 @@ namespace SLZ.Bonelab
 
 		private Coroutine timerRoutine;
 
-		[SerializeField]
 		[Tooltip("Assuming all zones are the child of a single transform, will be used to grab all zone refs")]
+		[SerializeField]
 		private GameObject zoneParentObj;
 
 		public List<Zone> zoneList;
@@ -737,16 +713,16 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		protected List<AIBrain> Alive_Enemy_List;
 
-		[Tooltip("A list of all dead enemy NPC's")]
 		[SerializeField]
+		[Tooltip("A list of all dead enemy NPC's")]
 		protected List<AIBrain> Dead_Enemy_List;
 
 		[SerializeField]
 		[Tooltip("A list of all the friendly npcs")]
 		protected List<AIBrain> FriendlyNPC_List;
 
-		[Tooltip("A list of all living enemy NPC's")]
 		[SerializeField]
+		[Tooltip("A list of all living enemy NPC's")]
 		protected List<AIBrain> Alive_Friendly_List;
 
 		[SerializeField]
@@ -789,16 +765,16 @@ namespace SLZ.Bonelab
 
 		public int crabletAgentID;
 
+		[Tooltip("Session is initialized, timer routine starts")]
 		[Header("SESSION EVENTS")]
 		[Obsolete("Migrate Unity Event to Ult Event")]
-		[Tooltip("Session is initialized, timer routine starts")]
 		public UnityEvent onSessionBegin;
 
 		[Tooltip("Session is initialized, timer routine starts")]
 		public UltEvent sessionBegin;
 
-		[Obsolete("Migrate Unity Event to Ult Event")]
 		[Tooltip("Session is complete, timer routine ends")]
+		[Obsolete("Migrate Unity Event to Ult Event")]
 		public UnityEvent onSessionEnd;
 
 		[Tooltip("Session is complete, timer routine ends")]
@@ -892,37 +868,37 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoDelayedStart_003Ed__118))]
+		[IteratorStateMachine(typeof(_003CCoDelayedStart_003Ed__114))]
 		private IEnumerator CoDelayedStart()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoTimerUp_003Ed__119))]
+		[IteratorStateMachine(typeof(_003CCoTimerUp_003Ed__115))]
 		private IEnumerator CoTimerUp()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoTimerUpRealtime_003Ed__120))]
+		[IteratorStateMachine(typeof(_003CCoTimerUpRealtime_003Ed__116))]
 		private IEnumerator CoTimerUpRealtime()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoTimerDown_003Ed__121))]
+		[IteratorStateMachine(typeof(_003CCoTimerDown_003Ed__117))]
 		private IEnumerator CoTimerDown()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoTimerRealtime_003Ed__122))]
+		[IteratorStateMachine(typeof(_003CCoTimerRealtime_003Ed__118))]
 		private IEnumerator CoTimerRealtime()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoDelayedEnd_003Ed__123))]
+		[IteratorStateMachine(typeof(_003CCoDelayedEnd_003Ed__119))]
 		private IEnumerator CoDelayedEnd()
 		{
 			return null;
@@ -965,7 +941,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoDelayedDespawn_003Ed__133))]
+		[IteratorStateMachine(typeof(_003CCoDelayedDespawn_003Ed__129))]
 		private IEnumerator CoDelayedDespawn(AIBrain brain, float seconds)
 		{
 			return null;
@@ -1007,7 +983,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoDelayedReload_003Ed__143))]
+		[IteratorStateMachine(typeof(_003CCoDelayedReload_003Ed__139))]
 		private IEnumerator CoDelayedReload(float delay)
 		{
 			return null;

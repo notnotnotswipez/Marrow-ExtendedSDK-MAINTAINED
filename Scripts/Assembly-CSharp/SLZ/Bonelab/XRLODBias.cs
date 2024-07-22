@@ -4,8 +4,8 @@ namespace SLZ.Bonelab
 {
 	public class XRLODBias : MonoBehaviour
 	{
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		private float OrginalLOD;
 
 		private void Start()

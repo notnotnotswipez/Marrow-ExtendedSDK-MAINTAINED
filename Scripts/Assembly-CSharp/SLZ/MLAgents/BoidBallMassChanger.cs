@@ -1,5 +1,4 @@
-using SLZ.Interaction;
-using SLZ.Rig;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.MLAgents
@@ -9,8 +8,6 @@ namespace SLZ.MLAgents
 		public BallThrustPointManager thrustManager;
 
 		public Grip grip;
-
-		private RigManager rigManager;
 
 		public bool beingGriped;
 

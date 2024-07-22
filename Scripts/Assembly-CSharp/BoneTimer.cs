@@ -43,7 +43,9 @@ public class BoneTimer : MonoBehaviour
 			}
 		}
 
-		[DebuggerHidden]
+        public object Current => throw new NotImplementedException();
+
+        [DebuggerHidden]
 		public _003CCoTimerUp_003Ed__15(int _003C_003E1__state)
 		{
 		}
@@ -58,30 +60,26 @@ public class BoneTimer : MonoBehaviour
 			return false;
 		}
 
-		public void Reset()
-		{
-			throw new NotImplementedException();
-		}
-
-		public object Current { get; }
-
-		object IEnumerator.Current => Current;
-
 		[DebuggerHidden]
 		private void System_002ECollections_002EIEnumerator_002EReset()
 		{
 		}
 
-		bool IEnumerator.MoveNext()
-		{
-			return MoveNext();
-		}
+        bool IEnumerator.MoveNext()
+        {
+            throw new NotImplementedException();
+        }
 
-		public void Dispose()
-		{
-			throw new NotImplementedException();
-		}
-	}
+        public void Reset()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 	[CompilerGenerated]
 	private sealed class _003CCoTimerUpRealtime_003Ed__16 : IEnumerator<object>, IEnumerator, IDisposable
@@ -110,7 +108,9 @@ public class BoneTimer : MonoBehaviour
 			}
 		}
 
-		[DebuggerHidden]
+        public object Current => throw new NotImplementedException();
+
+        [DebuggerHidden]
 		public _003CCoTimerUpRealtime_003Ed__16(int _003C_003E1__state)
 		{
 		}
@@ -125,30 +125,26 @@ public class BoneTimer : MonoBehaviour
 			return false;
 		}
 
-		public void Reset()
-		{
-			throw new NotImplementedException();
-		}
-
-		public object Current { get; }
-
-		object IEnumerator.Current => Current;
-
 		[DebuggerHidden]
 		private void System_002ECollections_002EIEnumerator_002EReset()
 		{
 		}
 
-		bool IEnumerator.MoveNext()
-		{
-			return MoveNext();
-		}
+        bool IEnumerator.MoveNext()
+        {
+            throw new NotImplementedException();
+        }
 
-		public void Dispose()
-		{
-			throw new NotImplementedException();
-		}
-	}
+        public void Reset()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 	[CompilerGenerated]
 	private sealed class _003CCoTimerDown_003Ed__17 : IEnumerator<object>, IEnumerator, IDisposable
@@ -177,7 +173,9 @@ public class BoneTimer : MonoBehaviour
 			}
 		}
 
-		[DebuggerHidden]
+        public object Current => throw new NotImplementedException();
+
+        [DebuggerHidden]
 		public _003CCoTimerDown_003Ed__17(int _003C_003E1__state)
 		{
 		}
@@ -192,30 +190,26 @@ public class BoneTimer : MonoBehaviour
 			return false;
 		}
 
-		public void Reset()
-		{
-			throw new NotImplementedException();
-		}
-
-		public object Current { get; }
-
-		object IEnumerator.Current => Current;
-
 		[DebuggerHidden]
 		private void System_002ECollections_002EIEnumerator_002EReset()
 		{
 		}
 
-		bool IEnumerator.MoveNext()
-		{
-			return MoveNext();
-		}
+        bool IEnumerator.MoveNext()
+        {
+            throw new NotImplementedException();
+        }
 
-		public void Dispose()
-		{
-			throw new NotImplementedException();
-		}
-	}
+        public void Reset()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 	[CompilerGenerated]
 	private sealed class _003CCoTimerRealtime_003Ed__18 : IEnumerator<object>, IEnumerator, IDisposable
@@ -244,7 +238,9 @@ public class BoneTimer : MonoBehaviour
 			}
 		}
 
-		[DebuggerHidden]
+        public object Current => throw new NotImplementedException();
+
+        [DebuggerHidden]
 		public _003CCoTimerRealtime_003Ed__18(int _003C_003E1__state)
 		{
 		}
@@ -259,33 +255,29 @@ public class BoneTimer : MonoBehaviour
 			return false;
 		}
 
-		public void Reset()
-		{
-			throw new NotImplementedException();
-		}
-
-		public object Current { get; }
-
-		object IEnumerator.Current => Current;
-
 		[DebuggerHidden]
 		private void System_002ECollections_002EIEnumerator_002EReset()
 		{
 		}
 
-		bool IEnumerator.MoveNext()
-		{
-			return MoveNext();
-		}
+        bool IEnumerator.MoveNext()
+        {
+            throw new NotImplementedException();
+        }
 
-		public void Dispose()
-		{
-			throw new NotImplementedException();
-		}
-	}
+        public void Reset()
+        {
+            throw new NotImplementedException();
+        }
 
-	[Header("Time Data")]
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
 	[SerializeField]
+	[Header("Time Data")]
 	private float timerValue;
 
 	[SerializeField]

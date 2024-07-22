@@ -1,29 +1,29 @@
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.VoidLogic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace SLZ.Bonelab.VoidLogic
 {
-	[AddComponentMenu("VoidLogic/Bonelab/Nodes/VoidLogic Lever")]
 	[Support(SupportFlags.BetaSupported, "This works, but should use Marrow primitives.")]
+	[AddComponentMenu("VoidLogic/Bonelab/Nodes/VoidLogic Lever")]
 	public class LeverNode : BaseNode, IVoidLogicActuator, IVoidLogicNode, IVoidLogicSensor
 	{
-		[SerializeField]
 		[Tooltip("Output response curve (multiplied by input)")]
+		[SerializeField]
 		private AnimationCurve _curve;
 
+		[SerializeField]
 		[Min(0f)]
 		[Tooltip("Lever Types:\n0 => Free\n1 => Momentary\n2+ => Stepped")]
-		[SerializeField]
 		private int _steps;
 
 		[Tooltip("Lever joint that drives the output power value")]
 		[SerializeField]
 		private Rigidbody _leverRigidBody;
 
-		[FormerlySerializedAs("servo")]
 		[SerializeField]
+		[FormerlySerializedAs("servo")]
 		private Servo _servo;
 
 		[Tooltip("Interactable host i.e. for running haptics")]
@@ -40,8 +40,8 @@ namespace SLZ.Bonelab.VoidLogic
 		[SerializeField]
 		private float force_Max;
 
-		[SerializeField]
 		[Tooltip("Only measures value and do not dive joint")]
+		[SerializeField]
 		private bool justMeasure;
 
 		[Header("Audio")]
@@ -128,15 +128,6 @@ namespace SLZ.Bonelab.VoidLogic
 		}
 
 		public override PortMetadata PortMetadata => default(PortMetadata);
-		public void ReadSensors(ref NodeState nodeState)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public void Actuate(ref NodeState nodeState)
-		{
-			throw new System.NotImplementedException();
-		}
 
 		private void Reset()
 		{
@@ -157,5 +148,15 @@ namespace SLZ.Bonelab.VoidLogic
 		private void SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicActuator_002EActuate(ref NodeState nodeState)
 		{
 		}
-	}
+
+        public void Actuate(ref NodeState nodeState)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        void IVoidLogicSensor.ReadSensors(ref NodeState nodeState)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 }

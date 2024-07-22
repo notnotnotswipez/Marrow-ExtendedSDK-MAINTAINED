@@ -27,8 +27,4 @@ namespace Unity.MLAgents
 		{
 		}
 	}
-
-	public class Agent
-	{
-	}
 }

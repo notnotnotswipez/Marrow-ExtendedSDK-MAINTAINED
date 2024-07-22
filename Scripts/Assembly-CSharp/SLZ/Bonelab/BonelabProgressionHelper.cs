@@ -7,8 +7,9 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Newtonsoft.Json.Linq;
 using SLZ.Bonelab.SaveData;
+using SLZ.Marrow;
+using SLZ.Marrow.SaveData;
 using SLZ.Marrow.Warehouse;
-using SLZ.Player;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -26,7 +27,7 @@ namespace SLZ.Bonelab
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003C_restoreSlotsOnReady_003Ed__13 : IAsyncStateMachine
+		private struct _003C_restoreSlotsOnReady_003Ed__11 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -44,15 +45,25 @@ namespace SLZ.Bonelab
 
 			private UniTask<bool[]>.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public const string INITIAL_INVENTORY = "SLZ.Bonelab.initial_inventory";
 
@@ -63,10 +74,6 @@ namespace SLZ.Bonelab
 		public const string FINAL_AMMO_DELTA = "SLZ.Bonelab.final_ammo_delta";
 
 		public const string IN_PROGRESS_AMMO = "SLZ.Bonelab.in_progress_ammo";
-
-		public const string PROGRESS = "SLZ.Bonelab.progress";
-
-		public const string COMPLETED = "SLZ.Bonelab.completed";
 
 		public static Dictionary<string, int> CalculateStartingAmmo(this PlayerProgression progression, params string[] priorLevels)
 		{
@@ -99,7 +106,7 @@ namespace SLZ.Bonelab
 			return false;
 		}
 
-		[AsyncStateMachine(typeof(_003C_restoreSlotsOnReady_003Ed__13))]
+		[AsyncStateMachine(typeof(_003C_restoreSlotsOnReady_003Ed__11))]
 		private static UniTaskVoid _restoreSlotsOnReady(Inventory inventory, JObject inventoryJson, Transform leftHand, Transform rightHand, Func<Barcode, Barcode> itemFilter)
 		{
 			return default(UniTaskVoid);
@@ -112,22 +119,6 @@ namespace SLZ.Bonelab
 
 		public static void RestoreAmmoCounts(this PlayerProgression progression, string levelKey, bool freshLoad, params string[] priorLevels)
 		{
-		}
-
-		public static bool TrySetLevelCompleted(this PlayerProgression progression, string levelKey, bool completed)
-		{
-			return false;
-		}
-
-		public static bool TrySetLevelProgress(this PlayerProgression progression, string levelKey, int progress)
-		{
-			return false;
-		}
-
-		public static bool TryGetLevelCompleted(this PlayerProgression progression, string levelKey, out bool completed)
-		{
-			completed = default(bool);
-			return false;
 		}
 
 		public static bool PushInventoryInto(this PlayerProgression progression, params string[] intoLevelKeys)
@@ -143,12 +134,6 @@ namespace SLZ.Bonelab
 		[Obsolete("To be replaced with PushInventoryInto")]
 		public static bool SaveInventoryFinal_Deprecated(this PlayerProgression progression, string levelKey)
 		{
-			return false;
-		}
-
-		public static bool TryGetLevelProgress(this PlayerProgression progression, string levelKey, out int progress)
-		{
-			progress = default(int);
 			return false;
 		}
 

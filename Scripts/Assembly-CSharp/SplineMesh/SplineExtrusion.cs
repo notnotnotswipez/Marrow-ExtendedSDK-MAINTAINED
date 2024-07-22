@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace SplineMesh
 {
-	[RequireComponent(typeof(Spline))]
 	[ExecuteInEditMode]
+	[RequireComponent(typeof(Spline))]
 	public class SplineExtrusion : MonoBehaviour
 	{
 		private Spline spline;

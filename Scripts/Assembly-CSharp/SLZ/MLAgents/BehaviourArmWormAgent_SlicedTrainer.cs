@@ -156,25 +156,16 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void Initialize()
-		{
-		}
 
 		private void SpawnTarget(Transform prefab, Vector3 pos)
 		{
 		}
 
-		public void OnEpisodeBegin()
-		{
-		}
 
 		public void CollectObservationBodyPart(ArtBodyPart bp, VectorSensor sensor)
 		{
 		}
 
-		public void CollectObservations(VectorSensor sensor)
-		{
-		}
 
 		public float GetMatchingVelocityReward(Vector3 velocityGoal, Vector3 actualVelocity)
 		{
@@ -186,10 +177,6 @@ namespace SLZ.MLAgents
 		}
 
 		private void ArmJump()
-		{
-		}
-
-		public void OnActionReceived(ActionBuffers actionBuffers)
 		{
 		}
 

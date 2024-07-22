@@ -14,7 +14,6 @@ namespace SLZ.Bonelab
 		[CompilerGenerated]
 		private sealed class _003CCoCountdown_003Ed__9 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -39,7 +38,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoCountdown_003Ed__9(int _003C_003E1__state)
 			{
 			}
@@ -49,31 +50,35 @@ namespace SLZ.Bonelab
 			{
 			}
 
-
-			public bool MoveNext()
+			private bool MoveNext()
 			{
-				throw new NotImplementedException();
+				return false;
 			}
 
-			public void Reset()
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
-				throw new NotImplementedException();
 			}
 
-			public object Current { get; }
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			object IEnumerator.Current => Current;
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CCoExpand_003Ed__13 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -104,7 +109,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoExpand_003Ed__13(int _003C_003E1__state)
 			{
 			}
@@ -114,31 +121,31 @@ namespace SLZ.Bonelab
 			{
 			}
 
+			private bool MoveNext()
+			{
+				return false;
+			}
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			public bool MoveNext()
-			{
-				throw new NotImplementedException();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
 
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		private Coroutine countdownRoutine;
 

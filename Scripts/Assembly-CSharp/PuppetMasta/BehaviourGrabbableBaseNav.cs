@@ -1,4 +1,4 @@
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.PuppetMasta;
 
 namespace PuppetMasta

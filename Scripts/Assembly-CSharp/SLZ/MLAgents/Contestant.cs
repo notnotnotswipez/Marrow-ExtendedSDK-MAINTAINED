@@ -20,8 +20,8 @@ namespace SLZ.MLAgents
 		[Tooltip("Game Object reference")]
 		public GameObject vehicle;
 
-		[Header("Contestant Section")]
 		[Tooltip("Used for lineup calculation")]
+		[Header("Contestant Section")]
 		public int contestantNumber;
 
 		[Tooltip("Not used yet")]
@@ -42,8 +42,8 @@ namespace SLZ.MLAgents
 		[Tooltip("Reset if checkpoint timer has finished")]
 		public bool use_timeout;
 
-		[Header("Statistics Section")]
 		[Tooltip("For stats collection and early stopping")]
+		[Header("Statistics Section")]
 		public int concurrent_incorrect;
 
 		[Tooltip("For stats collection")]

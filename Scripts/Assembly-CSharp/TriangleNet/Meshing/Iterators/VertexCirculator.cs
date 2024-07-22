@@ -45,7 +45,11 @@ namespace TriangleNet.Meshing.Iterators
 				}
 			}
 
-			[DebuggerHidden]
+            public Vertex Current => throw new NotImplementedException();
+
+            object IEnumerator.Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CEnumerateVertices_003Ed__2(int _003C_003E1__state)
 			{
 			}
@@ -55,19 +59,10 @@ namespace TriangleNet.Meshing.Iterators
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public Vertex Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			private void _003C_003Em__Finally1()
 			{
@@ -90,21 +85,31 @@ namespace TriangleNet.Meshing.Iterators
 				return null;
 			}
 
-			public IEnumerator<Vertex> GetEnumerator()
-			{
-				throw new NotImplementedException();
-			}
+            public IEnumerator<Vertex> GetEnumerator()
+            {
+                throw new NotImplementedException();
+            }
 
-			IEnumerator IEnumerable.GetEnumerator()
-			{
-				return GetEnumerator();
-			}
+            IEnumerator IEnumerable.GetEnumerator()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CEnumerateTriangles_003Ed__3 : IEnumerable<ITriangle>, IEnumerable, IEnumerator<ITriangle>, IEnumerator, IDisposable
@@ -141,7 +146,11 @@ namespace TriangleNet.Meshing.Iterators
 				}
 			}
 
-			[DebuggerHidden]
+            public ITriangle Current => throw new NotImplementedException();
+
+            object IEnumerator.Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CEnumerateTriangles_003Ed__3(int _003C_003E1__state)
 			{
 			}
@@ -151,19 +160,10 @@ namespace TriangleNet.Meshing.Iterators
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public ITriangle Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			private void _003C_003Em__Finally1()
 			{
@@ -186,21 +186,31 @@ namespace TriangleNet.Meshing.Iterators
 				return null;
 			}
 
-			public IEnumerator<ITriangle> GetEnumerator()
-			{
-				throw new NotImplementedException();
-			}
+            public IEnumerator<ITriangle> GetEnumerator()
+            {
+                throw new NotImplementedException();
+            }
 
-			IEnumerator IEnumerable.GetEnumerator()
-			{
-				return GetEnumerator();
-			}
+            IEnumerator IEnumerable.GetEnumerator()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		private List<Otri> cache;
 

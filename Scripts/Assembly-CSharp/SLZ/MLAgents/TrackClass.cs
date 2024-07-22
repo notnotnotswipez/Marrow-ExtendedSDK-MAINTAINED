@@ -92,8 +92,8 @@ namespace SLZ.MLAgents
 
 		public RegenDelegate regenDelegate;
 
-		[Header("Track Objects Section")]
 		[Tooltip("Generate Walls on Side of Track")]
+		[Header("Track Objects Section")]
 		public bool useWalls;
 
 		[Tooltip("(unused) Game Object reference for instancing single walls")]

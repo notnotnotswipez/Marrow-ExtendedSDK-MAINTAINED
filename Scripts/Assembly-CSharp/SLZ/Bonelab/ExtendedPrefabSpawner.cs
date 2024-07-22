@@ -8,7 +8,6 @@ using SLZ.Marrow.Data;
 using SLZ.Marrow.Interaction;
 using UnityEngine;
 using UnityEngine.Events;
-using YieldAwaitable = Cysharp.Threading.Tasks.YieldAwaitable;
 
 namespace SLZ.Bonelab
 {
@@ -30,17 +29,27 @@ namespace SLZ.Bonelab
 
 			private float _003ClastSpawn_003E5__3;
 
-			private YieldAwaitable.Awaiter _003C_003Eu__1;
+			private Cysharp.Threading.Tasks.YieldAwaitable.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -52,20 +61,30 @@ namespace SLZ.Bonelab
 
 			public ExtendedPrefabSpawner _003C_003E4__this;
 
-			private YieldAwaitable.Awaiter _003C_003Eu__1;
+			private Cysharp.Threading.Tasks.YieldAwaitable.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
 
-		[SerializeField]
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
+
 		[Tooltip("Spawnable")]
+		[SerializeField]
 		private Spawnable[] spawnables;
 
 		public bool spawnOnStart;

@@ -1,33 +1,38 @@
+using JetBrains.Annotations;
 using SLZ.Marrow.SaveData;
 
 namespace SLZ.Bonelab.SaveData
 {
-	public sealed class DataManager : MarrowDataManager<DataManager, Save, Settings, PlayerProgression, PlayerUnlocks>
+	public sealed class DataManager : MarrowDataManager<DataManager, Save, Settings, PlayerSettings, PlayerProgression, PlayerUnlocks>
 	{
+        public DataManager(int settingsVersion, int saveVersion) : base(settingsVersion, saveVersion)
+        {
+        }
+
+        [PublicAPI]
 		public static DataManager Instance => null;
 
 		public static Settings Settings => null;
 
 		public static Save ActiveSave => null;
+		
 
-
-
-		public static bool TrySaveSettings()
+		public new static bool TrySaveSettings()
 		{
 			return false;
 		}
 
-		public static bool TryLoadActiveSave(SaveFlags flags)
+		public new static bool TryLoadActiveSave(SaveFlags flags)
 		{
 			return false;
 		}
 
-		public static bool TrySaveActiveSave(SaveFlags flags)
+		public new static bool TrySaveActiveSave(SaveFlags flags)
 		{
 			return false;
 		}
 
-		public static bool TryAutosaveAndSetActive(Save save, SaveFlags flags)
+		public new static bool TryAutosaveAndSetActive(Save save, SaveFlags flags)
 		{
 			return false;
 		}
@@ -37,10 +42,6 @@ namespace SLZ.Bonelab.SaveData
 		}
 
 		private void _MSAFAIGE()
-		{
-		}
-
-		public DataManager(int settingsVersion, int saveVersion) : base(settingsVersion, saveVersion)
 		{
 		}
 	}

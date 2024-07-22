@@ -42,7 +42,9 @@ namespace PuppetMasta
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CSmoothActivate_003Ed__21(int _003C_003E1__state)
 			{
 			}
@@ -57,33 +59,29 @@ namespace PuppetMasta
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
 
-		[Tooltip("Animation State to crossfade to when this behaviour is activated.")]
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
+
 		[LargeHeader("Animation State")]
+		[Tooltip("Animation State to crossfade to when this behaviour is activated.")]
 		public string stateName;
 
 		[Tooltip("The duration of crossfading to 'State Name'. Value is in seconds.")]

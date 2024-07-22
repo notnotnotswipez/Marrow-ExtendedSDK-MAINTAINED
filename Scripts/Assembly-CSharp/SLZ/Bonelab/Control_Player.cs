@@ -8,9 +8,6 @@ namespace SLZ.Bonelab
 		public UIRig uiRig;
 
 		[HideInInspector]
-		public BodyVitals body_vitals;
-
-		[HideInInspector]
 		public float stored_offset_Sitting;
 
 		public RigScreenOptions rigScreen;

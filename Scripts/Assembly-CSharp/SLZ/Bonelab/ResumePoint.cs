@@ -19,8 +19,8 @@ namespace SLZ.Bonelab
 		[Tooltip("Set the checkpoint you want enabled for if the player dies immediately on spawn")]
 		public ZoneCheckpoint checkpoint;
 
-		[Header("Spawners deactive all previous spawners")]
 		[Tooltip("Game Objects to be disabled on this progression point")]
+		[Header("Spawners deactive all previous spawners")]
 		public GameObject[] disableObjects;
 
 		[Tooltip("Game Objects to be enabled on this progression point")]

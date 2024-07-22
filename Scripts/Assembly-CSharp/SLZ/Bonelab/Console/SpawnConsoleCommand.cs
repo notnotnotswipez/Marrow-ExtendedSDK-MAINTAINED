@@ -7,7 +7,7 @@ namespace SLZ.Bonelab.Console
 	[ConsoleCommand("__builtin", "spawn", "Spawn a spawnable")]
 	public class SpawnConsoleCommand : BaseConsoleCommand
 	{
-		protected override (CommandStatus, string, object) ParseTokenAtIndex(List<(string, object)> previousTokens, int index, string token)
+		protected override (CommandStatus, string, object) ParseTokenAtIndex(List<(string token, object parsed)> previousTokens, int index, string token)
 		{
 			return default((CommandStatus, string, object));
 		}

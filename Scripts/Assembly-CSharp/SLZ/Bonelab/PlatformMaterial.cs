@@ -8,8 +8,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private Renderer TargetRenderer;
 
-		[Space(20f)]
 		[SerializeField]
+		[Space(20f)]
 		private Material Android;
 
 		[SerializeField]

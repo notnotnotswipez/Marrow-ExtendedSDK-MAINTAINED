@@ -25,6 +25,7 @@ namespace SLZ.VRMK
 			public Vector3 axis;
 
 			public float dot;
+
 		}
 
 		public AvatarIKGoal goal;

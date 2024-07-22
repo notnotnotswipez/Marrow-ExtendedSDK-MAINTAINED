@@ -4,11 +4,10 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Audio;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -25,17 +24,25 @@ namespace SLZ.Bonelab
 
 			public AvatarGun _003C_003E4__this;
 
-
-			public void MoveNext()
+			private void MoveNext()
 			{
-				throw new System.NotImplementedException();
 			}
 
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
-				throw new System.NotImplementedException();
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -47,23 +54,31 @@ namespace SLZ.Bonelab
 
 			public RigManager targetRig;
 
-			public AvatarCrateReference avatarCrate;
+			public AvatarCrateReference avatarCrateRef;
 
 			public AvatarGun _003C_003E4__this;
 
 			private UniTask<bool>.Awaiter _003C_003Eu__1;
 
-
-			public void MoveNext()
+			private void MoveNext()
 			{
-				throw new System.NotImplementedException();
 			}
 
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
-				throw new System.NotImplementedException();
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		public Grip triggerGrip;
 
@@ -145,7 +160,7 @@ namespace SLZ.Bonelab
 		}
 
 		[AsyncStateMachine(typeof(_003CSwapAvatar_003Ed__28))]
-		private UniTaskVoid SwapAvatar(AvatarCrateReference avatarCrate, RigManager targetRig)
+		private UniTaskVoid SwapAvatar(AvatarCrateReference avatarCrateRef, RigManager targetRig)
 		{
 			return default(UniTaskVoid);
 		}

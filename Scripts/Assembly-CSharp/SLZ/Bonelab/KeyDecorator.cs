@@ -9,8 +9,5 @@ namespace SLZ.Bonelab
 		[Tooltip("this overrides the key code in the prefab asset")]
 		public KeyReceiver.Code code;
 
-		public override void OnSpawn(GameObject go)
-		{
-		}
 	}
 }

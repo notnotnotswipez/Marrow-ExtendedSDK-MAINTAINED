@@ -270,8 +270,8 @@ namespace RealisticEyeMovements
 		[SerializeField]
 		private EyelidRotationLimiter lowerRightLimiter;
 
-		[Tooltip("0: normal. 1: max widened, -1: max squint")]
 		[Range(-1f, 1f)]
+		[Tooltip("0: normal. 1: max widened, -1: max squint")]
 		public float eyeWidenOrSquint;
 
 		[SerializeField]

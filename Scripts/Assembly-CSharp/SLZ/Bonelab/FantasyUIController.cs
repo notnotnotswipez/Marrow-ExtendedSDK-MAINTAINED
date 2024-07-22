@@ -1,5 +1,5 @@
 using System;
-using SLZ.Rig;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Bonelab

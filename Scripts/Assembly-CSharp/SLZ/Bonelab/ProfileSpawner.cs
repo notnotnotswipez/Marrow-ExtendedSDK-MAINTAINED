@@ -32,15 +32,25 @@ namespace SLZ.Bonelab
 
 			private UniTask<SLZ.Marrow.Pool.Poolee>.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public Zone zone;
 
@@ -76,9 +86,6 @@ namespace SLZ.Bonelab
 			return default(UniTask);
 		}
 
-		public override void OnSpawn(GameObject go)
-		{
-		}
 
 		public void PostReactivate(BehaviourBaseNav baseNav)
 		{

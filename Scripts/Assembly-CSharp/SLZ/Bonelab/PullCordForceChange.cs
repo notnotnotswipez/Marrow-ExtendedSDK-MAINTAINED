@@ -4,8 +4,8 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -24,21 +24,29 @@ namespace SLZ.Bonelab
 
 			public PullCordForceChange _003C_003E4__this;
 
-			private SpawnableCrate _003Ccrate_003E5__2;
+			private AvatarCrate _003Ccrate_003E5__2;
 
-			private UniTask<SpawnableCrate>.Awaiter _003C_003Eu__1;
+			private UniTask<bool>.Awaiter _003C_003Eu__1;
 
-			private UniTask<bool>.Awaiter _003C_003Eu__2;
-
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		public AvatarCrateReference avatarCrate;
 

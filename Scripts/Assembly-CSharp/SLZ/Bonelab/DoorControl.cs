@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
@@ -16,9 +16,6 @@ namespace SLZ.Bonelab
 		[CompilerGenerated]
 		private sealed class _003CSwingOverTime_003Ed__98 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -51,7 +48,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CSwingOverTime_003Ed__98(int _003C_003E1__state)
 			{
 			}
@@ -61,7 +60,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -70,7 +69,22 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[Header("GENERAL")]
 		public bool FreeDoor;
@@ -95,8 +109,8 @@ public object Current { get; }
 
 		private bool DoorIsOffHinge;
 
-		[Header("LOCK")]
 		[Space(10f)]
+		[Header("LOCK")]
 		public float[] LockAngleLimits;
 
 		public bool Lock_Locked;
@@ -122,8 +136,8 @@ public object Current { get; }
 
 		private bool initializedLocked;
 
-		[Header("LINK")]
 		[Space(10f)]
+		[Header("LINK")]
 		public Rigidbody rb_parent;
 
 		private ConfigurableJoint jnt_link;
@@ -189,8 +203,8 @@ public object Current { get; }
 
 		private bool KnobLocked;
 
-		[Tooltip("This is the number added to the lowest x-angularThreshold and subtracted from the highest x-angularThreshold")]
 		[SerializeField]
+		[Tooltip("This is the number added to the lowest x-angularThreshold and subtracted from the highest x-angularThreshold")]
 		private float KnobThreshOffset;
 
 		public float[] knob_UnlockAngles;
@@ -209,8 +223,8 @@ public object Current { get; }
 
 		public Grip[] grips;
 
-		[Space(10f)]
 		[Header("REFERENCES")]
+		[Space(10f)]
 		public Transform audioPosition_Hinge;
 
 		public Transform audioPosition_Lock;

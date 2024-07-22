@@ -8,14 +8,13 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Bonelab.SaveData;
+using SLZ.Marrow;
 using SLZ.Marrow.Audio;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Interaction;
 using SLZ.Marrow.VoidLogic;
 using SLZ.Marrow.Warehouse;
 using SLZ.Marrow.Zones;
-using SLZ.Rig;
-using SLZ.SFX;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -24,11 +23,8 @@ namespace SLZ.Bonelab
 	public class GameControl_Hub : MonoBehaviour
 	{
 		[CompilerGenerated]
-		private sealed class _003CBWBoxSequence_003Ed__156 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CBWBoxSequence_003Ed__161 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -57,8 +53,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CBWBoxSequence_003Ed__156(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CBWBoxSequence_003Ed__161(int _003C_003E1__state)
 			{
 			}
 
@@ -67,7 +65,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -76,14 +74,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CKlaxonLight_003Ed__157 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CKlaxonLight_003Ed__162 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -116,8 +126,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CKlaxonLight_003Ed__157(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CKlaxonLight_003Ed__162(int _003C_003E1__state)
 			{
 			}
 
@@ -126,7 +138,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -135,14 +147,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CBackUpYoinkLoad_003Ed__161 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CBackUpYoinkLoad_003Ed__166 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -167,8 +191,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CBackUpYoinkLoad_003Ed__161(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CBackUpYoinkLoad_003Ed__166(int _003C_003E1__state)
 			{
 			}
 
@@ -177,7 +203,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -186,14 +212,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CGeneratorStartSequence_003Ed__165 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CGeneratorStartSequence_003Ed__170 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -218,8 +256,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CGeneratorStartSequence_003Ed__165(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CGeneratorStartSequence_003Ed__170(int _003C_003E1__state)
 			{
 			}
 
@@ -228,7 +268,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -237,11 +277,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CAirlockEnter_003Ed__176 : IAsyncStateMachine
+		private struct _003CAirlockEnter_003Ed__181 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -253,19 +308,29 @@ public object Current { get; }
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CAirlockExitCycle_003Ed__177 : IAsyncStateMachine
+		private struct _003CAirlockExitCycle_003Ed__182 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -275,19 +340,29 @@ public object Current { get; }
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003COpenSmallDoor_003Ed__178 : IAsyncStateMachine
+		private struct _003COpenSmallDoor_003Ed__183 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -299,19 +374,65 @@ public object Current { get; }
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CCloseSmallDoor_003Ed__179 : IAsyncStateMachine
+		private struct _003CCloseSmallDoor_003Ed__184 : IAsyncStateMachine
+		{
+			public int _003C_003E1__state;
+
+			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
+
+			public GameControl_Hub _003C_003E4__this;
+
+			public CancellationToken cancelToken;
+
+			private CancellationTokenSource _003CtimerToken_003E5__2;
+
+			private UniTask.Awaiter _003C_003Eu__1;
+
+			private void MoveNext()
+			{
+			}
+
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+		[StructLayout(3)]
+		[CompilerGenerated]
+		private struct _003COpenBigDoors_003Ed__185 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -323,19 +444,29 @@ public object Current { get; }
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003COpenBigDoors_003Ed__180 : IAsyncStateMachine
+		private struct _003CCloseBigDoors_003Ed__186 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -345,48 +476,71 @@ public object Current { get; }
 
 			public CancellationToken cancelToken;
 
+			private CancellationTokenSource _003CtimerToken_003E5__2;
+
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CCloseBigDoors_003Ed__181 : IAsyncStateMachine
+		private struct _003CDoorCloseTimer_003Ed__187 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
 			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
 
-			public GameControl_Hub _003C_003E4__this;
+			public float timerLength;
 
 			public CancellationToken cancelToken;
 
+			public GameControl_Hub _003C_003E4__this;
+
+			public bool bigDoor;
+
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CBlinkAirLockCycleLight_003Ed__182 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CBlinkAirLockCycleLight_003Ed__190 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -411,8 +565,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CBlinkAirLockCycleLight_003Ed__182(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CBlinkAirLockCycleLight_003Ed__190(int _003C_003E1__state)
 			{
 			}
 
@@ -421,7 +577,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -430,7 +586,22 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public const string OneTrueLevelKey = "Hub";
 
@@ -646,13 +817,24 @@ public object Current { get; }
 
 		public LevelCrateReference ascent;
 
-		public LevelCrateReference loadScreenLevel;
+		public InventorySaveFilter inventorySaveFilter;
 
 		public Spawnable vfxFadeOutSpawnable;
 
-		public InventorySaveFilter inventorySaveFilter;
+		[Header("Door Emancipator")]
+		public MarrowEntity bigDoorEntity;
 
-		public RigManager rm;
+		public MarrowEntity smallDoorEntity;
+
+		public Transform emancipatorPointSmall;
+
+		public Vector3 emancipatorBoundsSmall;
+
+		public Transform emancipatorPointBig;
+
+		public Vector3 emancipatorBoundsBig;
+
+		public LayerMask layerMask;
 
 		private int _loadedTeleportSpot;
 
@@ -722,7 +904,7 @@ public object Current { get; }
 		{
 		}
 
-		private void SceneStreamerCallback()
+		private void OnLevelLoad()
 		{
 		}
 
@@ -778,13 +960,13 @@ public object Current { get; }
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CBWBoxSequence_003Ed__156))]
+		[IteratorStateMachine(typeof(_003CBWBoxSequence_003Ed__161))]
 		public IEnumerator BWBoxSequence()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CKlaxonLight_003Ed__157))]
+		[IteratorStateMachine(typeof(_003CKlaxonLight_003Ed__162))]
 		public IEnumerator KlaxonLight()
 		{
 			return null;
@@ -802,7 +984,7 @@ public object Current { get; }
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CBackUpYoinkLoad_003Ed__161))]
+		[IteratorStateMachine(typeof(_003CBackUpYoinkLoad_003Ed__166))]
 		private IEnumerator BackUpYoinkLoad()
 		{
 			return null;
@@ -820,7 +1002,7 @@ public object Current { get; }
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CGeneratorStartSequence_003Ed__165))]
+		[IteratorStateMachine(typeof(_003CGeneratorStartSequence_003Ed__170))]
 		private IEnumerator GeneratorStartSequence()
 		{
 			return null;
@@ -867,43 +1049,57 @@ public object Current { get; }
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CAirlockEnter_003Ed__176))]
+		[AsyncStateMachine(typeof(_003CAirlockEnter_003Ed__181))]
 		private UniTaskVoid AirlockEnter(int side)
 		{
 			return default(UniTaskVoid);
 		}
 
-		[AsyncStateMachine(typeof(_003CAirlockExitCycle_003Ed__177))]
+		[AsyncStateMachine(typeof(_003CAirlockExitCycle_003Ed__182))]
 		private UniTaskVoid AirlockExitCycle()
 		{
 			return default(UniTaskVoid);
 		}
 
-		[AsyncStateMachine(typeof(_003COpenSmallDoor_003Ed__178))]
+		[AsyncStateMachine(typeof(_003COpenSmallDoor_003Ed__183))]
 		private UniTask OpenSmallDoor(CancellationToken cancelToken)
 		{
 			return default(UniTask);
 		}
 
-		[AsyncStateMachine(typeof(_003CCloseSmallDoor_003Ed__179))]
+		[AsyncStateMachine(typeof(_003CCloseSmallDoor_003Ed__184))]
 		private UniTask CloseSmallDoor(CancellationToken cancelToken)
 		{
 			return default(UniTask);
 		}
 
-		[AsyncStateMachine(typeof(_003COpenBigDoors_003Ed__180))]
+		[AsyncStateMachine(typeof(_003COpenBigDoors_003Ed__185))]
 		private UniTask OpenBigDoors(CancellationToken cancelToken)
 		{
 			return default(UniTask);
 		}
 
-		[AsyncStateMachine(typeof(_003CCloseBigDoors_003Ed__181))]
+		[AsyncStateMachine(typeof(_003CCloseBigDoors_003Ed__186))]
 		private UniTask CloseBigDoors(CancellationToken cancelToken)
 		{
 			return default(UniTask);
 		}
 
-		[IteratorStateMachine(typeof(_003CBlinkAirLockCycleLight_003Ed__182))]
+		[AsyncStateMachine(typeof(_003CDoorCloseTimer_003Ed__187))]
+		private UniTask DoorCloseTimer(CancellationToken cancelToken, float timerLength, bool bigDoor = false)
+		{
+			return default(UniTask);
+		}
+
+		public void DoorEmancipator(bool bigDoor = false)
+		{
+		}
+
+		private void OnDrawGizmosSelected()
+		{
+		}
+
+		[IteratorStateMachine(typeof(_003CBlinkAirLockCycleLight_003Ed__190))]
 		private IEnumerator BlinkAirLockCycleLight()
 		{
 			return null;

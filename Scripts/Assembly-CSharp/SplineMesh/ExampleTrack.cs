@@ -4,8 +4,8 @@ using UnityEngine;
 namespace SplineMesh
 {
 	[ExecuteInEditMode]
-	[SelectionBase]
 	[DisallowMultipleComponent]
+	[SelectionBase]
 	public class ExampleTrack : MonoBehaviour
 	{
 		private GameObject generated;

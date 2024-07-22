@@ -14,6 +14,14 @@ namespace SLZ.Bonelab
 
 		private Quaternion quatVel;
 
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
 		public void MoveCameraUpdate()
 		{
 		}

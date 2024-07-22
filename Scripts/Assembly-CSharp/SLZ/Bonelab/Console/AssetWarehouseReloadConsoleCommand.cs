@@ -26,16 +26,25 @@ namespace SLZ.Bonelab.Console
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
-				throw new System.NotImplementedException();
 			}
 
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
-				throw new System.NotImplementedException();
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		[AsyncStateMachine(typeof(_003CRunSimpleCommand_003Ed__0))]
 		public override UniTask RunSimpleCommand(IAsyncWriter<object> writer, string parameter)

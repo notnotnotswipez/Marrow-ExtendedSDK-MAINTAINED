@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 namespace SLZ.Bonelab
 {
-	[AddComponentMenu("Event/vR Graphic Raycaster")]
 	[RequireComponent(typeof(Canvas))]
+	[AddComponentMenu("Event/vR Graphic Raycaster")]
 	public class VRGraphicRaycaster : BaseRaycaster
 	{
 		public enum BlockingObjects
@@ -23,12 +23,12 @@ namespace SLZ.Bonelab
 
 		protected const int kNoEventMaskSet = -1;
 
-		[SerializeField]
 		[FormerlySerializedAs("ignoreReversedGraphics")]
+		[SerializeField]
 		private bool m_IgnoreReversedGraphics;
 
-		[FormerlySerializedAs("blockingObjects")]
 		[SerializeField]
+		[FormerlySerializedAs("blockingObjects")]
 		private BlockingObjects m_BlockingObjects;
 
 		[SerializeField]

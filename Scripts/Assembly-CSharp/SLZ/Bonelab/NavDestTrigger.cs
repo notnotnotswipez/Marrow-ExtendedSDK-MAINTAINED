@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using SLZ.VFX;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Bonelab

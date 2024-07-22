@@ -9,10 +9,5 @@ namespace MK.Glow
 
 		public float maxValue;
 
-		public MinMaxRange(float minValue, float maxValue)
-		{
-			this.minValue = 0f;
-			this.maxValue = 0f;
-		}
 	}
 }

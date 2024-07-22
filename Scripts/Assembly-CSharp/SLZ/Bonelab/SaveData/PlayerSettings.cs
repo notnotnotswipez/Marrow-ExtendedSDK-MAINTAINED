@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
+using SLZ.Marrow.SaveData;
 
 namespace SLZ.Bonelab.SaveData
 {
-	public sealed class PlayerSettings
+	public sealed class PlayerSettings : IPlayerSettings
 	{
 		[JsonProperty("modified")]
 		public string Modified
@@ -125,34 +126,6 @@ namespace SLZ.Bonelab.SaveData
 			get
 			{
 				return 0;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		[JsonProperty("snap_enabled")]
-		public bool SnapEnabled
-		{
-			[CompilerGenerated]
-			get
-			{
-				return false;
-			}
-			[CompilerGenerated]
-			set
-			{
-			}
-		}
-
-		[JsonProperty("virtual_crouching_enabled")]
-		public bool VirtualCrouchingEnabled
-		{
-			[CompilerGenerated]
-			get
-			{
-				return false;
 			}
 			[CompilerGenerated]
 			set

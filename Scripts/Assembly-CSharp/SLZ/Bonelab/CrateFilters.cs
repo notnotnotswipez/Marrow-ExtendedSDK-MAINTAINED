@@ -89,9 +89,9 @@ namespace SLZ.Bonelab
 
 		public class BlackListCrateFilter : ICrateFilter<Crate>
 		{
-			private List<string> blackList;
+			private List<Barcode> blackList;
 
-			public BlackListCrateFilter(List<string> blackList)
+			public BlackListCrateFilter(List<Barcode> blackList)
 			{
 			}
 

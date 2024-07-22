@@ -17,7 +17,7 @@ namespace SLZ.Bonelab
 	{
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CSequenceProgress_003Ed__48 : IAsyncStateMachine
+		private struct _003CSequenceProgress_003Ed__49 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -29,19 +29,29 @@ namespace SLZ.Bonelab
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CChangeChunk_003Ed__49 : IAsyncStateMachine
+		private struct _003CChangeChunk_003Ed__50 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -53,19 +63,29 @@ namespace SLZ.Bonelab
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CLoadAvatarFromSaveDataAsync_003Ed__61 : IAsyncStateMachine
+		private struct _003CLoadAvatarFromSaveDataAsync_003Ed__62 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -75,15 +95,25 @@ namespace SLZ.Bonelab
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		public Encounter[] Encounters;
 
@@ -156,9 +186,9 @@ namespace SLZ.Bonelab
 
 		public TextMeshPro tmp_BuildInfo;
 
-		public ZoneMusic music_menu;
+		public AudioClip clip_menu;
 
-		public ZoneMusic music_keygen;
+		public AudioClip clip_kegen;
 
 		public SpawnableCrateReference blueApollo;
 
@@ -169,6 +199,10 @@ namespace SLZ.Bonelab
 		}
 
 		public override void Start()
+		{
+		}
+
+		private void OnLevelLoad()
 		{
 		}
 
@@ -208,13 +242,13 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CSequenceProgress_003Ed__48))]
+		[AsyncStateMachine(typeof(_003CSequenceProgress_003Ed__49))]
 		public UniTaskVoid SequenceProgress(int progress)
 		{
 			return default(UniTaskVoid);
 		}
 
-		[AsyncStateMachine(typeof(_003CChangeChunk_003Ed__49))]
+		[AsyncStateMachine(typeof(_003CChangeChunk_003Ed__50))]
 		private UniTask ChangeChunk(int progress)
 		{
 			return default(UniTask);
@@ -264,7 +298,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CLoadAvatarFromSaveDataAsync_003Ed__61))]
+		[AsyncStateMachine(typeof(_003CLoadAvatarFromSaveDataAsync_003Ed__62))]
 		public UniTask LoadAvatarFromSaveDataAsync()
 		{
 			return default(UniTask);

@@ -41,7 +41,9 @@ namespace SLZ.MLAgents
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CRun_003Ed__45(int _003C_003E1__state)
 			{
 			}
@@ -56,33 +58,29 @@ namespace SLZ.MLAgents
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
 
-		[Header("Model/Inference Pipeline Specific")]
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
+
 		[Tooltip("The neural network to do inference with")]
+		[Header("Model/Inference Pipeline Specific")]
 		public NNModel srcModel;
 
 		private Model model;

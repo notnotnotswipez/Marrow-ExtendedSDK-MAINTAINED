@@ -71,8 +71,8 @@ namespace SLZ.Bonelab
 
 		private int _last_deactivate;
 
-		[Header("AudioSettings")]
 		[Tooltip("Is the sound 2d or 3d?")]
+		[Header("AudioSettings")]
 		[Range(0f, 1f)]
 		public float spatialBlend;
 
@@ -85,8 +85,8 @@ namespace SLZ.Bonelab
 
 		public GameObject audioPlacementOverride;
 
-		[Header("AudioClips")]
 		[Space(10f)]
+		[Header("AudioClips")]
 		public AudioClip[] clips_Confirm;
 
 		public AudioClip[] clips_Deny;

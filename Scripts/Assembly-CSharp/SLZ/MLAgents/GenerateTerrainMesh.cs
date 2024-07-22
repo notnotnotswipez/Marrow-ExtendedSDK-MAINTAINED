@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace SLZ.MLAgents
 {
-	[RequireComponent(typeof(MeshFilter))]
-	[RequireComponent(typeof(MeshRenderer))]
 	[RequireComponent(typeof(MeshCollider))]
+	[RequireComponent(typeof(MeshRenderer))]
+	[RequireComponent(typeof(MeshFilter))]
 	public class GenerateTerrainMesh : MonoBehaviour
 	{
 		public GameObject dbgPoint;

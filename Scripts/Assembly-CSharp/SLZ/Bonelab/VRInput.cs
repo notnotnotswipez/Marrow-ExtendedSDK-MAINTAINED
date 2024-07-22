@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -21,15 +21,6 @@ namespace SLZ.Bonelab
 
 			public Hand hand;
 
-			public TrackedInput(Hand h, Vector2 p, bool isNew, bool hasMoved, bool isButtonDown, bool isButtonUp, int i)
-			{
-				this.id = -1;
-				this.phase = TouchPhase.Began;
-				this.isPressed = true;
-				this.isReleased = true;
-				this.position = Vector2.left;
-				this.hand = null;
-			}
 		}
 
 		public List<TrackedInput> trackedInputs;

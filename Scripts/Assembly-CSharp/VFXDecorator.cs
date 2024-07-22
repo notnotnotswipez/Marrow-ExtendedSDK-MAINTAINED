@@ -9,9 +9,6 @@ public class VFXDecorator : SpawnDecorator
 
 	public bool despawnOnJointBreak;
 
-	public override void OnSpawn(GameObject go)
-	{
-	}
 
 	public void SpawnSpawnable(GameObject attachObj)
 	{

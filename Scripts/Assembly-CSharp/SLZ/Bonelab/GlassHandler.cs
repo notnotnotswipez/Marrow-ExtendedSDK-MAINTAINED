@@ -20,8 +20,8 @@ namespace SLZ.Bonelab
 		[Tooltip("Glass type to use on Android")]
 		public GlassType override_Android;
 
-		[Tooltip("Full transparent glass material to use")]
 		[Space(10f)]
+		[Tooltip("Full transparent glass material to use")]
 		public Material mat_transparent;
 
 		[Tooltip("Opaque glass material to use (black/grey or reflective likely)")]

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Rig;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -11,11 +11,8 @@ namespace SLZ.Bonelab
 	public class PageView : MonoBehaviour
 	{
 		[CompilerGenerated]
-		private sealed class _003CCoChangePage_003Ed__22 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CCoChangePage_003Ed__24 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -42,8 +39,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CCoChangePage_003Ed__22(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CCoChangePage_003Ed__24(int _003C_003E1__state)
 			{
 			}
 
@@ -52,7 +51,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -61,14 +60,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CCoCloseAnimation_003Ed__23 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CCoCloseAnimation_003Ed__25 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -99,8 +110,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CCoCloseAnimation_003Ed__23(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CCoCloseAnimation_003Ed__25(int _003C_003E1__state)
 			{
 			}
 
@@ -109,7 +122,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -118,14 +131,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CCoSummonAnimation_003Ed__24 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CCoSummonAnimation_003Ed__26 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -156,8 +181,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CCoSummonAnimation_003Ed__24(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CCoSummonAnimation_003Ed__26(int _003C_003E1__state)
 			{
 			}
 
@@ -166,7 +193,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -175,7 +202,22 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[Header("References")]
 		public GameObject audioPlacementOverride;
@@ -215,6 +257,10 @@ public object Current { get; }
 
 		private bool clip_closeDownFirstPlay;
 
+		public Action<PageView> onActivated;
+
+		public Action<PageView> onDeactivated;
+
 		private void Start()
 		{
 		}
@@ -236,19 +282,19 @@ public object Current { get; }
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoChangePage_003Ed__22))]
+		[IteratorStateMachine(typeof(_003CCoChangePage_003Ed__24))]
 		private IEnumerator CoChangePage(Page page)
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoCloseAnimation_003Ed__23))]
+		[IteratorStateMachine(typeof(_003CCoCloseAnimation_003Ed__25))]
 		private IEnumerator CoCloseAnimation()
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoSummonAnimation_003Ed__24))]
+		[IteratorStateMachine(typeof(_003CCoSummonAnimation_003Ed__26))]
 		private IEnumerator CoSummonAnimation()
 		{
 			return null;

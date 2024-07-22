@@ -5,7 +5,6 @@ using System.Threading;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnityEngine;
-using YieldAwaitable = Cysharp.Threading.Tasks.YieldAwaitable;
 
 public class MG_Obelisk : MonoBehaviour
 {
@@ -21,15 +20,25 @@ public class MG_Obelisk : MonoBehaviour
 
 		private UniTask.Awaiter _003C_003Eu__1;
 
-		public void MoveNext()
+		private void MoveNext()
 		{
 		}
 
-		[DebuggerHidden]
-		public void SetStateMachine(IAsyncStateMachine stateMachine)
+        void IAsyncStateMachine.MoveNext()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        [DebuggerHidden]
+		private void SetStateMachine(IAsyncStateMachine stateMachine)
 		{
 		}
-	}
+
+        void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 
 	[StructLayout(3)]
 	[CompilerGenerated]
@@ -51,19 +60,29 @@ public class MG_Obelisk : MonoBehaviour
 
 		private float _003CendTime_003E5__4;
 
-		private YieldAwaitable.Awaiter _003C_003Eu__1;
+		private System.Runtime.CompilerServices.YieldAwaitable _003C_003Eu__1;
 
 		private UniTask.Awaiter _003C_003Eu__2;
 
-		public void MoveNext()
+		private void MoveNext()
 		{
 		}
 
-		[DebuggerHidden]
-		public void SetStateMachine(IAsyncStateMachine stateMachine)
+        void IAsyncStateMachine.MoveNext()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        [DebuggerHidden]
+		private void SetStateMachine(IAsyncStateMachine stateMachine)
 		{
 		}
-	}
+
+        void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 
 	[SerializeField]
 	private GameObject laserObj;

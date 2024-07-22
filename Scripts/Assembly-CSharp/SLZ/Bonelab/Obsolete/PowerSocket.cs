@@ -7,14 +7,13 @@ using UnityEngine;
 
 namespace SLZ.Bonelab.Obsolete
 {
+	[Obsolete("OLD POWERABLE SYSTEM - DO NOT USE!")]
 	[AddComponentMenu(null)]
-	[Obsolete("Superseded by VoidLogic")]
 	public class PowerSocket : MonoBehaviour
 	{
 		[CompilerGenerated]
 		private sealed class _003CCoChargeLoop_003Ed__20 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -39,7 +38,9 @@ namespace SLZ.Bonelab.Obsolete
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoChargeLoop_003Ed__20(int _003C_003E1__state)
 			{
 			}
@@ -49,50 +50,46 @@ namespace SLZ.Bonelab.Obsolete
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
 
-		[SerializeField]
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
+
 		[Tooltip("The charge rate passed into the battery in Watts/min")]
+		[SerializeField]
 		private float m_ChargeCurrent;
 
 		private Coroutine CoroutineChargeLoop;
 
 		public bool Charging;
 
-		[Header("SPECIFIC POWERSOURCE")]
 		[SerializeField]
+		[Header("SPECIFIC POWERSOURCE")]
 		private PowerSource SamePower;
 
-		[Header("INDICATOR LIGHTS")]
 		[Space(5f)]
+		[Header("INDICATOR LIGHTS")]
 		public GameObject[] indicateOn;
 
 		public GameObject[] indicateOff;

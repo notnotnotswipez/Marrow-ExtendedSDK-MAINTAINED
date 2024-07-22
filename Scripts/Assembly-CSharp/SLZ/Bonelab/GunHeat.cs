@@ -1,3 +1,4 @@
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -10,8 +11,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private Material barrelMat;
 
-		[GradientUsage(true)]
 		[SerializeField]
+		[GradientUsage(true)]
 		private Gradient heatGradient;
 
 		[SerializeField]
@@ -42,7 +43,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void OnFire()
+		private void OnFire(Gun gun)
 		{
 		}
 

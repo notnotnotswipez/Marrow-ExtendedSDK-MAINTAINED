@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using SLZ.Bonelab.SaveData;
-using SLZ.Marrow.Data;
+using SLZ.Marrow;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -56,8 +55,8 @@ namespace SLZ.Bonelab
 			}
 		}
 
-		[Tooltip("Crate reference to the loading screen level")]
-		public LevelCrateReference LoadScreenLevel
+		[Tooltip("Crate reference to a fadeout VFX override, if any")]
+		public SpawnableCrateReference FadeoutVFXOverride
 		{
 			[CompilerGenerated]
 			get
@@ -77,32 +76,6 @@ namespace SLZ.Bonelab
 			get
 			{
 				return null;
-			}
-			[CompilerGenerated]
-			protected set
-			{
-			}
-		}
-
-		public RigManager PlayerRigManager
-		{
-			[CompilerGenerated]
-			get
-			{
-				return null;
-			}
-			[CompilerGenerated]
-			protected set
-			{
-			}
-		}
-
-		public Spawnable VfxFadeOutSpawnable
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(Spawnable);
 			}
 			[CompilerGenerated]
 			protected set
@@ -201,15 +174,6 @@ namespace SLZ.Bonelab
 			}
 		}
 
-		public static bool IsCompleted(PlayerProgression progression, string levelKey)
-		{
-			return false;
-		}
-
-		public static void SetCompleted(PlayerProgression progression, string levelKey, bool completed)
-		{
-		}
-
 		public virtual void Awake()
 		{
 		}
@@ -231,10 +195,6 @@ namespace SLZ.Bonelab
 		}
 
 		public void SetProgress(int progress)
-		{
-		}
-
-		public void FinalizeAmmo()
 		{
 		}
 

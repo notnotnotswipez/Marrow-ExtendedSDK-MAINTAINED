@@ -14,9 +14,6 @@ namespace SLZ.Bonelab
 		[CompilerGenerated]
 		private sealed class _003CRegenerate_003Ed__50 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -41,7 +38,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CRegenerate_003Ed__50(int _003C_003E1__state)
 			{
 			}
@@ -51,7 +50,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -60,7 +59,22 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[Space(2f)]
 		[Header("IMPACT")]
@@ -99,9 +113,9 @@ public object Current { get; }
 		[Tooltip("Modifier multiplier to attack type")]
 		public float mod_TypeDamage;
 
-		[Tooltip("Colliders for critical hits")]
-		[Header("CRITICAL HIT")]
 		[Space(10f)]
+		[Header("CRITICAL HIT")]
+		[Tooltip("Colliders for critical hits")]
 		public Collider[] col_crit;
 
 		[Tooltip("Critical hit modifier percent")]
@@ -111,8 +125,8 @@ public object Current { get; }
 		public GameObject fx_crit;
 
 		[Tooltip("Invulnerable, probably temp")]
-		[Header("HEALTH")]
 		[Space(10f)]
+		[Header("HEALTH")]
 		public bool invulnerable;
 
 		[Tooltip("Enemy maximum health")]
@@ -139,9 +153,9 @@ public object Current { get; }
 		[Tooltip("FX for bloodied hits")]
 		public GameObject fx_bloodied;
 
-		[Tooltip("Health to regen per frequency")]
-		[Space(10f)]
 		[Header("HEALTH REGEN")]
+		[Space(10f)]
+		[Tooltip("Health to regen per frequency")]
 		public float amt_Regen;
 
 		[Tooltip("Time until regen starts after hit")]
@@ -157,8 +171,8 @@ public object Current { get; }
 		public GameObject fx_regen;
 
 		[Tooltip("Threshold of damage to cause a reaction")]
-		[Header("REACTION")]
 		[Space(5f)]
+		[Header("REACTION")]
 		public float thr_React;
 
 		private bool reacting;
@@ -182,8 +196,8 @@ public object Current { get; }
 		[Tooltip("FX for death")]
 		public GameObject fx_death;
 
-		[Header("BODY STRUCTURE")]
 		[Space(10f)]
+		[Header("BODY STRUCTURE")]
 		private Rigidbody rb_enemyBody;
 
 		private EnemyTurret _enemyAiRig;

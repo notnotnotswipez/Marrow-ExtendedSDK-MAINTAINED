@@ -11,15 +11,15 @@ namespace SLZ.Bonelab.Obsolete
 		public bool isMotorized;
 
 		[Space(5f)]
-		[Range(0f, 0.2f)]
 		[Header("VOLTAGE OFFSET")]
+		[Range(0f, 0.2f)]
 		public float lowerOffSet;
 
 		[Range(0f, 0.8f)]
 		public float higherOffset;
 
-		[Range(-1f, 1f)]
 		[Space(5f)]
+		[Range(-1f, 1f)]
 		public float min_InputVoltage;
 
 		[Range(-1f, 1f)]
@@ -87,8 +87,8 @@ namespace SLZ.Bonelab.Obsolete
 
 		public Vector3 desiredPosition;
 
-		[Space(5f)]
 		[Header("SLATS")]
+		[Space(5f)]
 		public GameObject[] Slats;
 
 		[Header("LOCK")]

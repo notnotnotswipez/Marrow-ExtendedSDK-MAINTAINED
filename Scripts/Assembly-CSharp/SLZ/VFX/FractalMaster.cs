@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace SLZ.VFX
 {
-	[ExecuteInEditMode]
 	[ImageEffectAllowedInSceneView]
+	[ExecuteInEditMode]
 	public class FractalMaster : MonoBehaviour
 	{
 		public ComputeShader fractalShader;

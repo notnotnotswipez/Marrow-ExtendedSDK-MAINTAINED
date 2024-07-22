@@ -41,6 +41,7 @@ namespace Trees
 
 			public int gridSize;
 
+		
 		}
 
 		public LeafNode[] leafNodes;

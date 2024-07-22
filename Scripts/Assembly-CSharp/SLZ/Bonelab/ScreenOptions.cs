@@ -34,60 +34,6 @@ namespace SLZ.Bonelab
 
 			public CallbackFloat callbackFloat;
 
-			public GUIItem(GUIType t, float v, float st, float sp, CallbackFloat c = null)
-			{
-				this.callbackBool = null;
-				this.callbackFloat = null;
-				this.type = GUIType.BOX;
-				this.label = "null";
-				this.value = 0f;
-				this.start = 0f;
-				this.stop = 0f;
-			}
-
-			public GUIItem(GUIType t, string l, float v, float st, float sp, CallbackFloat c = null)
-			{
-				this.callbackBool = null;
-				this.callbackFloat = null;
-				this.type = GUIType.BOX;
-				this.label = "null";
-				this.value = 0f;
-				this.start = 0f;
-				this.stop = 0f;
-			}
-
-			public GUIItem(GUIType t, string l)
-			{
-				this.callbackBool = null;
-				this.callbackFloat = null;
-				this.type = GUIType.BOX;
-				this.label = "null";
-				this.value = 0f;
-				this.start = 0f;
-				this.stop = 0f;
-			}
-
-			public GUIItem(GUIType t, string l, CallbackBool c = null)
-			{
-				this.callbackBool = null;
-				this.callbackFloat = null;
-				this.type = GUIType.BOX;
-				this.label = "null";
-				this.value = 0f;
-				this.start = 0f;
-				this.stop = 0f;
-			}
-
-			public GUIItem(GUIType t, string l, CallbackFloat c = null)
-			{
-				this.callbackBool = null;
-				this.callbackFloat = null;
-				this.type = GUIType.BOX;
-				this.label = "null";
-				this.value = 0f;
-				this.start = 0f;
-				this.stop = 0f;
-			}
 		}
 
 		private float guiMargin;

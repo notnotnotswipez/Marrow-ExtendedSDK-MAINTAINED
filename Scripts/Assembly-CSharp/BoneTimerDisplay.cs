@@ -35,7 +35,9 @@ public class BoneTimerDisplay : MonoBehaviour
 			}
 		}
 
-		[DebuggerHidden]
+        public object Current => throw new NotImplementedException();
+
+        [DebuggerHidden]
 		public _003CCoUpdateDisplay_003Ed__9(int _003C_003E1__state)
 		{
 		}
@@ -50,30 +52,26 @@ public class BoneTimerDisplay : MonoBehaviour
 			return false;
 		}
 
-		public void Reset()
-		{
-			throw new NotImplementedException();
-		}
-
-		public object Current { get; }
-
-		object IEnumerator.Current => Current;
-
 		[DebuggerHidden]
 		private void System_002ECollections_002EIEnumerator_002EReset()
 		{
 		}
 
-		bool IEnumerator.MoveNext()
-		{
-			return MoveNext();
-		}
+        bool IEnumerator.MoveNext()
+        {
+            throw new NotImplementedException();
+        }
 
-		public void Dispose()
-		{
-			throw new NotImplementedException();
-		}
-	}
+        public void Reset()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+    }
 
 	public BoneTimer boneTimer;
 

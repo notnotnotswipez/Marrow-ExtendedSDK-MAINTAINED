@@ -5,6 +5,16 @@ namespace SLZ.SFX
 {
 	public class SimpleSFX : MonoBehaviour
 	{
+		public enum mixerGroups
+		{
+			hardInteraction = 0,
+			softInteraction = 1,
+			impact = 2,
+			ambience = 3,
+			diegeticMusic = 4,
+			npcVocals = 5
+		}
+
 		public enum PlayBehavior
 		{
 			random = 0,
@@ -15,6 +25,8 @@ namespace SLZ.SFX
 		public GameObject audioPlacementOverride;
 
 		public AudioMixerGroup mixerGroup;
+
+		public mixerGroups audioMixerGroup;
 
 		public AudioClip[] simpleClip;
 

@@ -1,7 +1,7 @@
+using SLZ.Marrow;
 using SLZ.Marrow.AI;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Interaction;
-using SLZ.Rig;
 using UnityEngine;
 
 namespace SLZ.Bonelab

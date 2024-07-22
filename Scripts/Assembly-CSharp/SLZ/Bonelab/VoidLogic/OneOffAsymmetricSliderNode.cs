@@ -1,29 +1,28 @@
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.VoidLogic;
-using SLZ.Player;
 using UnityEngine;
 
 namespace SLZ.Bonelab.VoidLogic
 {
-	[AddComponentMenu("VoidLogic/Bonelab/Internal Only/VoidLogic Asymmetric Slider One-off Node")]
 	[Support(SupportFlags.CowboySupported, "This is a one-off. Your bugs are your own unless or until we have a plan to generalize this into Marrow.")]
+	[AddComponentMenu("VoidLogic/Bonelab/Internal Only/VoidLogic Asymmetric Slider One-off Node")]
 	public class OneOffAsymmetricSliderNode : BaseNode, IVoidLogicSensor, IVoidLogicNode, IVoidLogicActuator
 	{
-		[SerializeField]
 		[Tooltip("Output response curve (multiplied by input)")]
+		[SerializeField]
 		private AnimationCurve _curve;
 
-		[SerializeField]
 		[Tooltip("Slider joint that drives the output power value")]
+		[SerializeField]
 		private ConfigurableJoint _sliderConfigurableJoint;
 
 		[Tooltip("Interactable host i.e. for running haptics")]
 		[SerializeField]
 		private InteractableHost _interactableHost;
 
-		[Header("Force")]
 		[SerializeField]
+		[Header("Force")]
 		private float force_Spring;
 
 		[SerializeField]
@@ -32,8 +31,8 @@ namespace SLZ.Bonelab.VoidLogic
 		[SerializeField]
 		private float force_Max;
 
-		[Header("Audio")]
 		[SerializeField]
+		[Header("Audio")]
 		private AudioClip clip_clickOn;
 
 		private Haptor _haptor;
@@ -84,15 +83,6 @@ namespace SLZ.Bonelab.VoidLogic
 		}
 
 		public override PortMetadata PortMetadata => default(PortMetadata);
-		public void Actuate(ref NodeState nodeState)
-		{
-			throw new System.NotImplementedException();
-		}
-
-		public void ReadSensors(ref NodeState nodeState)
-		{
-			throw new System.NotImplementedException();
-		}
 
 		protected override void Awake()
 		{
@@ -113,5 +103,15 @@ namespace SLZ.Bonelab.VoidLogic
 		private void SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicActuator_002EActuate(ref NodeState nodeState)
 		{
 		}
-	}
+
+        public void ReadSensors(ref NodeState nodeState)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Actuate(ref NodeState nodeState)
+        {
+            throw new System.NotImplementedException();
+        }
+    }
 }

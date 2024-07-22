@@ -142,25 +142,11 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void Initialize()
-		{
-		}
 
 		private void SetEnvParams()
 		{
 		}
 
-		public void OnEpisodeBegin()
-		{
-		}
-
-		public void CollectObservations(VectorSensor sensor)
-		{
-		}
-
-		public void OnActionReceived(ActionBuffers actionBuffers)
-		{
-		}
 
 		private void RandomizeAnimationCurve(ref AnimationCurve animCurve, float nb_inds)
 		{

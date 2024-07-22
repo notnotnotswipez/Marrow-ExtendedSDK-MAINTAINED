@@ -208,20 +208,7 @@ namespace SLZ.MLAgents
 		private void OnDrawGizmos()
 		{
 		}
-
-		public void Initialize()
-		{
-		}
-
 		private void SetEnvParams()
-		{
-		}
-
-		public void OnEpisodeBegin()
-		{
-		}
-
-		public void CollectObservations(VectorSensor sensor)
 		{
 		}
 
@@ -229,11 +216,6 @@ namespace SLZ.MLAgents
 		{
 			return 0f;
 		}
-
-		public void OnActionReceived(ActionBuffers actionBuffers)
-		{
-		}
-
 		private void ResetAvgLosses()
 		{
 		}

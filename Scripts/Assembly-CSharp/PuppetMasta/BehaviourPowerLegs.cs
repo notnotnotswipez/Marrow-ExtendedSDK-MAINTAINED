@@ -73,7 +73,9 @@ namespace PuppetMasta
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CSelfDespawn_003Ed__36(int _003C_003E1__state)
 			{
 			}
@@ -88,30 +90,26 @@ namespace PuppetMasta
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CTargetableUpdateRoutine_003Ed__95 : IEnumerator<object>, IEnumerator, IDisposable
@@ -140,7 +138,9 @@ namespace PuppetMasta
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CTargetableUpdateRoutine_003Ed__95(int _003C_003E1__state)
 			{
 			}
@@ -155,30 +155,26 @@ namespace PuppetMasta
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[Header("Biped Settings")]
 		public SubBehaviourIk ik;
@@ -229,8 +225,8 @@ namespace PuppetMasta
 
 		private bool _debugDrawHierarchy;
 
-		[EnumFlags]
 		[Header("Agro State")]
+		[EnumFlags]
 		public CombatType combatProficiency;
 
 		public CombatType agroState;

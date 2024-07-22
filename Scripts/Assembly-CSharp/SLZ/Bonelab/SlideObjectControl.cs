@@ -2,8 +2,8 @@ using UnityEngine;
 
 namespace SLZ.Bonelab
 {
-	[RequireComponent(typeof(Rigidbody))]
 	[RequireComponent(typeof(ConfigurableJoint))]
+	[RequireComponent(typeof(Rigidbody))]
 	public class SlideObjectControl : MonoBehaviour
 	{
 		private Vector3 SlideDirection;

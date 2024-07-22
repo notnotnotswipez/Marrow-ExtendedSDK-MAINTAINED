@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
 using SLZ.Marrow.SaveData;
+using SLZ.Marrow.Warehouse;
 
 namespace SLZ.Bonelab.SaveData
 {
@@ -21,17 +22,17 @@ namespace SLZ.Bonelab.SaveData
 			}
 		}
 
-		public int UnlockCountForBarcode(string barcode)
+		public int UnlockCountForBarcode(Barcode barcode)
 		{
 			return 0;
 		}
 
-		public int IncrementUnlockForBarcode(string barcode)
+		public int IncrementUnlockForBarcode(Barcode barcode)
 		{
 			return 0;
 		}
 
-		public bool ClearUnlockForBarcode(string barcode)
+		public bool ClearUnlockForBarcode(Barcode barcode)
 		{
 			return false;
 		}

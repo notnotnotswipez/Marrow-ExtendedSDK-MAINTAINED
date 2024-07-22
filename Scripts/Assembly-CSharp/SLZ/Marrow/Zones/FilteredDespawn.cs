@@ -6,8 +6,6 @@ namespace SLZ.Marrow.Zones
 	[RequireComponent(typeof(Zone))]
 	public class FilteredDespawn : ZoneItem
 	{
-		protected void OnEnter(MarrowEntity activatorEntity)
-		{
-		}
+		
 	}
 }

@@ -33,15 +33,6 @@ namespace MK.Glow
 
 			public int renderPriority;
 
-			public KeywordState(int bloom, int lensSurface, int lensFlare, int glare, int natural, int renderPriority)
-			{
-				this.bloom = -1;
-				this.lensSurface = -1;
-				this.lensFlare = -1;
-				this.glare = -1;
-				this.natural = -1;
-				this.renderPriority = -1;
-			}
 		}
 
 		private Dictionary<KeywordState, int> variants;

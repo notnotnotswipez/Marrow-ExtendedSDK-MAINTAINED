@@ -46,11 +46,6 @@ namespace MK.Glow
 
 			internal bool enabled;
 
-			internal Keyword(string name, bool enabled)
-			{
-				this.name = "";
-				this.enabled = false;
-			}
 		}
 
 		private static Resources _resources;

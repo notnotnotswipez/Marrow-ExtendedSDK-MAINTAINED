@@ -1,6 +1,5 @@
-using SLZ.Bonelab.Obsolete;
+using SLZ.Marrow;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
 using UnityEngine;
 using UnityEngine.Video;
 
@@ -30,8 +29,6 @@ namespace SLZ.Bonelab
 		public bool solved_CagePuzzle;
 
 		public DoorControl ctrl_CageDoor;
-
-		public TriggerSwitch[] toggler_SetLights;
 
 		private int int_LightsChecked;
 

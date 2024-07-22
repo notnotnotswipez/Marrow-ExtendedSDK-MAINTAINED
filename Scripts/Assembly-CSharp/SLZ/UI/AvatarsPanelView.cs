@@ -8,11 +8,9 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Bonelab;
 using SLZ.Bonelab.SaveData;
+using SLZ.Marrow;
 using SLZ.Marrow.Audio;
-using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Warehouse;
-using SLZ.Player;
-using SLZ.Rig;
 using SLZ.VRMK;
 using TMPro;
 using UnityEngine;
@@ -25,28 +23,38 @@ namespace SLZ.UI
 	{
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CPopulateMenuAsync_003Ed__92 : IAsyncStateMachine
+		private struct _003CPopulateMenuAsync_003Ed__91 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+			public Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
 
 			public AvatarsPanelView _003C_003E4__this;
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CPromptCycle_003Ed__96 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CPromptCycle_003Ed__95 : IEnumerator<object>, IEnumerator, IDisposable
 		{
 			private int _003C_003E1__state;
 
@@ -72,8 +80,10 @@ namespace SLZ.UI
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CPromptCycle_003Ed__96(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CPromptCycle_003Ed__95(int _003C_003E1__state)
 			{
 			}
 
@@ -82,63 +92,39 @@ namespace SLZ.UI
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
-
-			public void Reset()
-			{
-			}
-
-			public object Current { get; }
-			
-
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CLoadFavoriteAvatars_003Ed__97 : IAsyncStateMachine
+		private struct _003CSwapAvatar_003Ed__97 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
-
-			public AvatarsPanelView _003C_003E4__this;
-
-			private List<string> _003CfavoriteAvatarsBarcodes_003E5__2;
-
-			private int _003Ci_003E5__3;
-
-			private UniTask<AvatarCrate>.Awaiter _003C_003Eu__1;
-
-			public void MoveNext()
-			{
-			}
-
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
-		}
-
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003CSwapAvatar_003Ed__98 : IAsyncStateMachine
-		{
-			public int _003C_003E1__state;
-
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+			public Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
 
 			public AvatarsPanelView _003C_003E4__this;
 
@@ -146,43 +132,61 @@ namespace SLZ.UI
 
 			private UniTask<bool>.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CSwapReflectionAvatar_003Ed__99 : IAsyncStateMachine
+		private struct _003CSwapReflectionAvatar_003Ed__98 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
 			public AsyncUniTaskMethodBuilder _003C_003Et__builder;
 
-			public string barcode;
+			public Barcode barcode;
 
 			public AvatarsPanelView _003C_003E4__this;
 
 			private AvatarCrate _003Ccrate_003E5__2;
 
-			private UniTask<AvatarCrate>.Awaiter _003C_003Eu__1;
+			private UniTask<GameObject>.Awaiter _003C_003Eu__1;
 
-			private UniTask<GameObject>.Awaiter _003C_003Eu__2;
-
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public GameObject canvas;
 
@@ -194,8 +198,6 @@ namespace SLZ.UI
 		public bool includeExternalAvatars;
 
 		public bool filterByTag;
-
-		public List<string> avatarTags;
 
 		public bool favoritesMode;
 
@@ -275,7 +277,7 @@ namespace SLZ.UI
 
 		private string selectedTag;
 
-		private Dictionary<string, AvatarCrate> avatarFlatDictionary;
+		private Dictionary<Barcode, AvatarCrate> avatarFlatDictionary;
 
 		private List<AvatarCrate> avatarCrates;
 
@@ -301,8 +303,7 @@ namespace SLZ.UI
 
 		public Transform previewTransform;
 
-		[SerializeField]
-		private BonelabSerializableDictionaries.StringAvatarDictionary cachedPreviews;
+		private Dictionary<Barcode, SLZ.VRMK.Avatar> cachedPreviews;
 
 		private SLZ.VRMK.Avatar previewAvatar;
 
@@ -327,9 +328,9 @@ namespace SLZ.UI
 
 		private bool firstActivation;
 
-		private List<string> defaultFavoriteAvatarsBarcodes;
+		private List<AvatarCrateReference> defaultFavoriteAvatarsBarcodes;
 
-		private List<string> defaultPeasantBarcodes;
+		private List<AvatarCrateReference> defaultPeasantBarcodes;
 
 		public UnityEvent pullCordInserted;
 
@@ -337,7 +338,11 @@ namespace SLZ.UI
 
 		private static PlayerUnlocks u => null;
 
-		private void Start()
+		private void Awake()
+		{
+		}
+
+		private void OnLevelLoad()
 		{
 		}
 
@@ -349,11 +354,7 @@ namespace SLZ.UI
 		{
 		}
 
-		private void OnPalletAdded(string palletBarcode)
-		{
-		}
-
-		public void SetRig(MarrowEntity incomingRig)
+		private void OnPalletAdded(Barcode palletBarcode)
 		{
 		}
 
@@ -421,7 +422,7 @@ namespace SLZ.UI
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CPopulateMenuAsync_003Ed__92))]
+		[AsyncStateMachine(typeof(_003CPopulateMenuAsync_003Ed__91))]
 		public UniTaskVoid PopulateMenuAsync()
 		{
 			return default(UniTaskVoid);
@@ -439,26 +440,24 @@ namespace SLZ.UI
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CPromptCycle_003Ed__96))]
+		[IteratorStateMachine(typeof(_003CPromptCycle_003Ed__95))]
 		private IEnumerator PromptCycle()
 		{
 			return null;
 		}
 
-		[AsyncStateMachine(typeof(_003CLoadFavoriteAvatars_003Ed__97))]
-		private UniTaskVoid LoadFavoriteAvatars()
+		private void LoadFavoriteAvatars()
 		{
-			return default(UniTaskVoid);
 		}
 
-		[AsyncStateMachine(typeof(_003CSwapAvatar_003Ed__98))]
+		[AsyncStateMachine(typeof(_003CSwapAvatar_003Ed__97))]
 		private UniTaskVoid SwapAvatar(AvatarCrate avatarCrate)
 		{
 			return default(UniTaskVoid);
 		}
 
-		[AsyncStateMachine(typeof(_003CSwapReflectionAvatar_003Ed__99))]
-		private UniTask SwapReflectionAvatar(string barcode)
+		[AsyncStateMachine(typeof(_003CSwapReflectionAvatar_003Ed__98))]
+		private UniTask SwapReflectionAvatar(Barcode barcode)
 		{
 			return default(UniTask);
 		}

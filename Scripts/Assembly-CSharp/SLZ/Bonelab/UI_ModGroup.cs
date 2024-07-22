@@ -11,7 +11,6 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Marrow.Forklift;
 using SLZ.Marrow.Forklift.Model;
 using SLZ.Marrow.Warehouse;
-using SLZ.ModIO.WebSockets;
 using SLZ.UI;
 using TMPro;
 using UnityEngine;
@@ -53,6 +52,8 @@ namespace SLZ.Bonelab
 			public TextMeshProUGUI txt_developerModePort;
 
 			public TextMeshProUGUI txt_modioDiagnostics;
+
+			public TextMeshProUGUI txt_generalDiagnostics;
 		}
 
 		[Serializable]
@@ -104,15 +105,25 @@ namespace SLZ.Bonelab
 
 				private UniTask<UnityEngine.Networking.UnityWebRequest>.Awaiter _003C_003Eu__1;
 
-				public void MoveNext()
+				private void MoveNext()
 				{
 				}
 
-				[DebuggerHidden]
-				public void SetStateMachine(IAsyncStateMachine stateMachine)
+                void IAsyncStateMachine.MoveNext()
+                {
+                    throw new NotImplementedException();
+                }
+
+                [DebuggerHidden]
+				private void SetStateMachine(IAsyncStateMachine stateMachine)
 				{
 				}
-			}
+
+                void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+                {
+                    throw new NotImplementedException();
+                }
+            }
 
 			public ButtonReferenceHolder button;
 
@@ -150,15 +161,25 @@ namespace SLZ.Bonelab
 
 			private UniTask<bool>.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -174,45 +195,25 @@ namespace SLZ.Bonelab
 
 			private UniTask<ModRepository[]>.Awaiter _003C_003Eu__2;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
-		}
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003CCodeTimmer_003Ed__64 : IAsyncStateMachine
-		{
-			public int _003C_003E1__state;
-
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
-
-			public DeviceLoginResponseContext loginResponseContext;
-
-			public UI_ModGroup _003C_003E4__this;
-
-			public CancellationTokenSource cts;
-
-			public CancellationTokenSource maincts;
-
-			private DateTime _003Cdate_003E5__2;
-
-			private UniTask.Awaiter _003C_003Eu__1;
-
-			public void MoveNext()
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
-		}
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003C_003Ec__DisplayClass73_0
@@ -244,15 +245,25 @@ namespace SLZ.Bonelab
 
 			private int _003C_003E7__wrap2;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -268,15 +279,25 @@ namespace SLZ.Bonelab
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -294,15 +315,25 @@ namespace SLZ.Bonelab
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[Space(10f)]
 		[Header("Global")]
@@ -314,26 +345,26 @@ namespace SLZ.Bonelab
 
 		public Sprite defaultImage;
 
-		[Header("Group")]
 		[Space(10f)]
+		[Header("Group")]
 		public GameObject Group_Mods;
 
 		public GameObject Group_Main;
 
-		[Header("SubMenus")]
 		[Space(10f)]
+		[Header("SubMenus")]
 		public GameObject Menu_ModsMain;
 
 		public GameObject Menu_Downloads;
 
-		[Header("Popups")]
 		[Space(10f)]
+		[Header("Popups")]
 		public GameObject Popup_ModWarning;
 
 		public GameObject Popup_AvatarWarning;
 
-		[Header("Pages")]
 		[Space(10f)]
+		[Header("Pages")]
 		public GameObject Page_Installed;
 
 		public GameObject Page_Approved;
@@ -372,8 +403,8 @@ namespace SLZ.Bonelab
 
 		public TextMeshPro modioInstructions;
 
-		[Header("Warning")]
 		[Space(10f)]
+		[Header("Warning")]
 		public GameObject obj_DevModeWarning;
 
 		public GameObject obj_AvatarWarning;
@@ -396,7 +427,7 @@ namespace SLZ.Bonelab
 
 		private bool logInProcessActive;
 
-		private CancellationTokenSource codeTimerToken;
+		private CancellationTokenSource killLoginCTS;
 
 		private bool firstEnable;
 
@@ -464,6 +495,10 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		private void UpdateGeneralDiagnostics()
+		{
+		}
+
 		private void DevModeWarning()
 		{
 		}
@@ -474,12 +509,6 @@ namespace SLZ.Bonelab
 
 		private void LogInTask()
 		{
-		}
-
-		[AsyncStateMachine(typeof(_003CCodeTimmer_003Ed__64))]
-		private UniTaskVoid CodeTimmer(DeviceLoginResponseContext loginResponseContext, CancellationTokenSource cts, CancellationTokenSource maincts)
-		{
-			return default(UniTaskVoid);
 		}
 
 		public void BUTTON_INSTALLSUBSCRIPTION(bool yesInstall = false)

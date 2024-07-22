@@ -3,8 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Marrow.Data;
-using SLZ.Rig;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -12,11 +10,8 @@ namespace SLZ.Bonelab
 	public class UIControllerInput : MonoBehaviour
 	{
 		[CompilerGenerated]
-		private sealed class _003CSceneReloadCounter_003Ed__21 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CSceneReloadCounter_003Ed__15 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -41,8 +36,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CSceneReloadCounter_003Ed__21(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CSceneReloadCounter_003Ed__15(int _003C_003E1__state)
 			{
 			}
 
@@ -51,7 +48,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -60,16 +57,28 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
 
-		private OpenController m_Controller;
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-		private OpenControllerRig openCtrlRig;
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
 
-		[HideInInspector]
-		private List<Transform> _cursorTargetOverrides;
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
+
+		private Transform _cursorTargetOverride;
 
 		public Transform cursorTarget;
+
+		public bool isLeft;
 
 		private float m_levelReloadCounter;
 
@@ -87,24 +96,7 @@ public object Current { get; }
 
 		private bool _hasTriggeredThisFrame;
 
-		public Spawnable VfxFadeOutSpawnable
-		{
-			[CompilerGenerated]
-			get
-			{
-				return default(Spawnable);
-			}
-			[CompilerGenerated]
-			protected set
-			{
-			}
-		}
-
 		public Transform CursorTarget => null;
-
-		private void Awake()
-		{
-		}
 
 		public void Start()
 		{
@@ -114,13 +106,13 @@ public object Current { get; }
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CSceneReloadCounter_003Ed__21))]
+		[IteratorStateMachine(typeof(_003CSceneReloadCounter_003Ed__15))]
 		private IEnumerator SceneReloadCounter()
 		{
 			return null;
 		}
 
-		public void RemoveCursorTargetOverride(Transform transform)
+		public void RemoveCursorTargetOverride()
 		{
 		}
 

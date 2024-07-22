@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace SLZ.VRMK
 {
-	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/Limb IK")]
 	[HelpURL("http://www.root-motion.com/finalikdox/html/page7.html")]
+	[AddComponentMenu("Scripts/RootMotion.FinalIK/IK/Limb IK")]
 	public class LimbIKSlz : IK
 	{
 		public IKSolverLimbSlz solver;

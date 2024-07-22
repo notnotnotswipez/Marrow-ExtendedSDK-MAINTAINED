@@ -34,15 +34,25 @@ namespace SLZ.Bonelab
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[Header("Level Query")]
 		[Tooltip("Include levels that are built in with the game")]
@@ -75,9 +85,9 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		public LevelKeyPair[] storyLevelBarcodeKeyPair;
 
-		private Dictionary<string, string> _storyLevelBarcodeKeyPair;
+		private Dictionary<Barcode, string> _storyLevelBarcodeKeyPair;
 
-		private readonly List<string> _completedStoryLevelBarcodes;
+		private readonly List<Barcode> _completedStoryLevelBarcodes;
 
 		private void Awake()
 		{
@@ -91,7 +101,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private void OnPalletAdded(string palletBarcode)
+		private void OnPalletAdded(Barcode palletBarcode)
 		{
 		}
 

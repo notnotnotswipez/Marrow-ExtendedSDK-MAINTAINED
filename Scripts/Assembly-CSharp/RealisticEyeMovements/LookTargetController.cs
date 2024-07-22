@@ -17,8 +17,8 @@ namespace RealisticEyeMovements
 		[Tooltip("Drag objects here for the actor to look at. If empty, actor will look in random directions.")]
 		public Transform[] pointsOfInterest;
 
-		[Range(0f, 1f)]
 		[Tooltip("Ratio of how often to look at player vs elsewhere. 0: never, 1: always")]
+		[Range(0f, 1f)]
 		public float lookAtPlayerRatio;
 
 		[Range(0f, 1f)]
@@ -41,8 +41,8 @@ namespace RealisticEyeMovements
 		[Range(1f, 100f)]
 		public float maxLookTime;
 
-		[Tooltip("For 3rd person games, set this to the player's eye center transform")]
 		[FormerlySerializedAs("playerEyeCenter")]
+		[Tooltip("For 3rd person games, set this to the player's eye center transform")]
 		public Transform thirdPersonPlayerEyeCenter;
 
 		[Tooltip("Keep trying to track target even when it moves out of sight")]

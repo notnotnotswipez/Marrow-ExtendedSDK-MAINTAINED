@@ -1,4 +1,4 @@
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.SFX;
 using TMPro;
 using UnityEngine;
@@ -8,6 +8,8 @@ namespace SLZ.Bonelab
 	public class LoreClipboard : MonoBehaviour
 	{
 		public BoxGrip grip;
+
+		public CylinderGrip bottomGrip;
 
 		[Header("Text")]
 		[Space(10f)]

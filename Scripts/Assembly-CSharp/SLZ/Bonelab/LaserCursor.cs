@@ -3,8 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Rig;
-using SLZ.SFX;
+using SLZ.Marrow;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -23,9 +22,6 @@ namespace SLZ.Bonelab
 		[CompilerGenerated]
 		private sealed class _003CFireRayPulse_003Ed__65 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -52,7 +48,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CFireRayPulse_003Ed__65(int _003C_003E1__state)
 			{
 			}
@@ -62,7 +60,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -71,7 +69,22 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		protected bool m_isActive;
 
@@ -127,17 +140,17 @@ public object Current { get; }
 
 		private Transform location;
 
-		[Header("AudioSettings")]
-		[Tooltip("Is the sound 2d or 3d?")]
 		[Range(0f, 1f)]
+		[Tooltip("Is the sound 2d or 3d?")]
+		[Header("AudioSettings")]
 		public float spatialBlend;
 
 		[Tooltip("Higher than 1 numbers increase min sphere by 1 meter per unit over 1")]
 		[Range(0f, 1f)]
 		public float _sourceVolume;
 
-		[Space(10f)]
 		[Range(0.1f, 10f)]
+		[Space(10f)]
 		public float _sourceRadius;
 
 		public bool cursorHidden;
@@ -164,8 +177,8 @@ public object Current { get; }
 
 		private Vector3 m_lockedToButton;
 
-		[Range(0f, 200f)]
 		[Header("Knoll Filter")]
+		[Range(0f, 200f)]
 		public float maxMillimeters;
 
 		private BaseController activeController;

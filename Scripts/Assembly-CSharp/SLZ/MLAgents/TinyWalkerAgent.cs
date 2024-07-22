@@ -8,8 +8,8 @@ namespace SLZ.MLAgents
 {
 	public class TinyWalkerAgent : Agent
 	{
-		[SerializeField]
 		[Range(0.1f, 10f)]
+		[SerializeField]
 		[Header("Walk Speed")]
 		private float m_TargetWalkingSpeed;
 
@@ -86,27 +86,12 @@ namespace SLZ.MLAgents
 			}
 		}
 
-		public void Initialize()
-		{
-		}
-
-		public void OnEpisodeBegin()
-		{
-		}
-
 		private void FixedUpdate()
 		{
 		}
 
-		public void OnActionReceived(ActionBuffers actionBuffers)
-		{
-		}
 
 		public void CollectObservationBodyPart(BodyPart bp, VectorSensor sensor)
-		{
-		}
-
-		public void CollectObservations(VectorSensor sensor)
 		{
 		}
 

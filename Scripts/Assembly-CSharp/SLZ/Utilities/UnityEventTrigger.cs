@@ -9,7 +9,7 @@ namespace SLZ.Utilities
 	{
 		public UnityEventTrigger()
 		{
-
+			
 		}
 	}
 }

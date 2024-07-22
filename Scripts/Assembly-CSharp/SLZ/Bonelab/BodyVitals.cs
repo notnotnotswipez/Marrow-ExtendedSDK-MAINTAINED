@@ -1,5 +1,4 @@
 using System.Runtime.CompilerServices;
-using SLZ.Rig;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -74,8 +73,6 @@ namespace SLZ.Bonelab
 		public bool bodyLogEnabled;
 
 		public bool bodyLogFlipped;
-
-		public OpenControllerRig ctrl_Rig;
 
 		public event RescaleUI rescaleEvent
 		{

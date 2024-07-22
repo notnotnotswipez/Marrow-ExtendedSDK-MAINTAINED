@@ -1,12 +1,12 @@
-using SLZ.Interaction;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Player
 {
 	public class InteractableHighlight : MonoBehaviour
 	{
-		[Tooltip("Clone near settings to far settings")]
 		[SerializeField]
+		[Tooltip("Clone near settings to far settings")]
 		public bool CloneSettings;
 
 		[SerializeField]

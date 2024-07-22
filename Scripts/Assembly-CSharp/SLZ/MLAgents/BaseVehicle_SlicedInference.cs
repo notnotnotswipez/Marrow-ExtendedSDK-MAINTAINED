@@ -8,8 +8,8 @@ namespace SLZ.MLAgents
 {
 	public class BaseVehicle_SlicedInference : InferenceAgent
 	{
-		[Header("Base Agent Components")]
 		[Header("Base Vehicle Inference Class")]
+		[Header("Base Agent Components")]
 		public BaseVehicle vehicle;
 
 		public VehicleConfig vehicleConfig;

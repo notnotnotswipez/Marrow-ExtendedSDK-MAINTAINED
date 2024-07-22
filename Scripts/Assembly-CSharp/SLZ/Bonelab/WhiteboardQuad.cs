@@ -4,8 +4,8 @@ using UnityEngine.Rendering;
 
 namespace SLZ.Bonelab
 {
-	[RequireComponent(typeof(Collider))]
 	[RequireComponent(typeof(MeshRenderer))]
+	[RequireComponent(typeof(Collider))]
 	[RequireComponent(typeof(MeshFilter))]
 	public class WhiteboardQuad : MonoBehaviour
 	{

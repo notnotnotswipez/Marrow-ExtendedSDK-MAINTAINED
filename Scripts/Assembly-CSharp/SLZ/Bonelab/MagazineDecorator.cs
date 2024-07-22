@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Zones;
 using UnityEngine;
@@ -25,15 +26,25 @@ namespace SLZ.Bonelab
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		[SerializeField]
 		private CartridgeData _cartridgeData;
@@ -41,9 +52,6 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private int _ammoCount;
 
-		public override void OnSpawn(GameObject go)
-		{
-		}
 
 		[AsyncStateMachine(typeof(_003CInitializeAsync_003Ed__3))]
 		private UniTaskVoid InitializeAsync(Magazine magazine)

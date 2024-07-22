@@ -5,8 +5,8 @@ namespace Unity.MLAgentsExamples
 {
 	public class JointDriveController : MonoBehaviour
 	{
-		[Space(10f)]
 		[Header("Joint Drive Settings")]
+		[Space(10f)]
 		public float maxJointSpring;
 
 		public float jointDampen;

@@ -15,8 +15,8 @@ namespace SLZ.Combat
 		[HideInInspector]
 		private Quaternion orgrot;
 
-		[HideInInspector]
 		[SerializeField]
+		[HideInInspector]
 		private Vector3 orgScale;
 
 		public Transform bone;
@@ -25,10 +25,10 @@ namespace SLZ.Combat
 		[FormerlySerializedAs("ParentObj")]
 		private VisualDamageController visualDamageController;
 
-		[Space(10f)]
-		[Header("CutOut area")]
-		[Space(5f)]
 		[SerializeField]
+		[Space(5f)]
+		[Header("CutOut area")]
+		[Space(10f)]
 		public GibletEllipsoid[] gibletEllipsoid;
 
 		private void Reset()

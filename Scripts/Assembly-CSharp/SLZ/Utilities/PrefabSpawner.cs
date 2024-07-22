@@ -5,8 +5,8 @@ namespace SLZ.Utilities
 {
 	public class PrefabSpawner : MonoBehaviour
 	{
-		[Tooltip("Spawnable")]
 		[SerializeField]
+		[Tooltip("Spawnable")]
 		private Spawnable spawnable;
 
 		private void Awake()

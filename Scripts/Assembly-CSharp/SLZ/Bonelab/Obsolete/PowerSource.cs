@@ -4,16 +4,16 @@ using UnityEngine;
 namespace SLZ.Bonelab.Obsolete
 {
 	[AddComponentMenu(null)]
-	[Obsolete("Superseded by VoidLogic")]
+	[Obsolete("OLD POWERABLE SYSTEM - DO NOT USE!")]
 	public class PowerSource : MonoBehaviour
 	{
 		[SerializeField]
 		private bool m_InfinitePower;
 
-		[Tooltip("The Capcity of the PowerSource in Watts-min")]
 		[Header("VOLTAGE")]
-		[SerializeField]
 		[Space(5f)]
+		[Tooltip("The Capcity of the PowerSource in Watts-min")]
+		[SerializeField]
 		private float m_Capacity;
 
 		[Tooltip("Only for reading, functions for charging/drawing should be the mutator")]

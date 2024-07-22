@@ -7,14 +7,15 @@ using UnityEngine.Serialization;
 
 namespace SLZ.Bonelab.VoidLogic
 {
+	[AddComponentMenu("VoidLogic/Bonelab/Internal Only/VoidLogic Particle Emission Controller")]
 	[Obsolete("This interface is not yet considered stable. Use at your own risk!")]
 	[Support(SupportFlags.CowboySupported, null)]
-	[AddComponentMenu("VoidLogic/Bonelab/Internal Only/VoidLogic Particle Emission Controller")]
-	public class ParticleEmissionController : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, IVoidLogicActuator
+	public class ParticleEmissionController : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, ISerializationCallbackReceiver, IVoidLogicActuator
 	{
-		[Tooltip("Previous node in the chain")]
-		[Interface(typeof(IVoidLogicSource), false)]
+		[Obsolete("Replace with `_previousConnection`")]
 		[SerializeField]
+		[Interface(typeof(IVoidLogicSource), false)]
+		[Tooltip("Previous node in the chain")]
 		private MonoBehaviour _previousNode;
 
 		[FormerlySerializedAs("ParticleSystems")]
@@ -29,8 +30,6 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private static readonly PortMetadata _portMetadata;
 
-		public PortMetadata PortMetadata { get; }
-
 		public VoidLogicSubgraph Subgraph
 		{
 			[CompilerGenerated]
@@ -44,14 +43,19 @@ namespace SLZ.Bonelab.VoidLogic
 			}
 		}
 
-		public void Actuate(ref NodeState nodeState)
-		{
-			throw new NotImplementedException();
-		}
-
 		public int InputCount => 0;
 
 		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
+
+        public PortMetadata PortMetadata => throw new NotImplementedException();
+
+        private void UnityEngine_002EISerializationCallbackReceiver_002EOnBeforeSerialize()
+		{
+		}
+
+		private void UnityEngine_002EISerializationCallbackReceiver_002EOnAfterDeserialize()
+		{
+		}
 
 		private void Reset()
 		{
@@ -85,15 +89,24 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
-		{
-			input = null;
-			return false;
-		}
+        public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
+        {
+            throw new NotImplementedException();
+        }
 
-		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
-		{
-			return false;
-		}
-	}
+        public void OnBeforeSerialize()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnAfterDeserialize()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Actuate(ref NodeState nodeState)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

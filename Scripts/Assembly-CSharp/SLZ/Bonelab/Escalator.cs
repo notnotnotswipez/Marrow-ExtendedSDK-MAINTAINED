@@ -89,13 +89,6 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		protected void OnExit(MarrowEntity entity)
-		{
-		}
-
-		protected void OnEnter(MarrowEntity entity)
-		{
-		}
 
 		public void RunEscalator(bool escalatorIsOn = true)
 		{

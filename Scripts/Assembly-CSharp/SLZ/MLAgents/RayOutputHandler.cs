@@ -14,12 +14,4 @@ namespace SLZ.MLAgents
 		{
 		}
 	}
-
-	public class RayPerceptionOutput
-	{
-		public class RayOutput
-		{
-			
-		}
-	}
 }

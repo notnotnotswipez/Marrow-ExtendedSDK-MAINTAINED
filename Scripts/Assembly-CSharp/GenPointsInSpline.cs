@@ -9,11 +9,11 @@ public class GenPointsInSpline : MonoBehaviour
 	[Serializable]
 	public struct SpawnPoint
 	{
-		public Vector3 pos;
+		public float3 pos;
 
-		public Vector3 right;
+		public float3 right;
 
-		public Vector3 up;
+		public float3 up;
 	}
 
 	[SerializeField]

@@ -1,4 +1,4 @@
-using SLZ.Interaction;
+using SLZ.Marrow;
 using UnityEngine;
 
 namespace SLZ.Bonelab.VoidLogic

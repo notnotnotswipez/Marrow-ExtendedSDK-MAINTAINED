@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace SplineMesh
 {
-	[DisallowMultipleComponent]
 	[RequireComponent(typeof(MeshFilter))]
+	[DisallowMultipleComponent]
 	[ExecuteInEditMode]
 	public class MeshBender : MonoBehaviour
 	{

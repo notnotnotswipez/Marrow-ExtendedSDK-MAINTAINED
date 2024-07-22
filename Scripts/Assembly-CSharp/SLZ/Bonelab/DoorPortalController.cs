@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
-using SLZ.Rig;
-using SLZ.Vehicle;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -20,11 +19,8 @@ namespace SLZ.Bonelab
 		}
 
 		[CompilerGenerated]
-		private sealed class _003CDoorSequence_003Ed__43 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CDoorSequence_003Ed__42 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -55,8 +51,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CDoorSequence_003Ed__43(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CDoorSequence_003Ed__42(int _003C_003E1__state)
 			{
 			}
 
@@ -65,7 +63,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -74,7 +72,22 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public Seat seat;
 
@@ -89,8 +102,6 @@ public object Current { get; }
 		public float yoinkLength;
 
 		public Spawnable vfxFadeOutSpawnable;
-
-		public LevelCrateReference loadScreenLevel;
 
 		public AnimationCurve lerpSpeedCurve;
 
@@ -166,7 +177,7 @@ public object Current { get; }
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CDoorSequence_003Ed__43))]
+		[IteratorStateMachine(typeof(_003CDoorSequence_003Ed__42))]
 		private IEnumerator DoorSequence()
 		{
 			return null;

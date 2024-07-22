@@ -4,7 +4,7 @@ using SLZ.Marrow.SaveData;
 
 namespace SLZ.Bonelab.SaveData
 {
-	public sealed class Save : ISave<PlayerProgression, PlayerUnlocks>
+	public sealed class Save : ISave<PlayerSettings, PlayerProgression, PlayerUnlocks>, IFixFieldsIfNeeded
 	{
 		[JsonProperty("version")]
 		public int Version

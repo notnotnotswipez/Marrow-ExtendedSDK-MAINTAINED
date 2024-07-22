@@ -1,10 +1,6 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using Cysharp.Threading.Tasks;
-using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Bonelab;
 using SLZ.Bonelab.SaveData;
 using SLZ.Marrow;
@@ -19,32 +15,6 @@ namespace SLZ.UI
 		public delegate void SelectSpawnableDelegate(SpawnableCrate data);
 
 		public delegate void SelectUtilityModeDelegate(UtilityModes mode);
-
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003CLoadFavorites_003Ed__81 : IAsyncStateMachine
-		{
-			public int _003C_003E1__state;
-
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
-
-			public SpawnablesPanelView _003C_003E4__this;
-
-			private List<string> _003CfavoriteSpawnableBarcodes_003E5__2;
-
-			private int _003Ci_003E5__3;
-
-			private UniTask<AvatarCrate>.Awaiter _003C_003Eu__1;
-
-			public void MoveNext()
-			{
-			}
-
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
-		}
 
 		[Header("Buttons")]
 		public ButtonReferenceHolder[] tabButtons;
@@ -135,7 +105,7 @@ namespace SLZ.UI
 
 		private List<string> palletStripTitles;
 
-		private List<string> ammoBarcodes;
+		private List<SpawnableCrateReference> ammoBarcodes;
 
 		private bool firstActivation;
 
@@ -272,10 +242,8 @@ namespace SLZ.UI
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CLoadFavorites_003Ed__81))]
-		private UniTaskVoid LoadFavorites()
+		private void LoadFavorites()
 		{
-			return default(UniTaskVoid);
 		}
 
 		public void SaveFavorites()

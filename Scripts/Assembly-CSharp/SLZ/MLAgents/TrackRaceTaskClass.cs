@@ -36,7 +36,9 @@ namespace SLZ.MLAgents
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCheckVP_003Ed__26(int _003C_003E1__state)
 			{
 			}
@@ -51,33 +53,29 @@ namespace SLZ.MLAgents
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
 
-		[Tooltip("The context of the current task")]
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
+
 		[Header("Objective Section")]
+		[Tooltip("The context of the current task")]
 		private VehicleSceneContextManager context;
 
 		[Tooltip("Objective not currently being used in race since the checkpoints are spawned by the track generator")]
@@ -86,8 +84,8 @@ namespace SLZ.MLAgents
 		[Tooltip("Objective not currently being used in race since the checkpoints are spawned by the track generator")]
 		public GameObject objectivePrefab;
 
-		[Header("Timer Section")]
 		[Tooltip("Master clock for how long this track task objective has been active")]
+		[Header("Timer Section")]
 		public float currentTrackTime;
 
 		[Tooltip("The max amount of time this task can be active for before resetting")]
@@ -96,8 +94,8 @@ namespace SLZ.MLAgents
 		[Tooltip("To use the master timer or not")]
 		public bool useTrackTimer;
 
-		[Header("Race Specific Section")]
 		[Tooltip("The actual race track that is generated")]
+		[Header("Race Specific Section")]
 		public InfiniteTrackClass infTrack;
 
 		[Tooltip("Best times for each checkpoint")]

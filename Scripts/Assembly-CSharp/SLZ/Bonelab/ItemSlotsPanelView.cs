@@ -3,19 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Player;
+using SLZ.Marrow;
+using SLZ.SFX;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace SLZ.Bonelab
 {
 	public class ItemSlotsPanelView : PanelView
 	{
 		[CompilerGenerated]
-		private sealed class _003CCoCloseAnimation_003Ed__12 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CCoCloseAnimation_003Ed__24 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -48,8 +47,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CCoCloseAnimation_003Ed__12(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CCoCloseAnimation_003Ed__24(int _003C_003E1__state)
 			{
 			}
 
@@ -58,7 +59,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -67,14 +68,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CCoSummonAnimation_003Ed__13 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CCoSummonAnimation_003Ed__25 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -105,8 +118,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CCoSummonAnimation_003Ed__13(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CCoSummonAnimation_003Ed__25(int _003C_003E1__state)
 			{
 			}
 
@@ -115,7 +130,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -124,15 +139,48 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public UIRig uiRig;
 
-		public Transform[] slotTargets;
+		public SimpleSFX SimpleSfx;
 
 		private Inventory inventory;
 
+		private List<UnityAction> EnableActiveHoverEleActions;
+
+		private List<UnityAction> DisableActiveHoverEleActions;
+
+		private List<UnityAction> DisableInactiveHoverEleActions;
+
+		private List<UnityAction> EnableInactiveHoverEleActions;
+
+		private UnityAction PlayActiveSoundAction;
+
+		private UnityAction PlayDropSoundAction;
+
+		public Transform[] slotTargets;
+
 		public PageElementView[] slots;
+
+		public GameObject[] activeHoverEleObjs;
+
+		public GameObject[] inactiveHoverEleObjs;
 
 		public bool displayHud;
 
@@ -140,6 +188,10 @@ public object Current { get; }
 
 		[HideInInspector]
 		public bool isInventoryOpen;
+
+		private void Awake()
+		{
+		}
 
 		public void OnEnable()
 		{
@@ -158,17 +210,25 @@ public object Current { get; }
 		{
 		}
 
+		private void RegisterBodySlotEvents()
+		{
+		}
+
+		private void UnregisterBodySlotEvents()
+		{
+		}
+
 		public void HOTSWAP(bool tempMove = true)
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CCoCloseAnimation_003Ed__12))]
+		[IteratorStateMachine(typeof(_003CCoCloseAnimation_003Ed__24))]
 		private IEnumerator CoCloseAnimation(Action callback)
 		{
 			return null;
 		}
 
-		[IteratorStateMachine(typeof(_003CCoSummonAnimation_003Ed__13))]
+		[IteratorStateMachine(typeof(_003CCoSummonAnimation_003Ed__25))]
 		private IEnumerator CoSummonAnimation()
 		{
 			return null;

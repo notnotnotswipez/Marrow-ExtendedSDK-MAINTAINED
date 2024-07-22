@@ -32,8 +32,8 @@ namespace SLZ.MLAgents
 
 		public GameObject orientation_cube;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		public Rigidbody _rb;
 
 		[SerializeField]

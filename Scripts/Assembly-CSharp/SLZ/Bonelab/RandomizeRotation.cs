@@ -15,9 +15,9 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private bool RotateOnEnable;
 
-		[Range(0f, 360f)]
-		[SerializeField]
 		[Header("Degree range to rotate")]
+		[SerializeField]
+		[Range(0f, 360f)]
 		private float Rotation;
 
 		[SerializeField]

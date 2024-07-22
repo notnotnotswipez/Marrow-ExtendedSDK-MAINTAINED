@@ -9,8 +9,5 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private AvatarCrateReference _avatarCrate;
 
-		public override void OnSpawn(GameObject go)
-		{
-		}
 	}
 }

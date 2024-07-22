@@ -43,7 +43,9 @@ namespace SLZ.VFX
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CRealtime_003Ed__7(int _003C_003E1__state)
 			{
 			}
@@ -58,30 +60,26 @@ namespace SLZ.VFX
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CScaledTime_003Ed__8 : IEnumerator<object>, IEnumerator, IDisposable
@@ -110,7 +108,9 @@ namespace SLZ.VFX
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CScaledTime_003Ed__8(int _003C_003E1__state)
 			{
 			}
@@ -125,33 +125,29 @@ namespace SLZ.VFX
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
 
-		[Tooltip("Consider in scaled time or realtime")]
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
+
 		[SerializeField]
+		[Tooltip("Consider in scaled time or realtime")]
 		private TimeType CountingType;
 
 		[SerializeField]

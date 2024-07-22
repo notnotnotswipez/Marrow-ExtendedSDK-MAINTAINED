@@ -14,13 +14,6 @@ namespace RealisticEyeMovements
 
 		public float w;
 
-		public SerializableQuaternion(float rX, float rY, float rZ, float rW)
-		{
-			this.x = 0f;
-			this.y = 0f;
-			this.z = 0f;
-			this.w = 0f;
-		}
 
 		public override string ToString()
 		{

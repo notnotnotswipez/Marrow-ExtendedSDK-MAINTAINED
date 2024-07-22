@@ -6,12 +6,12 @@ namespace PathCreation
 {
 	public class PathCreator : MonoBehaviour
 	{
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		private PathCreatorData editorData;
 
-		[HideInInspector]
 		[SerializeField]
+		[HideInInspector]
 		private bool initialized;
 
 		private GlobalDisplaySettings globalEditorDisplaySettings;

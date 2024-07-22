@@ -28,8 +28,8 @@ namespace SLZ.Bonelab
 
 		public RideSpeed rideSpeed;
 
-		[Header("Off  -  0")]
 		[InspectorDisplayName("Target Velocity")]
+		[Header("Off  -  0")]
 		public float velocity_off;
 
 		[InspectorDisplayName("Position Damper")]
@@ -48,8 +48,8 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Maximum Force")]
 		public float force_station;
 
-		[Header("Lift Hill  -  2")]
 		[InspectorDisplayName("Target Velocity")]
+		[Header("Lift Hill  -  2")]
 		public float velocity_lift;
 
 		[InspectorDisplayName("Position Damper")]
@@ -68,8 +68,8 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Maximum Force")]
 		public float force_coast;
 
-		[Header("Brake  -  4")]
 		[InspectorDisplayName("Target Velocity")]
+		[Header("Brake  -  4")]
 		public float velocity_brake;
 
 		[InspectorDisplayName("Position Damper")]
@@ -78,8 +78,8 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Maximum Force")]
 		public float force_brake;
 
-		[InspectorDisplayName("Target Velocity")]
 		[Header("Boost  -  5")]
+		[InspectorDisplayName("Target Velocity")]
 		public float velocity_boost;
 
 		[InspectorDisplayName("Position Damper")]
@@ -108,8 +108,8 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Maximum Force")]
 		public float force_mspeed1;
 
-		[InspectorDisplayName("Target Velocity")]
 		[Header("Match Speed 2  -  8")]
+		[InspectorDisplayName("Target Velocity")]
 		public float velocity_mspeed2;
 
 		[InspectorDisplayName("Position Damper")]

@@ -9,7 +9,6 @@ namespace RealisticEyeMovements
 		private struct QVUnion
 		{
 			public Vector4 v;
-			
 			public Quaternion q;
 		}
 
@@ -35,14 +34,6 @@ namespace RealisticEyeMovements
 		private static Vector4 q2v(Quaternion q)
 		{
 			return default(Vector4);
-		}
-
-		public CritDampTweenQuaternion(Quaternion rotation, float omega, float maxSpeed)
-		{
-			this._rotation = default(QVUnion);
-			this.velocity = Vector4.one;
-			this.maxSpeed = 0f;
-			this.omega = 0f;
 		}
 
 		public void Step(Quaternion target)

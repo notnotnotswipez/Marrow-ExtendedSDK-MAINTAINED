@@ -19,20 +19,20 @@ namespace SLZ.MLAgents
 		[Tooltip("Configuration to pre-initialize values from for a basevehile")]
 		public VehicleConfig config_file;
 
-		[Tooltip("Maximum values used in the BaseVehicleUtils class (not SphereVehicleUtils")]
 		[Header("Motor & Transmission Section")]
+		[Tooltip("Maximum values used in the BaseVehicleUtils class (not SphereVehicleUtils")]
 		public float maxTorque;
 
-		[Header("Motor & Transmission Section")]
 		[Tooltip("Maximum values used in the BaseVehicleUtils class (not SphereVehicleUtils")]
+		[Header("Motor & Transmission Section")]
 		public float maxReverseTorque;
 
-		[Header("Motor & Transmission Section")]
 		[Tooltip("Maximum values used in the BaseVehicleUtils class (not SphereVehicleUtils")]
+		[Header("Motor & Transmission Section")]
 		public float maxBrakeTorque;
 
-		[Header("Motor & Transmission Section")]
 		[Tooltip("Maximum values used in the BaseVehicleUtils class (not SphereVehicleUtils")]
+		[Header("Motor & Transmission Section")]
 		public float maxSteerAngle;
 
 		[Tooltip("Gear and Rev Values are only used in audio functions")]
@@ -96,8 +96,8 @@ namespace SLZ.MLAgents
 
 		protected float steerVal;
 
-		[Header("Vehicle Status Section")]
 		[Tooltip("Amount of time where the vehicle will be immune post spawn")]
+		[Header("Vehicle Status Section")]
 		public float totalImmuneTime;
 
 		[Tooltip("Immunity Clock Time Left")]
@@ -120,8 +120,8 @@ namespace SLZ.MLAgents
 		[Tooltip("The rigidbody thats in the seat")]
 		public Rigidbody seatedBody;
 
-		[Header("Additional Forces Section")]
 		[Tooltip("Wheel off ground after touching a jump")]
+		[Header("Additional Forces Section")]
 		public bool hasJumped;
 
 		[Tooltip("Clock Ticker for how long its been off ground")]
@@ -181,8 +181,8 @@ namespace SLZ.MLAgents
 		[Tooltip("Amount of force to apply to un flip the car after some amount of time and past angle thresholds")]
 		public float flipMod;
 
-		[Tooltip("BaseVehicle uses RCC wheels - these are the wheel references")]
 		[Header("Wheels Section")]
+		[Tooltip("BaseVehicle uses RCC wheels - these are the wheel references")]
 		public RCC_WheelCollider[] rccWheels;
 
 		private int powerableWheelCount;

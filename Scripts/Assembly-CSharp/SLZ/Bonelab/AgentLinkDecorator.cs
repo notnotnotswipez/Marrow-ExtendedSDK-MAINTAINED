@@ -9,8 +9,5 @@ namespace SLZ.Bonelab
 	{
 		public bool enableAgentLinking;
 
-		public override void OnSpawn(GameObject go)
-		{
-		}
 	}
 }

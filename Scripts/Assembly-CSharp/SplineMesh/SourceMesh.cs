@@ -38,8 +38,6 @@ namespace SplineMesh
 		internal float Length => 0f;
 
 
-
-
 		public static SourceMesh Build(Mesh mesh)
 		{
 			return default(SourceMesh);

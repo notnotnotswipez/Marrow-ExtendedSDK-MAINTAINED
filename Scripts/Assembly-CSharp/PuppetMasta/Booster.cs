@@ -16,8 +16,8 @@ namespace PuppetMasta
 		[Tooltip("Muscle groups to boost. Used only when 'Full Body' is false.")]
 		public Muscle.Group[] groups;
 
-		[Range(0f, 1f)]
 		[Tooltip("Immunity to apply to the muscles. If muscle immunity is 1, it can not be damaged.")]
+		[Range(0f, 1f)]
 		public float immunity;
 
 		[Tooltip("Impulse multiplier to be applied to the muscles. This makes them deal more damage to other puppets.")]

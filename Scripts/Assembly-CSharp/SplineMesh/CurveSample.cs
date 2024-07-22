@@ -27,7 +27,6 @@ namespace SplineMesh
 		public Quaternion Rotation => default(Quaternion);
 
 
-
 		public override bool Equals(object obj)
 		{
 			return false;

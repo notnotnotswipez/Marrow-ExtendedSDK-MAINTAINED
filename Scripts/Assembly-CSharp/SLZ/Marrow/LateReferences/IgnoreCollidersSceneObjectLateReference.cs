@@ -7,6 +7,7 @@ namespace SLZ.Marrow.LateReferences
 	{
 		public IgnoreCollidersSceneObjectLateReference()
 		{
+			
 		}
 	}
 }

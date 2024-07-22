@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Bonelab.SaveData;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.VoidLogic;
 using SLZ.Marrow.Warehouse;
@@ -20,9 +21,6 @@ namespace SLZ.Bonelab
 		[CompilerGenerated]
 		private sealed class _003CCheckGachaLoop_003Ed__42 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -49,7 +47,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCheckGachaLoop_003Ed__42(int _003C_003E1__state)
 			{
 			}
@@ -59,7 +59,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -68,7 +68,22 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -78,26 +93,33 @@ public object Current { get; }
 
 			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
 
-			public string barcode;
+			public Barcode barcode;
 
 			public Control_Gashapon _003C_003E4__this;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CPusherPaddle_003Ed__45 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -122,7 +144,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CPusherPaddle_003Ed__45(int _003C_003E1__state)
 			{
 			}
@@ -132,7 +156,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -141,14 +165,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CBallUpdateLoop_003Ed__46 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -173,7 +209,9 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CBallUpdateLoop_003Ed__46(int _003C_003E1__state)
 			{
 			}
@@ -183,7 +221,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -192,14 +230,29 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public PowerSource pusherPower;
 
 		[SerializeField]
 		private List<Crate> blackList;
 
-		private List<string> blackListStrings;
+		private List<Barcode> blackListStrings;
 
 		[SerializeField]
 		private int _itemPrice;
@@ -272,7 +325,7 @@ public object Current { get; }
 
 		public Rigidbody[] ballRbs;
 
-		private AmmoInventory _ammoInventory;
+		private SLZ.Marrow.AmmoInventory _ammoInventory;
 
 		private static PlayerUnlocks u => null;
 
@@ -319,7 +372,7 @@ public object Current { get; }
 		}
 
 		[AsyncStateMachine(typeof(_003CSpawnGacha_003Ed__44))]
-		private UniTaskVoid SpawnGacha(string barcode)
+		private UniTaskVoid SpawnGacha(Barcode barcode)
 		{
 			return default(UniTaskVoid);
 		}

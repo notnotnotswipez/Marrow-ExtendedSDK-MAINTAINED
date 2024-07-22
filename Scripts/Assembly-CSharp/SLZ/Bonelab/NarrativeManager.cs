@@ -15,8 +15,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private NarrativeState.HoldState activeHoldState;
 
-		[Header("Active Interupt Director")]
 		[SerializeField]
+		[Header("Active Interupt Director")]
 		private PlayableDirector interuptDirector;
 
 		[SerializeField]

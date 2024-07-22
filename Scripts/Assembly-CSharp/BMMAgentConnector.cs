@@ -1,7 +1,7 @@
 using SLZ.MLAgents;
 using SLZ.Marrow.Zones;
-using Barracuda;
 using UnityEngine;
+using Barracuda;
 
 public class BMMAgentConnector : SpawnDecorator
 {
@@ -18,14 +18,6 @@ public class BMMAgentConnector : SpawnDecorator
 	}
 
 	private void SearchForBMM()
-	{
-	}
-
-	public override void OnSpawn(GameObject go)
-	{
-	}
-
-	public override void OnDespawn(GameObject go)
 	{
 	}
 }

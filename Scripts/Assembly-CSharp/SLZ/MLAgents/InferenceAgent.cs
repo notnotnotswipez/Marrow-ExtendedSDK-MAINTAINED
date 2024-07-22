@@ -12,7 +12,7 @@ namespace SLZ.MLAgents
 		{
 			public SendObservationEvent()
 			{
-
+				
 			}
 		}
 

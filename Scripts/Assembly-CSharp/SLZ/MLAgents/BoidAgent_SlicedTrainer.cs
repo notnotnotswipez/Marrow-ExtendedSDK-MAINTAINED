@@ -54,17 +54,10 @@ namespace SLZ.MLAgents
 
 		public bool between_actions;
 
-		public void Initialize()
-		{
-		}
-
 		private void Awake()
 		{
 		}
 
-		public void OnEpisodeBegin()
-		{
-		}
 
 		public void MoveAgent(ActionSegment<int> act)
 		{
@@ -75,14 +68,6 @@ namespace SLZ.MLAgents
 		}
 
 		private void TakeDelayedAction(ActionBuffers actionBuffers)
-		{
-		}
-
-		public void OnActionReceived(ActionBuffers actionBuffers)
-		{
-		}
-
-		public void CollectObservations(VectorSensor sensor)
 		{
 		}
 

@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace SplineMesh
 {
-	[DisallowMultipleComponent]
 	[ExecuteInEditMode]
+	[DisallowMultipleComponent]
 	[RequireComponent(typeof(MeshFilter))]
 	[RequireComponent(typeof(MeshRenderer))]
 	public class ExtrusionSegment : MonoBehaviour

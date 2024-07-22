@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace SplineMesh
 {
-	[ExecuteInEditMode]
 	[RequireComponent(typeof(Spline))]
+	[ExecuteInEditMode]
 	public class RopeBuilder : MonoBehaviour
 	{
 		private bool toUpdate;

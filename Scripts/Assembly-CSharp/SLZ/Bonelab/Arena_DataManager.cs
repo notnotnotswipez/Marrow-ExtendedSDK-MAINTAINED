@@ -12,7 +12,6 @@ namespace SLZ.Bonelab
 		[CompilerGenerated]
 		private sealed class _003CCoWaitLoadOrCreate_003Ed__7 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -37,7 +36,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoWaitLoadOrCreate_003Ed__7(int _003C_003E1__state)
 			{
 			}
@@ -46,32 +47,32 @@ namespace SLZ.Bonelab
 			private void System_002EIDisposable_002EDispose()
 			{
 			}
-			
+
+			private bool MoveNext()
+			{
+				return false;
+			}
 
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			public bool MoveNext()
-			{
-				throw new NotImplementedException();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
 
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public bool visDebug;
 

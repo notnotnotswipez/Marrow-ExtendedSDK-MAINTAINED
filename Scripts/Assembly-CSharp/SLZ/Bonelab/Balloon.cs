@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Marrow;
 using SLZ.Marrow.Combat;
 using SLZ.Marrow.Utilities;
-using SLZ.SFX;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -35,7 +35,6 @@ namespace SLZ.Bonelab
 		[CompilerGenerated]
 		private sealed class _003CCoWarmupAttach_003Ed__32 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -60,7 +59,9 @@ namespace SLZ.Bonelab
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoWarmupAttach_003Ed__32(int _003C_003E1__state)
 			{
 			}
@@ -70,26 +71,31 @@ namespace SLZ.Bonelab
 			{
 			}
 
-
-			public bool MoveNext()
+			private bool MoveNext()
 			{
-				throw new NotImplementedException();
+				return false;
 			}
 
-			public void Reset()
+			[DebuggerHidden]
+			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
-				throw new NotImplementedException();
 			}
 
-			public object Current { get; }
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			object IEnumerator.Current => Current;
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[Header("Options")]
 		public bool scaleForceWithAttachedMass;

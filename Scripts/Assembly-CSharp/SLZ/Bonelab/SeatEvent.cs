@@ -1,5 +1,5 @@
+using SLZ.Marrow;
 using SLZ.Marrow.Utilities;
-using SLZ.Vehicle;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -11,9 +11,9 @@ namespace SLZ.Bonelab
 		[Tooltip("Seat script goes here")]
 		public Seat seat;
 
-		[SerializeField]
-		[Tooltip("Event to fire on player seated")]
 		[Header("Events")]
+		[Tooltip("Event to fire on player seated")]
+		[SerializeField]
 		private UnityEvent OnSeat;
 
 		[Tooltip("Event to fire on player unseated")]

@@ -83,10 +83,6 @@ namespace SLZ.MLAgents
 		{
 		}
 
-		public void OnEpisodeBegin()
-		{
-		}
-
 		private void Start()
 		{
 		}
@@ -117,14 +113,6 @@ namespace SLZ.MLAgents
 		}
 
 		private void ManageCoolDown()
-		{
-		}
-
-		public void CollectObservations(VectorSensor sensor)
-		{
-		}
-
-		public void OnActionReceived(ActionBuffers actionBuffers)
 		{
 		}
 

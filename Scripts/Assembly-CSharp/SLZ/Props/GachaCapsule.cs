@@ -8,10 +8,9 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Bonelab;
 using SLZ.Bonelab.SaveData;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
-using SLZ.VFX;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -19,41 +18,37 @@ namespace SLZ.Props
 {
 	public class GachaCapsule : MonoBehaviour
 	{
-		[CompilerGenerated]
-		private sealed class _003C_003Ec__DisplayClass51_0
-		{
-			public Crate crate;
-
-			internal void _003CPopFXAsync_003Eb__0(GameObject go)
-			{
-			}
-		}
-
 		[StructLayout(3)]
 		[CompilerGenerated]
 		private struct _003CPopFXAsync_003Ed__51 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+			public Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
 
 			public GachaCapsule _003C_003E4__this;
 
-			private _003C_003Ec__DisplayClass51_0 _003C_003E8__1;
-
 			public Spawnable effect;
 
-			private UniTask<Crate>.Awaiter _003C_003Eu__1;
-
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
 		private sealed class _003CDespawnTimmer_003Ed__52 : IEnumerator<object>, IEnumerator, IDisposable
@@ -82,7 +77,9 @@ namespace SLZ.Props
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CDespawnTimmer_003Ed__52(int _003C_003E1__state)
 			{
 			}
@@ -97,30 +94,26 @@ namespace SLZ.Props
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
@@ -128,21 +121,29 @@ namespace SLZ.Props
 		{
 			public int _003C_003E1__state;
 
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+			public Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
 
 			public GachaCapsule _003C_003E4__this;
 
-			private UniTask<SpawnableCrate>.Awaiter _003C_003Eu__1;
-
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public SphereGrip grip;
 
@@ -172,16 +173,16 @@ namespace SLZ.Props
 
 		public AnimationCurve hapticsCurve;
 
-		[Range(0f, 1f)]
 		[SerializeField]
+		[Range(0f, 1f)]
 		private float amplitudeMin;
 
 		[SerializeField]
 		[Range(0f, 1f)]
 		private float amplitudeMax;
 
-		[Range(0f, 2000f)]
 		[SerializeField]
+		[Range(0f, 2000f)]
 		private float frequencyMin;
 
 		[Range(0f, 2000f)]

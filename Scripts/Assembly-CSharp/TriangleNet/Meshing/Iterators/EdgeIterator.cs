@@ -26,7 +26,9 @@ namespace TriangleNet.Meshing.Iterators
 
 		private object System_002ECollections_002EIEnumerator_002ECurrent => null;
 
-		public EdgeIterator(Mesh mesh)
+        object IEnumerator.Current => throw new NotImplementedException();
+
+        public EdgeIterator(Mesh mesh)
 		{
 		}
 
@@ -42,7 +44,5 @@ namespace TriangleNet.Meshing.Iterators
 		public void Reset()
 		{
 		}
-
-		object IEnumerator.Current => Current;
 	}
 }

@@ -3,9 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Data;
-using SLZ.SFX;
 using UnityEngine;
 
 namespace SLZ.MLAgents
@@ -40,7 +39,9 @@ namespace SLZ.MLAgents
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CChargeShot_003Ed__39(int _003C_003E1__state)
 			{
 			}
@@ -55,33 +56,29 @@ namespace SLZ.MLAgents
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			bool IEnumerator.MoveNext()
-			{
-				return MoveNext();
-			}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
 
-		[Tooltip("Total number of boids that can be out in the scene and amount of ammo")]
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
+
 		[Header("Gun Specific Section")]
+		[Tooltip("Total number of boids that can be out in the scene and amount of ammo")]
 		public int maxMagSize;
 
 		private int currentMagSize;
@@ -143,8 +140,8 @@ namespace SLZ.MLAgents
 		[Tooltip("Sound affect for powering down gun")]
 		public GunSFX powerDownSFX;
 
-		[Tooltip("The model manager that this spawner is associated with")]
 		[Header("Inference Section")]
+		[Tooltip("The model manager that this spawner is associated with")]
 		public BarracudaModelManagerMono bmm;
 
 		[Tooltip("Scriptable object that holds model manager/spawner variable and model references")]

@@ -12,14 +12,6 @@ namespace SLZ.Interaction
 
 		public Vector3 binormal;
 
-		protected void OnEnter(MarrowEntity entity)
-		{
-		}
-
-		protected void OnExit(MarrowEntity entity)
-		{
-		}
-
 		private void OnDrawGizmos()
 		{
 		}

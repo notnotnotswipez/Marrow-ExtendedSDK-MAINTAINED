@@ -3,9 +3,9 @@ using UnityEngine;
 
 namespace SLZ.Bonelab.VoidLogic
 {
-	[HelpURL("https://github.com/StressLevelZero/MarrowSDK/wiki/VoidLogic/RatchetNode")]
-	[Support(SupportFlags.AlphaSupported, "I'm not certain this is the best approach but it's a solution that has been proven to work.")]
 	[AddComponentMenu("VoidLogic/Bonelab/Nodes/VoidLogic Ratchet")]
+	[Support(SupportFlags.AlphaSupported, "I'm not certain this is the best approach but it's a solution that has been proven to work.")]
+	[HelpURL("https://github.com/StressLevelZero/MarrowSDK/wiki/VoidLogic/RatchetNode")]
 	public class RatchetNode : BaseNode
 	{
 		[SerializeField]

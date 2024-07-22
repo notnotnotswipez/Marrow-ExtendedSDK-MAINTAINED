@@ -7,10 +7,7 @@ using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Bonelab.SaveData;
-using SLZ.Marrow.Data;
-using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Warehouse;
-using SLZ.Marrow.Zones;
 using TMPro;
 using UnityEngine;
 
@@ -19,11 +16,8 @@ namespace SLZ.Bonelab
 	public class GameControl_MenuVoidG114 : BonelabInternalGameControl
 	{
 		[CompilerGenerated]
-		private sealed class _003CStartSequence_003Ed__76 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CStartSequence_003Ed__72 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -50,8 +44,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CStartSequence_003Ed__76(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CStartSequence_003Ed__72(int _003C_003E1__state)
 			{
 			}
 
@@ -60,7 +56,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -69,14 +65,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[CompilerGenerated]
-		private sealed class _003CDissolveBoneLab_003Ed__84 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CDissolveBoneLab_003Ed__80 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -103,8 +111,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CDissolveBoneLab_003Ed__84(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CDissolveBoneLab_003Ed__80(int _003C_003E1__state)
 			{
 			}
 
@@ -113,7 +123,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -122,11 +132,26 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CLoadAvatarFromSaveDataAsync_003Ed__89 : IAsyncStateMachine
+		private struct _003CLoadAvatarFromSaveDataAsync_003Ed__85 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -136,15 +161,25 @@ public object Current { get; }
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-			public void MoveNext()
+			private void MoveNext()
 			{
 			}
 
-			[DebuggerHidden]
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[Header("BUILD INFO")]
 		public string buildTitle;
@@ -188,9 +223,9 @@ public object Current { get; }
 
 		public AudioClip sfx_bonelab;
 
-		public ZoneMusic music_menu;
+		public AudioClip clip_menu;
 
-		public ZoneMusic music_keygen;
+		public AudioClip clip_kegen;
 
 		public GameObject particles_elements;
 
@@ -238,8 +273,8 @@ public object Current { get; }
 
 		private AvatarCrate avatarCrate;
 
-		[Header("CONTROL")]
 		[HideInInspector]
+		[Header("CONTROL")]
 		public BodyVitals ctrl_bodyVitals;
 
 		private bool m_waitForConfirm;
@@ -281,15 +316,9 @@ public object Current { get; }
 
 		public LevelCrateReference voidG114LevelCrate;
 
-		public LevelCrateReference loadScreenLevel;
-
 		private LevelCrateReference _loadcrate;
 
-		public Spawnable vfxFadeOutSpawnable;
-
 		private bool canClick;
-
-		private MarrowEntity playerEntity;
 
 		private static PlayerProgression Progression => null;
 
@@ -297,15 +326,11 @@ public object Current { get; }
 		{
 		}
 
+		private void OnLevelLoad()
+		{
+		}
+
 		private void OnDestroy()
-		{
-		}
-
-		private void PullLocalizedText()
-		{
-		}
-
-		public override void Start()
 		{
 		}
 
@@ -314,7 +339,7 @@ public object Current { get; }
 			return false;
 		}
 
-		[IteratorStateMachine(typeof(_003CStartSequence_003Ed__76))]
+		[IteratorStateMachine(typeof(_003CStartSequence_003Ed__72))]
 		private IEnumerator StartSequence()
 		{
 			return null;
@@ -348,7 +373,7 @@ public object Current { get; }
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CDissolveBoneLab_003Ed__84))]
+		[IteratorStateMachine(typeof(_003CDissolveBoneLab_003Ed__80))]
 		public IEnumerator DissolveBoneLab()
 		{
 			return null;
@@ -371,7 +396,7 @@ public object Current { get; }
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CLoadAvatarFromSaveDataAsync_003Ed__89))]
+		[AsyncStateMachine(typeof(_003CLoadAvatarFromSaveDataAsync_003Ed__85))]
 		public UniTask LoadAvatarFromSaveDataAsync()
 		{
 			return default(UniTask);

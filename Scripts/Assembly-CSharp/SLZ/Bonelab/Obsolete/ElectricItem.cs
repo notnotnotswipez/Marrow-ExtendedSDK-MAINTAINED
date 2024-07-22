@@ -4,8 +4,8 @@ namespace SLZ.Bonelab.Obsolete
 {
 	public class ElectricItem : ScriptableObject
 	{
-		[Space(5f)]
 		[Header("UI")]
+		[Space(5f)]
 		public Material Icon;
 	}
 }

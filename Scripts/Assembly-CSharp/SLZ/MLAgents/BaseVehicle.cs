@@ -22,8 +22,8 @@ namespace SLZ.MLAgents
 		[Tooltip("Reference value for normalizing mass observations of rigidbodies")]
 		public float max_weight;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		public Rigidbody _rb;
 
 		[Tooltip("Master variable for all other scripts to know if vehicle is currently colliding")]

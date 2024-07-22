@@ -31,17 +31,25 @@ namespace SLZ.Bonelab.Console
 
 			private Scene _003Cscene_003E5__3;
 
-
-			public void MoveNext()
+			private void MoveNext()
 			{
-				throw new System.NotImplementedException();
 			}
 
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new System.NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
-				throw new System.NotImplementedException();
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new System.NotImplementedException();
+            }
+        }
 
 		public override IUniTaskAsyncEnumerable<object> RunCommand(string command)
 		{

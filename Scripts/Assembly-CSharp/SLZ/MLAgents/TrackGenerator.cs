@@ -28,8 +28,8 @@ namespace SLZ.MLAgents
 		[Tooltip("Reference for predefined path")]
 		public PathCreator pathCreator;
 
-		[HideInInspector]
 		[Header("Partition Section")]
+		[HideInInspector]
 		public bool usePartitions;
 
 		[Tooltip("Length of bez path that designates a partition (as a fraction of total)")]

@@ -13,8 +13,5 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private RadioStation selectedStation;
 
-		public override void OnSpawn(GameObject go)
-		{
-		}
 	}
 }

@@ -4,8 +4,8 @@ namespace SLZ.VRMK
 {
 	public class MirrorFollow : MonoBehaviour
 	{
-		[HideInInspector]
 		[Header("THIS SCRIPT IS ONLY USED FOR THE INTRO MIRROR.\nIF USED ELSEWHERE IN THE GAME, IT WILL CAUSE PROBLEMS.\n")]
+		[HideInInspector]
 		public Transform transformToMirror;
 
 		public Transform mirrorPlane;

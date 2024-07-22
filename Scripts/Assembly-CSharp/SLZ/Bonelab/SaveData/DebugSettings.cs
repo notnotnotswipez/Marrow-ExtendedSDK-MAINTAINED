@@ -2,10 +2,11 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using SLZ.Marrow.SaveData;
 
 namespace SLZ.Bonelab.SaveData
 {
-	public sealed class DebugSettings
+	public sealed class DebugSettings : IDebugSettings, IFixFieldsIfNeeded
 	{
 		[JsonExtensionData]
 		public IDictionary<string, JToken> AdditionalData

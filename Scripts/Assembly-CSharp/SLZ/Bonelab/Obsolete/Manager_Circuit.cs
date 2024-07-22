@@ -21,8 +21,8 @@ namespace SLZ.Bonelab.Obsolete
 		public List<Powerable> Electronics;
 
 		[Tooltip("Checked if you want it to only work with a specific Power Source.")]
-		[Space(10f)]
 		[Header("SPECIFIC POWERSOURCE")]
+		[Space(10f)]
 		public bool SpecificPSMode;
 
 		public bool hasPowerSources => false;

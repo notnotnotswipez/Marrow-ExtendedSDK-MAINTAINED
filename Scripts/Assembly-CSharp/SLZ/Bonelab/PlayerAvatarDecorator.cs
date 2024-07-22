@@ -14,14 +14,16 @@ namespace SLZ.Bonelab
 
 		private bool _hasSpawned;
 
-		private PlayerAvatarManager _avatarManager;
-
-		public AvatarCrate overrideAvatar;
+		public AvatarCrateReference overrideAvatar;
 
 		[HideInInspector]
 		public bool preventSwap;
 
 		private void Reset()
+		{
+		}
+
+		private void Awake()
 		{
 		}
 
@@ -38,6 +40,10 @@ namespace SLZ.Bonelab
 		}
 
 		public void OnDespawn(GameObject go)
+		{
+		}
+
+		private void OnLevelLoad()
 		{
 		}
 

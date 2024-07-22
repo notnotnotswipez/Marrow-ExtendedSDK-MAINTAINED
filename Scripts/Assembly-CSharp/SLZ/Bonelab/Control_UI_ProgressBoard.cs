@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Bonelab.SaveData;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using SLZ.Marrow.Audio;
 using SLZ.SFX;
 using TMPro;
@@ -16,11 +16,8 @@ namespace SLZ.Bonelab
 	public class Control_UI_ProgressBoard : MonoBehaviour
 	{
 		[CompilerGenerated]
-		private sealed class _003CBoardUpdateLoop_003Ed__56 : IEnumerator<object>, IEnumerator, IDisposable
+		private sealed class _003CBoardUpdateLoop_003Ed__58 : IEnumerator<object>, IEnumerator, IDisposable
 		{
-public void Reset(){}
-public void Dispose(){}
-public object Current { get; }
 			private int _003C_003E1__state;
 
 			private object _003C_003E2__current;
@@ -45,8 +42,10 @@ public object Current { get; }
 				}
 			}
 
-			[DebuggerHidden]
-			public _003CBoardUpdateLoop_003Ed__56(int _003C_003E1__state)
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
+			public _003CBoardUpdateLoop_003Ed__58(int _003C_003E1__state)
 			{
 			}
 
@@ -55,7 +54,7 @@ public object Current { get; }
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
@@ -64,7 +63,22 @@ public object Current { get; }
 			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
-		}
+
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		public CraneControlBox craneControlBox;
 
@@ -168,6 +182,8 @@ public object Current { get; }
 
 		private int lastSocketIndex;
 
+		public bool inVolume;
+
 		private static PlayerProgression p => null;
 
 		private void OnEnable()
@@ -182,13 +198,21 @@ public object Current { get; }
 		{
 		}
 
-		[IteratorStateMachine(typeof(_003CBoardUpdateLoop_003Ed__56))]
+		public void INVOLUME(bool inOut)
+		{
+		}
+
+		[IteratorStateMachine(typeof(_003CBoardUpdateLoop_003Ed__58))]
 		private IEnumerator BoardUpdateLoop()
 		{
 			return null;
 		}
 
 		public void UPDATEDBOARD()
+		{
+		}
+
+		public void CheckActivation()
 		{
 		}
 

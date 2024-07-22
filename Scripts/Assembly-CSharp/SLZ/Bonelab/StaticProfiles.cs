@@ -93,11 +93,7 @@ namespace SLZ.Bonelab
 
 		private List<SpawnableCrateReference> bladeCrateList;
 
-		public Spawnable vfxFadeOutSpawnable;
-
 		public LevelCrateReference hubLevelCrate;
-
-		public LevelCrateReference loadScreenLevel;
 
 		public Spawnable seekerSpawnable;
 

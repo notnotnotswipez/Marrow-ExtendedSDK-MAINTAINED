@@ -1,6 +1,6 @@
 using System;
 using System.Runtime.CompilerServices;
-using SLZ.Interaction;
+using SLZ.Marrow;
 using Unity.MLAgents;
 using UnityEngine;
 

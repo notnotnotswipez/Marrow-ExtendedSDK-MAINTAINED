@@ -15,12 +15,6 @@ namespace PathCreation
 
 			public readonly float percentBetweenIndices;
 
-			public TimeOnPathData(int prev, int next, float percentBetweenIndices)
-			{
-				this.previousIndex = -1;
-				this.nextIndex = -1;
-				this.percentBetweenIndices = 0f;
-			}
 		}
 
 		[SerializeField]

@@ -1,3 +1,5 @@
+using SLZ.Marrow;
+
 namespace SLZ.Interaction
 {
 	public class DualHingeVirtualController : HingeVirtualController

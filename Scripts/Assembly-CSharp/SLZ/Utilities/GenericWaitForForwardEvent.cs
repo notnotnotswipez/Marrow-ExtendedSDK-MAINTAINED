@@ -39,7 +39,9 @@ namespace SLZ.Utilities
 				}
 			}
 
-			[DebuggerHidden]
+            public object Current => throw new NotImplementedException();
+
+            [DebuggerHidden]
 			public _003CCoDelayForward_003Ed__2(int _003C_003E1__state)
 			{
 			}
@@ -49,30 +51,31 @@ namespace SLZ.Utilities
 			{
 			}
 
-			public bool MoveNext()
+			private bool MoveNext()
 			{
 				return false;
 			}
 
-			public void Reset()
-			{
-				throw new NotImplementedException();
-			}
-
-			public object Current { get; }
-
-			object IEnumerator.Current => Current;
-
 			[DebuggerHidden]
-			public void System_002ECollections_002EIEnumerator_002EReset()
+			private void System_002ECollections_002EIEnumerator_002EReset()
 			{
 			}
 
-			public void Dispose()
-			{
-				throw new NotImplementedException();
-			}
-		}
+            bool IEnumerator.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Reset()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[SerializeField]
 		private UnityEvent ForwardEvent;

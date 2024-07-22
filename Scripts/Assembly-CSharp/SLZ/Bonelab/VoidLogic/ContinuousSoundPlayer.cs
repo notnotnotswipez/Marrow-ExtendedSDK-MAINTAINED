@@ -14,11 +14,11 @@ namespace SLZ.Bonelab.VoidLogic
 	[AddComponentMenu("VoidLogic/Bonelab/Sinks/VoidLogic Continuous Sound Player")]
 	[Obsolete("This interface is not yet considered stable. Use at your own risk!")]
 	[Support(SupportFlags.CowboySupported, "It's unclear how exactly we want to properly support playing sound. This component is allowed without endorsement until we have an answer for that.")]
-	public class ContinuousSoundPlayer : MonoBehaviour, IVoidLogicSink, IVoidLogicNode
+	public class ContinuousSoundPlayer : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, ISerializationCallbackReceiver
 	{
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CManagedUpdate_003Ed__54 : IAsyncStateMachine
+		private struct _003CManagedUpdate_003Ed__57 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -30,21 +30,29 @@ namespace SLZ.Bonelab.VoidLogic
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-
-			public void MoveNext()
+			private void MoveNext()
 			{
-				throw new NotImplementedException();
 			}
 
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
-				throw new NotImplementedException();
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CDoAStart_003Ed__55 : IAsyncStateMachine
+		private struct _003CDoAStart_003Ed__58 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -56,21 +64,29 @@ namespace SLZ.Bonelab.VoidLogic
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-
-			public void MoveNext()
+			private void MoveNext()
 			{
-				throw new NotImplementedException();
 			}
 
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
-				throw new NotImplementedException();
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CSpawnAndPlayAudio_003Ed__56 : IAsyncStateMachine
+		private struct _003CSpawnAndPlayAudio_003Ed__59 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -82,21 +98,29 @@ namespace SLZ.Bonelab.VoidLogic
 
 			private UniTask<GameObject>.Awaiter _003C_003Eu__1;
 
-
-			public void MoveNext()
+			private void MoveNext()
 			{
-				throw new NotImplementedException();
 			}
 
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
+
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
 			{
-				throw new NotImplementedException();
 			}
-		}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 		[StructLayout(3)]
 		[CompilerGenerated]
-		private struct _003CFadeVolume_003Ed__59 : IAsyncStateMachine
+		private struct _003CFadeVolume_003Ed__62 : IAsyncStateMachine
 		{
 			public int _003C_003E1__state;
 
@@ -120,20 +144,29 @@ namespace SLZ.Bonelab.VoidLogic
 
 			private UniTask.Awaiter _003C_003Eu__1;
 
-
-			public void MoveNext()
+			private void MoveNext()
 			{
-				throw new NotImplementedException();
 			}
 
-			public void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-				throw new NotImplementedException();
-			}
-		}
+            void IAsyncStateMachine.MoveNext()
+            {
+                throw new NotImplementedException();
+            }
 
-		[Tooltip("Previous node(s) in the chain")]
+            [DebuggerHidden]
+			private void SetStateMachine(IAsyncStateMachine stateMachine)
+			{
+			}
+
+            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
+            {
+                throw new NotImplementedException();
+            }
+        }
+
 		[SerializeField]
+		[Obsolete("Replace with `_previousConnections`")]
+		[Tooltip("Previous node(s) in the chain")]
 		[Interface(typeof(IVoidLogicSource), false)]
 		private MonoBehaviour[] _previous;
 
@@ -156,8 +189,6 @@ namespace SLZ.Bonelab.VoidLogic
 		private CancellationTokenSource fadeCancelToken;
 
 		private static readonly PortMetadata _portMetadata;
-
-		public PortMetadata PortMetadata { get; }
 
 		public VoidLogicSubgraph Subgraph
 		{
@@ -293,6 +324,16 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
 
+        public PortMetadata PortMetadata => throw new NotImplementedException();
+
+        private void UnityEngine_002EISerializationCallbackReceiver_002EOnBeforeSerialize()
+		{
+		}
+
+		private void UnityEngine_002EISerializationCallbackReceiver_002EOnAfterDeserialize()
+		{
+		}
+
 		private void Awake()
 		{
 		}
@@ -309,19 +350,19 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CManagedUpdate_003Ed__54))]
+		[AsyncStateMachine(typeof(_003CManagedUpdate_003Ed__57))]
 		private UniTaskVoid ManagedUpdate(CancellationToken cancellationSource)
 		{
 			return default(UniTaskVoid);
 		}
 
-		[AsyncStateMachine(typeof(_003CDoAStart_003Ed__55))]
+		[AsyncStateMachine(typeof(_003CDoAStart_003Ed__58))]
 		private UniTask DoAStart(EdgeType edgeType)
 		{
 			return default(UniTask);
 		}
 
-		[AsyncStateMachine(typeof(_003CSpawnAndPlayAudio_003Ed__56))]
+		[AsyncStateMachine(typeof(_003CSpawnAndPlayAudio_003Ed__59))]
 		private UniTask SpawnAndPlayAudio(EdgeType edgeType, ClipPair chosenClipPair)
 		{
 			return default(UniTask);
@@ -336,7 +377,7 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		[AsyncStateMachine(typeof(_003CFadeVolume_003Ed__59))]
+		[AsyncStateMachine(typeof(_003CFadeVolume_003Ed__62))]
 		private UniTaskVoid FadeVolume(float fadeTarget, float fadeTime, CancellationTokenSource cancellationSource)
 		{
 			return default(UniTaskVoid);
@@ -350,15 +391,20 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
-		{
-			input = null;
-			return false;
-		}
 
-		public bool TrySetInputAtIndex(uint idx, IVoidLogicSource input)
-		{
-			return false;
-		}
-	}
+        public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnBeforeSerialize()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void OnAfterDeserialize()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
