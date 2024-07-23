@@ -13,7 +13,7 @@ Install [Git](https://git-scm.com/) and Restart Unity / Unity Hub if they are op
 Begin installing the MarrowSDK by following the original instructions at https://github.com/StressLevelZero/MarrowSDK/wiki/ProjectSetup.
 
 > [!IMPORTANT]  
-> DO NOT INSTALL THE SLZ MARROWSDK PACKAGE AFTER ADDING THE SCOPED REGISTRY
+> DO NOT INSTALL THE SLZ MARROWSDK PACKAGE OR THE BACKLOT PACKAGE AFTER ADDING THE SCOPED REGISTRY
 
 > [!IMPORTANT]  
 > IF UPDATING, MAKE SURE TO DELETE Marrow-ExtendedSDK-Maintained-main COMPLETELY FROM YOUR ASSETS FOLDER BEFORE DOWNLOADING THE NEW CODE DROPDOWN
