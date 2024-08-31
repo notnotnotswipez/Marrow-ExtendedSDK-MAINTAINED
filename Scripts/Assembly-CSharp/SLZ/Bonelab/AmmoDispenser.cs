@@ -1,82 +1,66 @@
-using System;
+﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using SLZ.Marrow.Warehouse;
+using SLZ.Marrow.Zones;
 using TMPro;
 using UnityEngine;
 
 namespace SLZ.Bonelab
 {
-	public class AmmoDispenser : MonoBehaviour
+	public class AmmoDispenser : MonoBehaviour, IRecycleListenable, ISpawnListenable
 	{
-		[CompilerGenerated]
-		private sealed class _003CRAINAMMO_003Ed__14 : IEnumerator<object>, IEnumerator, IDisposable
+		private void Awake()
 		{
-			private int _003C_003E1__state;
+		}
 
-			private object _003C_003E2__current;
+		public void Start()
+		{
+		}
 
-			public AmmoDispenser _003C_003E4__this;
+		public void Setup()
+		{
+		}
 
-			public int type;
+		public void SPAWN_AMMO(int type)
+		{
+		}
 
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
+		public IEnumerator RAINAMMO(int type)
+		{
+			return null;
+		}
 
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
+		public void TOGGLERAIN()
+		{
+		}
 
-            public object Current => throw new NotImplementedException();
+		public void STOPRAININGAMMO(int type)
+		{
+		}
 
-            [DebuggerHidden]
-			public _003CRAINAMMO_003Ed__14(int _003C_003E1__state)
-			{
-			}
+		public void TEXTDISPLAY()
+		{
+		}
 
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
+		public void AUDIOALERT(bool positive = false, int type = 0)
+		{
+		}
 
-			private bool MoveNext()
-			{
-				return false;
-			}
+		public void OnRecycle(GameObject go)
+		{
+		}
 
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
+		public void OnSpawn(GameObject go)
+		{
+		}
 
-            bool IEnumerator.MoveNext()
-            {
-                throw new NotImplementedException();
-            }
+		public void OnDespawn(GameObject go)
+		{
+		}
 
-            public void Reset()
-            {
-                throw new NotImplementedException();
-            }
-
-            public void Dispose()
-            {
-                throw new NotImplementedException();
-            }
-        }
+		public AmmoDispenser()
+		{
+		}
 
 		public TextMeshPro[] txt_ammoDisplay;
 
@@ -99,39 +83,5 @@ namespace SLZ.Bonelab
 		public AudioClip[] clip_deny;
 
 		private Coroutine[] rainingAmmo;
-
-		public void Start()
-		{
-		}
-
-		public void Setup()
-		{
-		}
-
-		public void SPAWN_AMMO(int type)
-		{
-		}
-
-		[IteratorStateMachine(typeof(_003CRAINAMMO_003Ed__14))]
-		public IEnumerator RAINAMMO(int type)
-		{
-			return null;
-		}
-
-		public void TOGGLERAIN()
-		{
-		}
-
-		public void STOPRAININGAMMO(int type)
-		{
-		}
-
-		public void TEXTDISPLAY()
-		{
-		}
-
-		public void AUDIOALERT(bool positive = false, int type = 0)
-		{
-		}
 	}
 }

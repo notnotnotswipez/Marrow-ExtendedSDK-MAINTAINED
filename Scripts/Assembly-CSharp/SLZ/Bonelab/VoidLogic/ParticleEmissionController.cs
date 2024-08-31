@@ -1,35 +1,17 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
-using SLZ.Algorithms.Unity;
+using System.Runtime.InteropServices;
 using SLZ.Marrow.VoidLogic;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace SLZ.Bonelab.VoidLogic
 {
-	[AddComponentMenu("VoidLogic/Bonelab/Internal Only/VoidLogic Particle Emission Controller")]
 	[Obsolete("This interface is not yet considered stable. Use at your own risk!")]
+	[AddComponentMenu("VoidLogic/Bonelab Internal/VoidLogic Particle Emission Controller")]
 	[Support(SupportFlags.CowboySupported, null)]
-	public class ParticleEmissionController : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, ISerializationCallbackReceiver, IVoidLogicActuator
+	public class ParticleEmissionController : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, IVoidLogicActuator
 	{
-		[Obsolete("Replace with `_previousConnection`")]
-		[SerializeField]
-		[Interface(typeof(IVoidLogicSource), false)]
-		[Tooltip("Previous node in the chain")]
-		private MonoBehaviour _previousNode;
-
-		[FormerlySerializedAs("ParticleSystems")]
-		[SerializeField]
-		private ParticleSystem[] _particleSystems;
-
-		private bool _disable;
-
-		private ParticleSystem.EmissionModule[] _emissionSystems;
-
-		private float[] _cachedRateMultipliers;
-
-		private static readonly PortMetadata _portMetadata;
-
 		public VoidLogicSubgraph Subgraph
 		{
 			[CompilerGenerated]
@@ -43,18 +25,12 @@ namespace SLZ.Bonelab.VoidLogic
 			}
 		}
 
-		public int InputCount => 0;
-
-		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
-
-        public PortMetadata PortMetadata => throw new NotImplementedException();
-
-        private void UnityEngine_002EISerializationCallbackReceiver_002EOnBeforeSerialize()
+		public bool Deprecated
 		{
-		}
-
-		private void UnityEngine_002EISerializationCallbackReceiver_002EOnAfterDeserialize()
-		{
+			get
+			{
+				return default(bool);
+			}
 		}
 
 		private void Reset()
@@ -85,28 +61,68 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		private void SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicActuator_002EActuate(ref NodeState nodeState)
+		void IVoidLogicActuator.Actuate(NodeState nodeState)
 		{
 		}
 
-        public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
-        {
-            throw new NotImplementedException();
-        }
+		void IVoidLogicNode.Initialize(NodeState nodeState)
+		{
+		}
 
-        public void OnBeforeSerialize()
-        {
-            throw new NotImplementedException();
-        }
+		public int InputCount
+		{
+			get
+			{
+				return 0;
+			}
+		}
 
-        public void OnAfterDeserialize()
-        {
-            throw new NotImplementedException();
-        }
+		public bool TryGetInputConnection(uint inputIndex, [Out] OutputPortReference connectedPort)
+		{
+			return default(bool);
+		}
 
-        public void Actuate(ref NodeState nodeState)
-        {
-            throw new NotImplementedException();
-        }
-    }
+		public bool TryConnectPortToInput(OutputPortReference output, uint inputIndex)
+		{
+			return default(bool);
+		}
+
+		PortMetadata IVoidLogicNode.PortMetadata
+		{
+			get
+			{
+				return default(PortMetadata);
+			}
+		}
+
+		public ParticleEmissionController()
+		{
+		}
+
+		[SerializeField]
+		[HideInInspector]
+		private bool _deprecated;
+
+		[Obsolete("Dead Field: Please remove")]
+		[Tooltip("Dead Field: Please remove")]
+		[SerializeField]
+		[NonReorderable]
+		protected internal MonoBehaviour _previousNode;
+
+		[SerializeField]
+		[Tooltip("Previous node in the chain")]
+		private OutputPortReference _previousConnection;
+
+		[FormerlySerializedAs("ParticleSystems")]
+		[SerializeField]
+		private ParticleSystem[] _particleSystems;
+
+		private bool _disable;
+
+		private ParticleSystem.EmissionModule[] _emissionSystems;
+
+		private float[] _cachedRateMultipliers;
+
+		private static readonly PortMetadata _portMetadata;
+	}
 }

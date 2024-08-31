@@ -1,8 +1,5 @@
-using System;
+﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using SLZ.Marrow;
 using SLZ.Marrow.Combat;
 using SLZ.Marrow.Data;
@@ -15,137 +12,59 @@ namespace SLZ.Bonelab
 {
 	public class ProjectileBalloon : SpawnEvents, IAttackReceiver, IEventSystemHandler
 	{
-		[CompilerGenerated]
-		private sealed class _003CCoDelayFire_003Ed__33 : IEnumerator<object>, IEnumerator, IDisposable
+		protected override void Awake()
 		{
-			private int _003C_003E1__state;
+		}
 
-			private object _003C_003E2__current;
-
-			public ProjectileBalloon _003C_003E4__this;
-
-			public Vector3 forward;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-            public object Current => throw new NotImplementedException();
-
-            [DebuggerHidden]
-			public _003CCoDelayFire_003Ed__33(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-
-            bool IEnumerator.MoveNext()
-            {
-                throw new NotImplementedException();
-            }
-
-            public void Reset()
-            {
-                throw new NotImplementedException();
-            }
-
-            public void Dispose()
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-		[CompilerGenerated]
-		private sealed class _003CCoWarmupAttach_003Ed__34 : IEnumerator<object>, IEnumerator, IDisposable
+		public override void OnPoolInitialize()
 		{
-			private int _003C_003E1__state;
+		}
 
-			private object _003C_003E2__current;
+		public override void OnPoolDeInitialize()
+		{
+		}
 
-			public ProjectileBalloon _003C_003E4__this;
+		private void AttachJoint(Rigidbody connectedBody, Vector3 impactPosition)
+		{
+		}
 
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
+		private void AttachBuoyancyJoint()
+		{
+		}
 
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
+		private void LateUpdate()
+		{
+		}
 
-            public object Current => throw new NotImplementedException();
+		private IEnumerator CoDelayFire(Vector3 position, Vector3 forward)
+		{
+			return null;
+		}
 
-            [DebuggerHidden]
-			public _003CCoWarmupAttach_003Ed__34(int _003C_003E1__state)
-			{
-			}
+		private IEnumerator CoWarmupAttach()
+		{
+			return null;
+		}
 
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
+		private void TakeDamage(Vector3 attackDir)
+		{
+		}
 
-			private bool MoveNext()
-			{
-				return false;
-			}
+		private void OnCollisionEnter(Collision collision)
+		{
+		}
 
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
+		public void SetColor(Balloon.BalloonColor color)
+		{
+		}
 
-            bool IEnumerator.MoveNext()
-            {
-                throw new NotImplementedException();
-            }
+		public void ReceiveAttack(Attack attack)
+		{
+		}
 
-            public void Reset()
-            {
-                throw new NotImplementedException();
-            }
-
-            public void Dispose()
-            {
-                throw new NotImplementedException();
-            }
-        }
+		public ProjectileBalloon()
+		{
+		}
 
 		[Header("Options")]
 		public LayerMask collisionLayers;
@@ -163,6 +82,8 @@ namespace SLZ.Bonelab
 		public float maxImpactForce;
 
 		[Header("References")]
+		public Spawnable airPopVFXSpawnable;
+
 		public Spawnable balloonPopVfxSpawnable;
 
 		public GameObject[] balloonArt;
@@ -203,60 +124,6 @@ namespace SLZ.Bonelab
 
 		public LineRenderer linerenderer;
 
-		public ParticleSystem ps;
-
 		public Transform hosttransform;
-
-		protected override void Awake()
-		{
-		}
-
-		public override void OnPoolInitialize()
-		{
-		}
-
-		public override void OnPoolDeInitialize()
-		{
-		}
-
-		private void AttachJoint(Rigidbody connectedBody, Vector3 impactPosition)
-		{
-		}
-
-		private void AttachBuoyancyJoint()
-		{
-		}
-
-		private void LateUpdate()
-		{
-		}
-
-		[IteratorStateMachine(typeof(_003CCoDelayFire_003Ed__33))]
-		private IEnumerator CoDelayFire(Vector3 position, Vector3 forward)
-		{
-			return null;
-		}
-
-		[IteratorStateMachine(typeof(_003CCoWarmupAttach_003Ed__34))]
-		private IEnumerator CoWarmupAttach()
-		{
-			return null;
-		}
-
-		private void TakeDamage(Vector3 attackDir)
-		{
-		}
-
-		private void OnCollisionEnter(Collision collision)
-		{
-		}
-
-		public void SetColor(Balloon.BalloonColor color)
-		{
-		}
-
-		public void ReceiveAttack(Attack attack)
-		{
-		}
 	}
 }

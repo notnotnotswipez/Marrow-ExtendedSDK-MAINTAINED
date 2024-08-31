@@ -1,76 +1,15 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
-using SLZ.Algorithms.Unity;
+using System.Runtime.InteropServices;
 using SLZ.Marrow.VoidLogic;
 using UnityEngine;
 
 namespace SLZ.Bonelab.VoidLogic
 {
-	[AddComponentMenu("VoidLogic/Bonelab/Internal Only/VoidLogic Line Renderer One-off Sink")]
+	[AddComponentMenu("VoidLogic/Bonelab Internal/VoidLogic Line Renderer One-off Sink")]
 	[Support(SupportFlags.CowboySupported, "This is a one-off. Your bugs are your own unless or until we have a plan to generalize this into Marrow.")]
-	public sealed class OneOffLineRendererSink : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, ISerializationCallbackReceiver
+	public sealed class OneOffLineRendererSink : MonoBehaviour, IVoidLogicSink, IVoidLogicNode
 	{
-		[SerializeField]
-		[Interface(typeof(IVoidLogicSource), false)]
-		[Obsolete("Replace with `_previousConnection`")]
-		[Tooltip("Previous node in the chain")]
-		private MonoBehaviour _previousNode;
-
-		private float _priorValue;
-
-		[SerializeField]
-		private Renderer[] _renderers;
-
-		[SerializeField]
-		private int[] _materialIndex;
-
-		[SerializeField]
-		private Material _offMat;
-
-		[SerializeField]
-		private Material _onMat;
-
-		[SerializeField]
-		private float lowThreshold;
-
-		[SerializeField]
-		private float highThreshold;
-
-		private bool _isHigh;
-
-		[Interface(typeof(IVoidLogicSink), false)]
-		[SerializeField]
-		private MonoBehaviour nextNode;
-
-		[SerializeField]
-		private Mesh segmentMesh;
-
-		[SerializeField]
-		private Mesh endMesh;
-
-		[SerializeField]
-		private bool movingEndPoint;
-
-		[SerializeField]
-		private Transform overrideStartPoint;
-
-		[SerializeField]
-		private Transform overrideEndPoint;
-
-		public float lineEdgeOffset;
-
-		public float scale;
-
-		private Vector3 startPoint;
-
-		private Vector3 endPoint;
-
-		public GameObject testMesh;
-
-		public GameObject testMeshArrow;
-
-		private static readonly PortMetadata _portMetadata;
-
 		public VoidLogicSubgraph Subgraph
 		{
 			[CompilerGenerated]
@@ -84,18 +23,12 @@ namespace SLZ.Bonelab.VoidLogic
 			}
 		}
 
-		public int InputCount => 0;
-
-		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
-
-        public PortMetadata PortMetadata => throw new NotImplementedException();
-
-        private void UnityEngine_002EISerializationCallbackReceiver_002EOnBeforeSerialize()
+		public bool Deprecated
 		{
-		}
-
-		private void UnityEngine_002EISerializationCallbackReceiver_002EOnAfterDeserialize()
-		{
+			get
+			{
+				return default(bool);
+			}
 		}
 
 		private void Awake()
@@ -138,19 +71,106 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-        public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
-        {
-            throw new NotImplementedException();
-        }
+		void IVoidLogicNode.Initialize(NodeState nodeState)
+		{
+		}
 
-        public void OnBeforeSerialize()
-        {
+		public int InputCount
+		{
+			get
+			{
+				return 0;
+			}
+		}
 
-        }
+		public bool TryGetInputConnection(uint inputIndex, [Out] OutputPortReference connectedPort)
+		{
+			return default(bool);
+		}
 
-        public void OnAfterDeserialize()
-        {
+		public bool TryConnectPortToInput(OutputPortReference output, uint inputIndex)
+		{
+			return default(bool);
+		}
 
-        }
-    }
+		PortMetadata IVoidLogicNode.PortMetadata
+		{
+			get
+			{
+				return default(PortMetadata);
+			}
+		}
+
+		public OneOffLineRendererSink()
+		{
+		}
+
+		[SerializeField]
+		[HideInInspector]
+		private bool _deprecated;
+
+		[Obsolete("Dead Field: Please remove")]
+		[Tooltip("Dead Field: Please remove")]
+		[NonReorderable]
+		[SerializeField]
+		protected internal MonoBehaviour _previousNode;
+
+		[Tooltip("Previous node in the chain")]
+		[SerializeField]
+		private OutputPortReference _previousConnection;
+
+		private float _priorValue;
+
+		[SerializeField]
+		private Renderer[] _renderers;
+
+		[SerializeField]
+		private int[] _materialIndex;
+
+		[SerializeField]
+		private Material _offMat;
+
+		[SerializeField]
+		private Material _onMat;
+
+		[SerializeField]
+		private float lowThreshold;
+
+		[SerializeField]
+		private float highThreshold;
+
+		private bool _isHigh;
+
+		[SerializeField]
+		private MonoBehaviour nextNode;
+
+		[SerializeField]
+		private Mesh segmentMesh;
+
+		[SerializeField]
+		private Mesh endMesh;
+
+		[SerializeField]
+		private bool movingEndPoint;
+
+		[SerializeField]
+		private Transform overrideStartPoint;
+
+		[SerializeField]
+		private Transform overrideEndPoint;
+
+		public float lineEdgeOffset;
+
+		public float scale;
+
+		private Vector3 startPoint;
+
+		private Vector3 endPoint;
+
+		public GameObject testMesh;
+
+		public GameObject testMeshArrow;
+
+		private static readonly PortMetadata _portMetadata;
+	}
 }

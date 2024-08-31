@@ -437,7 +437,6 @@ namespace SLZ.Bonelab
 
 		public UnityEvent returnEvent;
 
-		private const string REPO_APPROVED = "https://mods.stresslevelzero.com/repository.json";
 
 		private readonly Regex NonAlphanumeric;
 

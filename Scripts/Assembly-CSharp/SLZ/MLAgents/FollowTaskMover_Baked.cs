@@ -74,8 +74,6 @@ namespace SLZ.MLAgents
             }
         }
 
-		public TrackClass trackClass;
-
 		public float desiredSpeed;
 
 		public float minSpeed;

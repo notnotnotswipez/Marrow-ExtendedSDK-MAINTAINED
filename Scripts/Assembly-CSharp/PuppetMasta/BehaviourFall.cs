@@ -10,7 +10,6 @@ using UnityEngine;
 namespace PuppetMasta
 {
 	[AddComponentMenu("Scripts/RootMotion.Dynamics/PuppetMaster/Behaviours/BehaviourFall")]
-	[HelpURL("http://root-motion.com/puppetmasterdox/html/page11.html")]
 	public class BehaviourFall : BehaviourBase
 	{
 		[CompilerGenerated]

@@ -4,11 +4,9 @@ using System.Runtime.InteropServices;
 using SLZ.Marrow.VoidLogic;
 using UnityEngine;
 
-namespace SLZ.Bonelab.VoidLogic
+namespace SLZ.Marrow.Redacted
 {
-	[Support(SupportFlags.NotForRelease, "This is a one-off for testing.")]
-	[AddComponentMenu(null)]
-	public sealed class OneOffSetEuler : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, IVoidLogicActuator
+	public class PowerSender : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, IVoidLogicSource, IPlugable
 	{
 		public VoidLogicSubgraph Subgraph
 		{
@@ -47,24 +45,28 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		private void Update()
-		{
-		}
-
-		void IVoidLogicNode.Initialize(NodeState nodeState)
-		{
-		}
-
-		public void Actuate(NodeState nodeState)
-		{
-		}
-
 		public int InputCount
 		{
 			get
 			{
 				return 0;
 			}
+		}
+
+		public int OutputCount
+		{
+			get
+			{
+				return 0;
+			}
+		}
+
+		void IVoidLogicNode.Initialize(NodeState nodeState)
+		{
+		}
+
+		void IVoidLogicSource.Calculate(NodeState nodeState)
+		{
 		}
 
 		public bool TryGetInputConnection(uint inputIndex, [Out] OutputPortReference connectedPort)
@@ -77,7 +79,7 @@ namespace SLZ.Bonelab.VoidLogic
 			return default(bool);
 		}
 
-		PortMetadata IVoidLogicNode.PortMetadata
+		public PortMetadata PortMetadata
 		{
 			get
 			{
@@ -85,7 +87,15 @@ namespace SLZ.Bonelab.VoidLogic
 			}
 		}
 
-		public OneOffSetEuler()
+		public void OnSocketAttached(Socket socket)
+		{
+		}
+
+		public void OnSocketDetached(Socket socket)
+		{
+		}
+
+		public PowerSender()
 		{
 		}
 
@@ -93,25 +103,15 @@ namespace SLZ.Bonelab.VoidLogic
 		[HideInInspector]
 		private bool _deprecated;
 
-		[Tooltip("Dead Field: Please remove")]
-		[NonReorderable]
-		[Obsolete("Dead Field: Please remove")]
+		[Tooltip("Previous node in the chain")]
 		[SerializeField]
-		protected internal MonoBehaviour[] _previous;
-
-		[SerializeField]
-		[NonReorderable]
-		[Tooltip("Previous node(s) in the chain")]
-		protected internal OutputPortReference[] _previousConnections;
-
-		[SerializeField]
-		private bool _setOnActuation;
-
-		[SerializeField]
-		private Transform _target;
-
-		private Vector3 targetRotation;
+		private OutputPortReference _previousConnection;
 
 		private static readonly PortMetadata _portMetadata;
+
+		[SerializeField]
+		private Plug _plug;
+
+		private PowerReceiver _powerReceiver;
 	}
 }

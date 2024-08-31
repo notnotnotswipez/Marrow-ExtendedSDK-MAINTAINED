@@ -1,31 +1,17 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
-using SLZ.Algorithms.Unity;
+using System.Runtime.InteropServices;
 using SLZ.Marrow.VoidLogic;
 using TMPro;
 using UnityEngine;
 
 namespace SLZ.Bonelab.VoidLogic
 {
-	[AddComponentMenu("VoidLogic/Bonelab/Internal Only/VoidLogic Value Reader One-off Sink")]
-	[Support(SupportFlags.CowboySupported, "This is a one-off. Your bugs are your own unless or until we have a plan to generalize this into Marrow.")]
-	public sealed class OneOffValueReaderSink : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, ISerializationCallbackReceiver
+	[Support(SupportFlags.Unsupported, "Replaced by TextAdapter.")]
+	[Obsolete("Replaced by TextAdapter.")]
+	[AddComponentMenu(null)]
+	public sealed class OneOffValueReaderSink : MonoBehaviour, IVoidLogicSink, IVoidLogicNode
 	{
-		[SerializeField]
-		[Tooltip("Previous node in the chain")]
-		[Interface(typeof(IVoidLogicSource), false)]
-		[Obsolete("Replace with `_previousConnection`")]
-		private MonoBehaviour _previousNode;
-
-		private float _priorValue;
-
-		[SerializeField]
-		private TextMeshPro tmp;
-
-		public string labelText;
-
-		private static readonly PortMetadata _portMetadata;
-
 		public VoidLogicSubgraph Subgraph
 		{
 			[CompilerGenerated]
@@ -39,18 +25,12 @@ namespace SLZ.Bonelab.VoidLogic
 			}
 		}
 
-		public int InputCount => 0;
-
-		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
-
-        public PortMetadata PortMetadata => throw new NotImplementedException();
-
-        private void UnityEngine_002EISerializationCallbackReceiver_002EOnBeforeSerialize()
+		public bool Deprecated
 		{
-		}
-
-		private void UnityEngine_002EISerializationCallbackReceiver_002EOnAfterDeserialize()
-		{
+			get
+			{
+				return default(bool);
+			}
 		}
 
 		private void Awake()
@@ -69,10 +49,6 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		private void Start()
-		{
-		}
-
 		private void Update()
 		{
 		}
@@ -81,19 +57,56 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-        public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
-        {
-            throw new NotImplementedException();
-        }
+		void IVoidLogicNode.Initialize(NodeState nodeState)
+		{
+		}
 
-        public void OnBeforeSerialize()
-        {
-            throw new NotImplementedException();
-        }
+		public int InputCount
+		{
+			get
+			{
+				return 0;
+			}
+		}
 
-        public void OnAfterDeserialize()
-        {
-            throw new NotImplementedException();
-        }
-    }
+		public bool TryGetInputConnection(uint inputIndex, [Out] OutputPortReference connectedPort)
+		{
+			return default(bool);
+		}
+
+		public bool TryConnectPortToInput(OutputPortReference output, uint inputIndex)
+		{
+			return default(bool);
+		}
+
+		PortMetadata IVoidLogicNode.PortMetadata
+		{
+			get
+			{
+				return default(PortMetadata);
+			}
+		}
+
+		public OneOffValueReaderSink()
+		{
+		}
+
+		[Tooltip("Dead Field: Please remove")]
+		[SerializeField]
+		[Obsolete("Dead Field: Please remove")]
+		[NonReorderable]
+		protected internal MonoBehaviour _previousNode;
+
+		[SerializeField]
+		[Tooltip("Previous node in the chain")]
+		private OutputPortReference _previousConnection;
+
+		private float _priorValue;
+
+		public TextMeshPro tmp;
+
+		public string labelText;
+
+		private static readonly PortMetadata _portMetadata;
+	}
 }

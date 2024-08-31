@@ -1,17 +1,40 @@
-using SLZ.Marrow.Interaction;
-using SLZ.Marrow.Zones;
+﻿using System;
+using SLZ.Marrow.Circuits;
+using SLZ.Marrow.Utilities;
 using UnityEngine;
 
 namespace SLZ.Bonelab
 {
-	public class Escalator : ZoneItem
+	public class Escalator : ActuatorSocket
 	{
+		public float speed
+		{
+			get
+			{
+				return 0f;
+			}
+			set
+			{
+			}
+		}
+
+		public void SetSpeed(float newValue)
+		{
+		}
+
+		private void FixedUpdate()
+		{
+		}
+
+		public Escalator()
+		{
+		}
+
 		public float resetHalfThreshold;
 
 		[SerializeField]
 		private float _speed;
 
-		[SerializeField]
 		private float _lastSpeed;
 
 		public Rigidbody steps;
@@ -48,58 +71,16 @@ namespace SLZ.Bonelab
 
 		public Vector2 directionMill;
 
-		private Quaternion topPlatRollInit;
+		private SimpleTransform topPlatRollInit;
 
-		private Quaternion botPlatRollInit;
+		private SimpleTransform botPlatRollInit;
 
-		private Quaternion topTranRollInit;
+		private SimpleTransform topTranRollInit;
 
-		private Quaternion botTranRollInit;
+		private SimpleTransform botTranRollInit;
 
 		private Rigidbody _topTranRb;
 
 		private Rigidbody _botTranRb;
-
-		private bool isRunning;
-
-		private int activationCount;
-
-		private float _lastCycle;
-
-		public float speed
-		{
-			get
-			{
-				return 0f;
-			}
-			set
-			{
-			}
-		}
-
-		public void EventSpeed(float newValue, float oldValue)
-		{
-		}
-
-		private void Awake()
-		{
-		}
-
-		private void Start()
-		{
-		}
-
-
-		public void RunEscalator(bool escalatorIsOn = true)
-		{
-		}
-
-		public void OnFixedUpdate()
-		{
-		}
-
-		private void FixedUpdate()
-		{
-		}
 	}
 }

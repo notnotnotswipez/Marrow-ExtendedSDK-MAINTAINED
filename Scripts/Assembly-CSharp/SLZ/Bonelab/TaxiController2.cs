@@ -3,14 +3,13 @@ using System.Collections;
 using SLZ.Marrow;
 using SLZ.Marrow.Audio;
 using SLZ.Marrow.Data;
-using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 using UnityEngine.Events;
 
 namespace SLZ.Bonelab
 {
-	public class TaxiController : MonoBehaviour
+	public class TaxiController2 : MonoBehaviour
 	{
 		private void OnEnable()
 		{
@@ -127,7 +126,7 @@ namespace SLZ.Bonelab
 			return null;
 		}
 
-		public TaxiController()
+		public TaxiController2()
 		{
 		}
 
@@ -152,18 +151,12 @@ namespace SLZ.Bonelab
 		public Rigidbody frontAxle;
 
 		[SerializeField]
-		private SplineJoint splineJoint;
-
-		[SerializeField]
-		private PolyLine jimmyExitPolyLine;
-
-		[SerializeField]
 		private Rigidbody carBody;
 
 		private ConfigurableJoint _steeringHinge;
 
-		[Header("Off  -  0")]
 		[InspectorDisplayName("Target Velocity")]
+		[Header("Off  -  0")]
 		public float velocity_off;
 
 		[InspectorDisplayName("Position Damper")]
@@ -182,8 +175,8 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Maximum Force")]
 		public float force_idle;
 
-		[Header("Fast  -  2")]
 		[InspectorDisplayName("Target Velocity")]
+		[Header("Fast  -  2")]
 		public float velocity_fast;
 
 		[InspectorDisplayName("Position Damper")]
@@ -192,8 +185,8 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Maximum Force")]
 		public float force_fast;
 
-		[InspectorDisplayName("Target Velocity")]
 		[Header("Slow  -  3")]
+		[InspectorDisplayName("Target Velocity")]
 		public float velocity_slow;
 
 		[InspectorDisplayName("Position Damper")]
@@ -202,8 +195,8 @@ namespace SLZ.Bonelab
 		[InspectorDisplayName("Maximum Force")]
 		public float force_slow;
 
-		[InspectorDisplayName("Target Velocity")]
 		[Header("Brake  -  4")]
+		[InspectorDisplayName("Target Velocity")]
 		public float velocity_brake;
 
 		[InspectorDisplayName("Position Damper")]

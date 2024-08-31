@@ -1,11 +1,7 @@
-using System;
+﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
-using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Marrow;
 using SLZ.Marrow.Audio;
 using SLZ.Marrow.Data;
@@ -16,111 +12,83 @@ namespace SLZ.Bonelab
 {
 	public class SpawnGun : Gun
 	{
-		[CompilerGenerated]
-		private sealed class _003CCoFireFlash_003Ed__85 : IEnumerator<object>, IEnumerator, IDisposable
+		private void Start()
 		{
-			private int _003C_003E1__state;
+		}
 
-			private object _003C_003E2__current;
-
-			public SpawnGun _003C_003E4__this;
-
-			private float _003Cduration_003E5__2;
-
-			private float _003Ctime_003E5__3;
-
-			private object System_002ECollections_002EGeneric_002EIEnumerator_003CSystem_002EObject_003E_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-			private object System_002ECollections_002EIEnumerator_002ECurrent
-			{
-				[DebuggerHidden]
-				get
-				{
-					return null;
-				}
-			}
-
-            public object Current => throw new NotImplementedException();
-
-            [DebuggerHidden]
-			public _003CCoFireFlash_003Ed__85(int _003C_003E1__state)
-			{
-			}
-
-			[DebuggerHidden]
-			private void System_002EIDisposable_002EDispose()
-			{
-			}
-
-			private bool MoveNext()
-			{
-				return false;
-			}
-
-			[DebuggerHidden]
-			private void System_002ECollections_002EIEnumerator_002EReset()
-			{
-			}
-
-            bool IEnumerator.MoveNext()
-            {
-                throw new NotImplementedException();
-            }
-
-            public void Reset()
-            {
-                throw new NotImplementedException();
-            }
-
-            public void Dispose()
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-		[StructLayout(3)]
-		[CompilerGenerated]
-		private struct _003CSpawnCrate_003Ed__87 : IAsyncStateMachine
+		private void OnEnable()
 		{
-			public int _003C_003E1__state;
+		}
 
-			public AsyncUniTaskVoidMethodBuilder _003C_003Et__builder;
+		private void OnDisable()
+		{
+		}
 
-			public Action<GameObject> callback;
+		private void OnDestroy()
+		{
+		}
 
-			public SpawnGun _003C_003E4__this;
+		public override void OnPoolInitialize()
+		{
+		}
 
-			private UniTask<bool>.Awaiter _003C_003Eu__1;
+		protected override void OnTriggerGripAttached(Hand hand)
+		{
+		}
 
-			private void MoveNext()
-			{
-			}
+		protected override void OnTriggerGripDetached(Hand hand)
+		{
+		}
 
-            void IAsyncStateMachine.MoveNext()
-            {
-                throw new NotImplementedException();
-            }
+		protected void OnSpawnableSelected(SpawnableCrate crate)
+		{
+		}
 
-            [DebuggerHidden]
-			private void SetStateMachine(IAsyncStateMachine stateMachine)
-			{
-			}
+		protected void OnModeSelect(UtilityModes mode)
+		{
+		}
 
-            void IAsyncStateMachine.SetStateMachine(IAsyncStateMachine stateMachine)
-            {
-                throw new NotImplementedException();
-            }
-        }
+		private void OnHandAttachedUpdate(Hand hand)
+		{
+		}
 
-		[SerializeField]
+		public override void Fire()
+		{
+		}
+
+		protected override void OnFire()
+		{
+		}
+
+		public Vector3 FindNearestPointOnLine(Vector3 origin, Vector3 vector, Vector3 point)
+		{
+			return default(Vector3);
+		}
+
+		public void FlashScreen()
+		{
+		}
+
+		private IEnumerator CoFireFlash()
+		{
+			return null;
+		}
+
+		private void SetPreviewMesh()
+		{
+		}
+
+		private UniTaskVoid SpawnCrate([Optional] Vector3 position, [Optional] Quaternion rotation, [Optional] Action<GameObject> callback)
+		{
+			return default(UniTaskVoid);
+		}
+
+		public SpawnGun()
+		{
+		}
+
 		[Header("Spawn Options")]
+		[SerializeField]
 		private Spawnable _spawnGunUISpawnable;
 
 		public LayerMask collisionLayers;
@@ -203,8 +171,8 @@ namespace SLZ.Bonelab
 
 		public float dampTimeRot;
 
-		[Header("Audio")]
 		[SerializeField]
+		[Header("Audio")]
 		private AudioClip[] blip;
 
 		public float blipIncrement;
@@ -268,78 +236,5 @@ namespace SLZ.Bonelab
 		private Mesh[] loadedMesh;
 
 		private BoneTag playerTag;
-
-		private void Start()
-		{
-		}
-
-		private void OnEnable()
-		{
-		}
-
-		private void OnDisable()
-		{
-		}
-
-		private void OnDestroy()
-		{
-		}
-
-		public override void OnPoolInitialize()
-		{
-		}
-
-		protected override void OnTriggerGripAttached(Hand hand)
-		{
-		}
-
-		protected override void OnTriggerGripDetached(Hand hand)
-		{
-		}
-
-		protected void OnSpawnableSelected(SpawnableCrate crate)
-		{
-		}
-
-		protected void OnModeSelect(UtilityModes mode)
-		{
-		}
-
-		private void OnHandAttachedUpdate(Hand hand)
-		{
-		}
-
-		public override void Fire()
-		{
-		}
-
-		protected override void OnFire()
-		{
-		}
-
-		public Vector3 FindNearestPointOnLine(Vector3 origin, Vector3 vector, Vector3 point)
-		{
-			return default(Vector3);
-		}
-
-		public void Flash()
-		{
-		}
-
-		[IteratorStateMachine(typeof(_003CCoFireFlash_003Ed__85))]
-		private IEnumerator CoFireFlash()
-		{
-			return null;
-		}
-
-		private void SetPreviewMesh()
-		{
-		}
-
-		[AsyncStateMachine(typeof(_003CSpawnCrate_003Ed__87))]
-		private UniTaskVoid SpawnCrate(Vector3 position = default(Vector3), Quaternion rotation = default(Quaternion), Action<GameObject> callback = null)
-		{
-			return default(UniTaskVoid);
-		}
 	}
 }

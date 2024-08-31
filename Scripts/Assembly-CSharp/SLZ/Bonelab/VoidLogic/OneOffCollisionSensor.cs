@@ -1,3 +1,4 @@
+﻿using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using SLZ.Marrow.VoidLogic;
@@ -5,19 +6,10 @@ using UnityEngine;
 
 namespace SLZ.Bonelab.VoidLogic
 {
-	[AddComponentMenu("VoidLogic/Bonelab/Internal Only/VoidLogic Collision Sensor One-off")]
 	[Support(SupportFlags.CowboySupported, null)]
+	[AddComponentMenu("VoidLogic/Bonelab Internal/VoidLogic Collision Sensor One-off")]
 	public class OneOffCollisionSensor : MonoBehaviour, IVoidLogicSource, IVoidLogicNode, IVoidLogicSensor
 	{
-		[SerializeField]
-		private bool _negate;
-
-		private Rigidbody _rigidbody;
-
-		private readonly Queue<(Vector3 force, Vector3 torque)> _impacts;
-
-		private static readonly PortMetadata _portMetadata;
-
 		public VoidLogicSubgraph Subgraph
 		{
 			[CompilerGenerated]
@@ -31,9 +23,21 @@ namespace SLZ.Bonelab.VoidLogic
 			}
 		}
 
-		public int OutputCount => 0;
+		public bool Deprecated
+		{
+			get
+			{
+				return default(bool);
+			}
+		}
 
-		public PortMetadata PortMetadata => default(PortMetadata);
+		public int OutputCount
+		{
+			get
+			{
+				return 0;
+			}
+		}
 
 		private void Start()
 		{
@@ -43,22 +47,41 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		private void SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicSensor_002EReadSensors(ref NodeState nodeState)
+		void IVoidLogicNode.Initialize(NodeState nodeState)
 		{
 		}
 
-		private void SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicSource_002ECalculate(ref NodeState nodeState)
+		void IVoidLogicSensor.ReadSensors(NodeState nodeState)
 		{
 		}
 
-        public void Calculate(ref NodeState nodeState)
-        {
-            throw new System.NotImplementedException();
-        }
+		void IVoidLogicSource.Calculate(NodeState nodeState)
+		{
+		}
 
-        public void ReadSensors(ref NodeState nodeState)
-        {
-            throw new System.NotImplementedException();
-        }
-    }
+		public PortMetadata PortMetadata
+		{
+			get
+			{
+				return default(PortMetadata);
+			}
+		}
+
+		public OneOffCollisionSensor()
+		{
+		}
+
+		[HideInInspector]
+		[SerializeField]
+		private bool _deprecated;
+
+		[SerializeField]
+		private bool _negate;
+
+		private Rigidbody _rigidbody;
+
+		private readonly Queue<ValueTuple<Vector3, Vector3>> _impacts;
+
+		private static readonly PortMetadata _portMetadata;
+	}
 }

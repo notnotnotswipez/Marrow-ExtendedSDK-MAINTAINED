@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 using System.Runtime.CompilerServices;
-using SLZ.Algorithms.Unity;
+using System.Runtime.InteropServices;
 using SLZ.Marrow.VoidLogic;
 using UnityEngine;
 
@@ -8,28 +8,8 @@ namespace SLZ.Bonelab.VoidLogic
 {
 	[Support(SupportFlags.Unsupported, null)]
 	[AddComponentMenu(null)]
-	public sealed class OneOffThruster : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, ISerializationCallbackReceiver, IVoidLogicActuator
+	public sealed class OneOffThruster : MonoBehaviour, IVoidLogicSink, IVoidLogicNode, IVoidLogicActuator
 	{
-		[Obsolete("Replace with `_previousConnections`")]
-		[Tooltip("Previous node(s) in the chain")]
-		[Interface(typeof(IVoidLogicSource), false)]
-		[SerializeField]
-		private MonoBehaviour[] _previous;
-
-		[SerializeField]
-		private ForceMode forceMode;
-
-		[SerializeField]
-		private bool _relativeForce;
-
-		[SerializeField]
-		private bool _relativeTorque;
-
-		[SerializeField]
-		private Rigidbody _target;
-
-		private static readonly PortMetadata _portMetadata;
-
 		public VoidLogicSubgraph Subgraph
 		{
 			[CompilerGenerated]
@@ -43,18 +23,12 @@ namespace SLZ.Bonelab.VoidLogic
 			}
 		}
 
-		public int InputCount => 0;
-
-		private PortMetadata SLZ_002EMarrow_002EVoidLogic_002EIVoidLogicNode_002EPortMetadata => default(PortMetadata);
-
-        public PortMetadata PortMetadata => throw new NotImplementedException();
-
-        private void UnityEngine_002EISerializationCallbackReceiver_002EOnBeforeSerialize()
+		public bool Deprecated
 		{
-		}
-
-		private void UnityEngine_002EISerializationCallbackReceiver_002EOnAfterDeserialize()
-		{
+			get
+			{
+				return default(bool);
+			}
 		}
 
 		private void Awake()
@@ -73,23 +47,71 @@ namespace SLZ.Bonelab.VoidLogic
 		{
 		}
 
-		public void Actuate(ref NodeState nodeState)
+		void IVoidLogicNode.Initialize(NodeState nodeState)
 		{
 		}
 
-        public bool TryGetInputAtIndex(uint idx, out IVoidLogicSource input)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void OnBeforeSerialize()
-        {
-
-        }
-
-        public void OnAfterDeserialize()
-        {
-
+		void IVoidLogicActuator.Actuate(NodeState nodeState)
+		{
 		}
-    }
+
+		public int InputCount
+		{
+			get
+			{
+				return 0;
+			}
+		}
+
+		public bool TryGetInputConnection(uint inputIndex, [Out] OutputPortReference connectedPort)
+		{
+			return default(bool);
+		}
+
+		public bool TryConnectPortToInput(OutputPortReference output, uint inputIndex)
+		{
+			return default(bool);
+		}
+
+		PortMetadata IVoidLogicNode.PortMetadata
+		{
+			get
+			{
+				return default(PortMetadata);
+			}
+		}
+
+		public OneOffThruster()
+		{
+		}
+
+		[SerializeField]
+		[HideInInspector]
+		private bool _deprecated;
+
+		[Obsolete("Dead Field: Please remove")]
+		[Tooltip("Dead Field: Please remove")]
+		[NonReorderable]
+		[SerializeField]
+		protected internal MonoBehaviour[] _previous;
+
+		[Tooltip("Previous node(s) in the chain")]
+		[NonReorderable]
+		[SerializeField]
+		protected internal OutputPortReference[] _previousConnections;
+
+		[SerializeField]
+		private ForceMode forceMode;
+
+		[SerializeField]
+		private bool _relativeForce;
+
+		[SerializeField]
+		private bool _relativeTorque;
+
+		[SerializeField]
+		private Rigidbody _target;
+
+		private static readonly PortMetadata _portMetadata;
+	}
 }

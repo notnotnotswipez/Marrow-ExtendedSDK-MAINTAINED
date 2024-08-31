@@ -1,27 +1,54 @@
+﻿using System;
 using System.Collections.Generic;
 using SLZ.Marrow.VoidLogic;
 using UnityEngine;
 
 namespace SLZ.Bonelab.VoidLogic
 {
+	[AddComponentMenu("VoidLogic/Bonelab Internal/VoidLogic Trigger")]
+	[Support(SupportFlags.Deprecated, "This has been replaced by ZoneTriggerSource.")]
 	[RequireComponent(typeof(Collider))]
-	[Support(SupportFlags.BetaSupported, "This works, but should use Marrow primitives.")]
-	[AddComponentMenu("VoidLogic/Bonelab/Nodes/VoidLogic Trigger")]
+	[Obsolete("This has been replaced by ZoneTriggerSource.")]
 	public class TriggerNode : BaseNode
 	{
-		public enum TriggerBehavior
+		protected override void Awake()
 		{
-			Always = 0,
-			Once = 1,
-			Pinned = 2
+		}
+
+		private void OnTriggerEnter(Collider other)
+		{
+		}
+
+		private void OnTriggerExit(Collider other)
+		{
+		}
+
+		public override void Initialize(NodeState nodeState)
+		{
+		}
+
+		public override void Calculate(NodeState nodeState)
+		{
+		}
+
+		public override PortMetadata PortMetadata
+		{
+			get
+			{
+				return default(PortMetadata);
+			}
+		}
+
+		public TriggerNode()
+		{
 		}
 
 		[Tooltip("Trigger Behavior:\nAlways => Enter and Exit\nOnce => Enter and Exit, once\nPinned => Enter (pin to \"on\" state)")]
 		[SerializeField]
-		private TriggerBehavior _triggerBehavior;
+		private TriggerNode.TriggerBehavior _triggerBehavior;
 
-		[SerializeField]
 		[Tooltip("Limit trigger to a specific Layer. Ignored by Player or Npc Only")]
+		[SerializeField]
 		private LayerMask _layerFilter;
 
 		private LayerMask _playerLayerMask;
@@ -36,8 +63,8 @@ namespace SLZ.Bonelab.VoidLogic
 		[Tooltip("Limit trigger to player or NPC only")]
 		private bool _playerOrNpcOnly;
 
-		[SerializeField]
 		[Tooltip("Limit trigger to a specific object collision. CONFLICTS WITH: Player Only")]
+		[SerializeField]
 		private GameObject _triggerObject;
 
 		private bool _isTriggered;
@@ -50,22 +77,11 @@ namespace SLZ.Bonelab.VoidLogic
 
 		private static readonly PortMetadata _portMetadata;
 
-		public override PortMetadata PortMetadata => default(PortMetadata);
-
-		protected override void Awake()
+		public enum TriggerBehavior
 		{
-		}
-
-		private void OnTriggerEnter(Collider other)
-		{
-		}
-
-		private void OnTriggerExit(Collider other)
-		{
-		}
-
-		public override void Calculate(ref NodeState nodeState)
-		{
+			Always,
+			Once,
+			Pinned
 		}
 	}
 }
