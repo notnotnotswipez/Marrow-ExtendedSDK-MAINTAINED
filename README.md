@@ -16,7 +16,7 @@ Begin installing the MarrowSDK by following the original instructions at https:/
 > DO NOT INSTALL THE SLZ MARROWSDK PACKAGE OR THE BACKLOT PACKAGE AFTER ADDING THE SCOPED REGISTRY
 
 > [!IMPORTANT]  
-> IF UPDATING, MAKE SURE TO DELETE Marrow-ExtendedSDK-Maintained-main COMPLETELY FROM YOUR ASSETS FOLDER BEFORE DOWNLOADING THE NEW CODE DROPDOWN
+> IF UPDATING, MAKE SURE TO DELETE Marrow-ExtendedSDK-MAINTAINED-main COMPLETELY FROM YOUR ASSETS FOLDER BEFORE DOWNLOADING THE NEW CODE DROPDOWN
 
 After you've added the scoped registry, go to the top left of the ``Package Manager`` and add a ``git URL``.
 The git URL you should add is 
@@ -36,6 +36,9 @@ After installation is complete and the ``Extended Marrow SDK`` package is listed
 ![image](https://github.com/notnotnotswipez/Marrow-ExtendedSDK-MAINTAINED/assets/79382000/81b8e308-f70f-4196-9aa1-bf9563f7e3db)
 
 Extract the contents of the zip into your project's `Assets` folder.
+
+> [!IMPORTANT]
+> To utilize the Marrow Backlot assets, you must install the [Marrow Backlot Standalone](https://github.com/EvroDeveloper/Marrow-Backlot-Standalone) package. The base Marrow SDK Backlot is __not__ compatible with the Extended SDK.
 
 #
 ### This repo contains DUMMY scripts. Which are scripts that are not functional and contain no code. They simply get replaced with their ingame equivalents upon being loaded.
