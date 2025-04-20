@@ -10,7 +10,7 @@ One of the major objectives of this repo, is to remove incentives to decompile t
 
 Install [Git](https://git-scm.com/) and Restart Unity / Unity Hub if they are open.
 
-Begin installing the MarrowSDK by following the original instructions at https://github.com/StressLevelZero/MarrowSDK/wiki/ProjectSetup.
+Begin installing the MarrowSDK by following the original [instructions](https://github.com/StressLevelZero/MarrowSDK/wiki/ProjectSetup), stop after you have added the scoped registry. Further instructions below.
 
 > [!IMPORTANT]  
 > DO NOT INSTALL THE SLZ MARROWSDK PACKAGE OR THE BACKLOT PACKAGE AFTER ADDING THE SCOPED REGISTRY
