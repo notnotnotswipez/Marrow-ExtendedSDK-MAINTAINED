@@ -9,6 +9,7 @@ namespace SLZ.Bonelab
 
 		public void Toggle()
 		{
+			ObjectToToggle.SetActive(!ObjectToToggle.activeSelf);
 		}
 	}
 }
